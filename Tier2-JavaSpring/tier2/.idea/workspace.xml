@@ -5,98 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_annotations_4_1_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_0_1_android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_19_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_lognet_grpc_spring_boot_starter_4_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_api_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_core_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_services_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_stub_1_47_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_linux_aarch_64_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_linux_x86_64_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_osx_aarch_64_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_osx_x86_64_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_boringssl_static_windows_x86_64_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_classes_2_0_54_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_perfmark_perfmark_api_0_25_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_68.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_68.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_68.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_5_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/UserDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/WaterUsageDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/ElectricityUsageAdviceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/ElectricityUsageImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/UserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/WaterUsageAdviceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/WaterUsageImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/Definitions.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsageAdvice.java" beforeDir="false" />
@@ -114,75 +36,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsageAdviceOrBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsageOrBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Definitions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsage$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsageAdvice$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsageAdvice$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsageAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsageAdviceOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ElectricityUsageOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Empty$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Empty$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Empty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EmptyOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ListUsage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ListUsage$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ListUsage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ListUsageOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$MethodHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionBaseDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionBlockingStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionFileDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionFutureStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionImplBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionMethodDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc$ResourcesConsumptionStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ResourcesConsumptionGrpc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UserOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsage$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsageAdvice$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsageAdvice$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsageAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsageAdviceOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaterUsageOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/via/sep3/tier2/Tier2Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/via/sep3/tier2/grpc/GrpcClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/via/sep3/tier2/rest/RestApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pjmp-success.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-via.sep3.tier2.Tier2ApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/via.sep3.tier2.Tier2ApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/via/sep3/tier2/Tier2ApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tier2-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tier2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/ElectricityAdviceDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/ElectricityAdviceDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/ElectricityConsumptionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/ElectricityConsumptionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/WaterAdviceDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/WaterAdviceDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/WaterConsumptionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAO/WaterConsumptionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAOInterfaces/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DAOInterfaces/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DatabaseFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/database/DatabaseFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/ElectricityUsageAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/ElectricityUsageAdviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/ElectricityUsageImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/ElectricityUsageImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/UserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/WaterUsageAdviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/WaterUsageAdviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/WaterUsageImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/model/WaterUsageImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/service/ResourcesConsumption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/java/via/sep3/tier3/service/ResourcesConsumption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tier2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tier2.iml" afterDir="false" />
+    </list>
+    <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
+    <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
+    <list id="24008627-7003-4c05-aedb-3c849e7a57df" name="Changes by gavriliuciurie" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/UsageListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/GrpcClient.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +53,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -225,20 +87,45 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="via.sep3.tier2.logic.DAOs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2" />
       <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2\grpc\proto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2\grpc\proto" />
       <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2\grpc" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="via.sep3.tier2" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Tier2Application">
+    <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
+      <module name="tier2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="via.sep3.tier2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tier2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tier2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="via.sep3.tier2.Tier2Application" />
@@ -246,6 +133,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GrpcClient" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -257,7 +149,9 @@
       <updated>1667340724333</updated>
       <workItem from="1667340726579" duration="22000" />
       <workItem from="1667380592176" duration="2999000" />
-      <workItem from="1667383605524" duration="3175000" />
+      <workItem from="1667383605524" duration="7234000" />
+      <workItem from="1667395700746" duration="223000" />
+      <workItem from="1667395937544" duration="2317000" />
     </task>
     <servers />
   </component>
