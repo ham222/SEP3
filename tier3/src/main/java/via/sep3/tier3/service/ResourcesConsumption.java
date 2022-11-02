@@ -30,9 +30,10 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         double amount = electricityUsage.getAmount();
         int month = electricityUsage.getMonth();
         int year = electricityUsage.getYear();
+        int userId = electricityUsage.getUserId();
 
         // creating ElectricityUsageImpl
-        ElectricityUsageImpl sendElectricity = new ElectricityUsageImpl(id,amount,month,year);
+        ElectricityUsageImpl sendElectricity = new ElectricityUsageImpl(id,amount,month,year,userId);
 
         // sending ElectricityUsageImpl to database
         eDao.addElectricityData(sendElectricity);
@@ -51,9 +52,10 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         double amount = waterUsage.getAmount();
         int month = waterUsage.getMonth();
         int year = waterUsage.getYear();
+        int userId = waterUsage.getUserId();
 
         // creating WaterUsageImpl
-        WaterUsageImpl sendWater = new WaterUsageImpl(id,amount,month,year);
+        WaterUsageImpl sendWater = new WaterUsageImpl(id,amount,month,year,userId);
 
         // sending WaterUsageImpl to database
         wDao.addWaterData(sendWater);
@@ -80,11 +82,11 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         // for testing
         // todo delete later
         ArrayList<WaterUsageImpl> wUsages = new ArrayList<>();
-        wUsages.add(new WaterUsageImpl(1,2,3,4));
-        wUsages.add(new WaterUsageImpl(2,3,4,5));
+        wUsages.add(new WaterUsageImpl(1,2,3,4,5));
+        wUsages.add(new WaterUsageImpl(2,3,4,5,7));
         ArrayList<ElectricityUsageImpl> eUsages = new ArrayList<>();
-        eUsages.add(new ElectricityUsageImpl(1,2,3,4));
-        eUsages.add(new ElectricityUsageImpl(3,4,5,6));
+        eUsages.add(new ElectricityUsageImpl(1,2,3,4,9));
+        eUsages.add(new ElectricityUsageImpl(3,4,5,6,3310));
 
         // finish for testing part
 
@@ -105,6 +107,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
                     .setAmount(water.getAmount())
                     .setMonth(water.getMonth())
                     .setYear(water.getYear())
+                    .setUserId(water.getUserId())
                     .build();
 
             wGrpcUsages.add(temporaryW);
@@ -119,6 +122,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
                     .setAmount(electr.getAmount())
                     .setMonth(electr.getMonth())
                     .setYear(electr.getYear())
+                    .setUserId(electr.getUserId())
                     .build();
 
             eGrpcUsages.add(temporaryE);

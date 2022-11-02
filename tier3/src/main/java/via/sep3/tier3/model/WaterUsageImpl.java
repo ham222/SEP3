@@ -5,14 +5,7 @@ public class WaterUsageImpl {
     private double amount;
     private int month;
     private int year;
-
-    public WaterUsageImpl(int id, double amount, int month, int year)
-    {
-        this.id = id;
-        this.amount = amount;
-        this.month = month;
-        this.year = year;
-    }
+    private int userId;
 
     public int getId()
     {
@@ -52,5 +45,24 @@ public class WaterUsageImpl {
     public void setYear(int year)
     {
         this.year = year;
+    }
+
+    public int getUserId()
+    {
+        return userId;
+    }
+
+    public void setUserId(int userId)
+    {
+        this.userId = userId;
+    }
+
+    public WaterUsageImpl(int id, double amount, int month, int year, int userId)
+    {
+        this.id = id;
+        this.amount = amount;
+        this.month = month;
+        this.year = year;
+        this.userId = userId;
     }
 }
