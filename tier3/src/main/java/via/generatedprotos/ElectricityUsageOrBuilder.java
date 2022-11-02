@@ -30,4 +30,10 @@ public interface ElectricityUsageOrBuilder extends
    * @return The year.
    */
   int getYear();
+
+  /**
+   * <code>int32 userId = 5;</code>
+   * @return The userId.
+   */
+  int getUserId();
 }
