@@ -68,7 +68,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
 
     // todo rename properly "GetUsage" not GetWaterUsage
     @Override
-    public void getWaterUsage(User user, StreamObserver<ListUsage> observer)
+    public void getUsage(Empty empty, StreamObserver<ListUsage> observer)
     {
         // get lists of usages from each DAO
         // commented for testing
