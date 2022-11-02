@@ -12,6 +12,6 @@ public class RestApiController {
 
     @GetMapping(path = "/users",produces = MediaType.APPLICATION_JSON_VALUE)
     public String getAllUsers(){
-
+        return "";
     }
 }
