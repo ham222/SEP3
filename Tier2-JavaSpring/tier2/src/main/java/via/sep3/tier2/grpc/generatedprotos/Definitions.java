@@ -58,19 +58,20 @@ public final class Definitions {
     java.lang.String[] descriptorData = {
       "\n\021definitions.proto\"D\n\004User\022\n\n\002id\030\001 \001(\005\022" +
       "\020\n\010username\030\002 \001(\t\022\020\n\010password\030\003 \001(\t\022\014\n\004r" +
-      "ole\030\004 \001(\005\"E\n\nWaterUsage\022\n\n\002id\030\001 \001(\005\022\016\n\006a" +
+      "ole\030\004 \001(\005\"U\n\nWaterUsage\022\n\n\002id\030\001 \001(\005\022\016\n\006a" +
       "mount\030\002 \001(\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(\005" +
-      "\"K\n\020ElectricityUsage\022\n\n\002id\030\001 \001(\005\022\016\n\006amou" +
-      "nt\030\002 \001(\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(\005\",\n" +
-      "\020WaterUsageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004body\030\002 " +
-      "\001(\t\"2\n\026ElectricityUsageAdvice\022\n\n\002id\030\001 \001(" +
-      "\005\022\014\n\004body\030\002 \001(\t\"\007\n\005Empty\"O\n\tListUsage\022\032\n" +
-      "\005water\030\001 \003(\0132\013.WaterUsage\022&\n\013electricity" +
-      "\030\002 \003(\0132\021.ElectricityUsage2\222\001\n\024ResourcesC" +
-      "onsumption\0220\n\023LogElectricityUsage\022\021.Elec" +
-      "tricityUsage\032\006.Empty\022$\n\rLogWaterUsage\022\013." +
-      "WaterUsage\032\006.Empty\022\"\n\rGetWaterUsage\022\005.Us" +
-      "er\032\n.ListUsageB\002P\001b\006proto3"
+      "\022\016\n\006userId\030\005 \001(\005\"[\n\020ElectricityUsage\022\n\n\002" +
+      "id\030\001 \001(\005\022\016\n\006amount\030\002 \001(\001\022\r\n\005month\030\003 \001(\005\022" +
+      "\014\n\004year\030\004 \001(\005\022\016\n\006userId\030\005 \001(\005\",\n\020WaterUs" +
+      "ageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"2\n\026E" +
+      "lectricityUsageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004bod" +
+      "y\030\002 \001(\t\"\007\n\005Empty\"O\n\tListUsage\022\032\n\005water\030\001" +
+      " \003(\0132\013.WaterUsage\022&\n\013electricity\030\002 \003(\0132\021" +
+      ".ElectricityUsage2\216\001\n\024ResourcesConsumpti" +
+      "on\0220\n\023LogElectricityUsage\022\021.ElectricityU" +
+      "sage\032\006.Empty\022$\n\rLogWaterUsage\022\013.WaterUsa" +
+      "ge\032\006.Empty\022\036\n\010GetUsage\022\006.Empty\032\n.ListUsa" +
+      "geB\002P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,13 +88,13 @@ public final class Definitions {
     internal_static_WaterUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WaterUsage_descriptor,
-        new java.lang.String[] { "Id", "Amount", "Month", "Year", });
+        new java.lang.String[] { "Id", "Amount", "Month", "Year", "UserId", });
     internal_static_ElectricityUsage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ElectricityUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ElectricityUsage_descriptor,
-        new java.lang.String[] { "Id", "Amount", "Month", "Year", });
+        new java.lang.String[] { "Id", "Amount", "Month", "Year", "UserId", });
     internal_static_WaterUsageAdvice_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_WaterUsageAdvice_fieldAccessorTable = new

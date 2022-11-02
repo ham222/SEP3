@@ -7,6 +7,13 @@ public class WaterUsageImpl {
     private int year;
     private int userId;
 
+    public WaterUsageImpl(double amount, int month, int year, int userId) {
+        this.amount = amount;
+        this.month = month;
+        this.year = year;
+        this.userId = userId;
+    }
+
     public int getId()
     {
         return id;

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: via.sep3.tier2.Tier2ApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.98 s - in via.sep3.tier2.Tier2ApplicationTests

@@ -26,14 +26,14 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         System.out.println("Got a request in LogElectricityUsage With:" + electricityUsage.toString());
 
         // set up the arguments for the ElectricityUsageImpl
-        int id = electricityUsage.getId();
+        //int id = electricityUsage.getId();
         double amount = electricityUsage.getAmount();
         int month = electricityUsage.getMonth();
         int year = electricityUsage.getYear();
         int userId = electricityUsage.getUserId();
 
         // creating ElectricityUsageImpl
-        ElectricityUsageImpl sendElectricity = new ElectricityUsageImpl(id,amount,month,year,userId);
+        ElectricityUsageImpl sendElectricity = new ElectricityUsageImpl(amount,month,year,userId);
 
         // sending ElectricityUsageImpl to database
         eDao.addElectricityData(sendElectricity);
@@ -55,7 +55,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         int userId = waterUsage.getUserId();
 
         // creating WaterUsageImpl
-        WaterUsageImpl sendWater = new WaterUsageImpl(id,amount,month,year,userId);
+        WaterUsageImpl sendWater = new WaterUsageImpl(amount,month,year,userId);
 
         // sending WaterUsageImpl to database
         wDao.addWaterData(sendWater);
@@ -76,17 +76,19 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         // commented for testing
         // todo uncomment after done testing
 
-//        ArrayList<WaterUsageImpl> wUsages = wDao.getAllWaterUsage();
-//        ArrayList<ElectricityUsageImpl> eUsages = eDao.getAllElectricityUsage();
+        ArrayList<WaterUsageImpl> wUsages = wDao.getAllWaterUsage();
+
+        System.out.println(wUsages.toArray());
+        ArrayList<ElectricityUsageImpl> eUsages = eDao.getAllElectricityUsage();
 
         // for testing
         // todo delete later
-        ArrayList<WaterUsageImpl> wUsages = new ArrayList<>();
-        wUsages.add(new WaterUsageImpl(1,2,3,4,5));
-        wUsages.add(new WaterUsageImpl(2,3,4,5,7));
-        ArrayList<ElectricityUsageImpl> eUsages = new ArrayList<>();
-        eUsages.add(new ElectricityUsageImpl(1,2,3,4,9));
-        eUsages.add(new ElectricityUsageImpl(3,4,5,6,3310));
+//        ArrayList<WaterUsageImpl> wUsages = new ArrayList<>();
+//        wUsages.add(new WaterUsageImpl(1,2,3,4,5));
+//        wUsages.add(new WaterUsageImpl(2,3,4,5,7));
+//        ArrayList<ElectricityUsageImpl> eUsages = new ArrayList<>();
+//        eUsages.add(new ElectricityUsageImpl(1,2,3,4,9));
+//        eUsages.add(new ElectricityUsageImpl(3,4,5,6,3310));
 
         // finish for testing part
 

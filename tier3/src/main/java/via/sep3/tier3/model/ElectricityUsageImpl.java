@@ -6,6 +6,14 @@ public class ElectricityUsageImpl {
     private double amount;
     private int month;
     private int year;
+
+    public ElectricityUsageImpl(double amount, int month, int year, int userId) {
+        this.amount = amount;
+        this.month = month;
+        this.year = year;
+        this.userId = userId;
+    }
+
     private int userId;
 
     public ElectricityUsageImpl(int id, double amount, int month, int year, int userId)
@@ -66,4 +74,6 @@ public class ElectricityUsageImpl {
     {
         this.userId = userId;
     }
+
+
 }

@@ -74,35 +74,35 @@ public final class ResourcesConsumptionGrpc {
     return getLogWaterUsageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<User,
-      ListUsage> getGetWaterUsageMethod;
+  private static volatile io.grpc.MethodDescriptor<Empty,
+      ListUsage> getGetUsageMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetWaterUsage",
-      requestType = User.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetUsage",
+      requestType = Empty.class,
       responseType = ListUsage.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<User,
-      ListUsage> getGetWaterUsageMethod() {
-    io.grpc.MethodDescriptor<User, ListUsage> getGetWaterUsageMethod;
-    if ((getGetWaterUsageMethod = ResourcesConsumptionGrpc.getGetWaterUsageMethod) == null) {
+  public static io.grpc.MethodDescriptor<Empty,
+      ListUsage> getGetUsageMethod() {
+    io.grpc.MethodDescriptor<Empty, ListUsage> getGetUsageMethod;
+    if ((getGetUsageMethod = ResourcesConsumptionGrpc.getGetUsageMethod) == null) {
       synchronized (ResourcesConsumptionGrpc.class) {
-        if ((getGetWaterUsageMethod = ResourcesConsumptionGrpc.getGetWaterUsageMethod) == null) {
-          ResourcesConsumptionGrpc.getGetWaterUsageMethod = getGetWaterUsageMethod =
-              io.grpc.MethodDescriptor.<User, ListUsage>newBuilder()
+        if ((getGetUsageMethod = ResourcesConsumptionGrpc.getGetUsageMethod) == null) {
+          ResourcesConsumptionGrpc.getGetUsageMethod = getGetUsageMethod =
+              io.grpc.MethodDescriptor.<Empty, ListUsage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWaterUsage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  User.getDefaultInstance()))
+                  Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ListUsage.getDefaultInstance()))
-              .setSchemaDescriptor(new ResourcesConsumptionMethodDescriptorSupplier("GetWaterUsage"))
+              .setSchemaDescriptor(new ResourcesConsumptionMethodDescriptorSupplier("GetUsage"))
               .build();
         }
       }
     }
-    return getGetWaterUsageMethod;
+    return getGetUsageMethod;
   }
 
   /**
@@ -169,9 +169,9 @@ public final class ResourcesConsumptionGrpc {
 
     /**
      */
-    public void getWaterUsage(User request,
+    public void getUsage(Empty request,
         io.grpc.stub.StreamObserver<ListUsage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWaterUsageMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUsageMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -191,12 +191,12 @@ public final class ResourcesConsumptionGrpc {
                 Empty>(
                   this, METHODID_LOG_WATER_USAGE)))
           .addMethod(
-            getGetWaterUsageMethod(),
+            getGetUsageMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                User,
+                Empty,
                 ListUsage>(
-                  this, METHODID_GET_WATER_USAGE)))
+                  this, METHODID_GET_USAGE)))
           .build();
     }
   }
@@ -233,10 +233,10 @@ public final class ResourcesConsumptionGrpc {
 
     /**
      */
-    public void getWaterUsage(User request,
+    public void getUsage(Empty request,
         io.grpc.stub.StreamObserver<ListUsage> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetWaterUsageMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetUsageMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -270,9 +270,9 @@ public final class ResourcesConsumptionGrpc {
 
     /**
      */
-    public ListUsage getWaterUsage(User request) {
+    public ListUsage getUsage(Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetWaterUsageMethod(), getCallOptions(), request);
+          getChannel(), getGetUsageMethod(), getCallOptions(), request);
     }
   }
 
@@ -308,16 +308,16 @@ public final class ResourcesConsumptionGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ListUsage> getWaterUsage(
-        User request) {
+    public com.google.common.util.concurrent.ListenableFuture<ListUsage> getUsage(
+        Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetWaterUsageMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetUsageMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_LOG_ELECTRICITY_USAGE = 0;
   private static final int METHODID_LOG_WATER_USAGE = 1;
-  private static final int METHODID_GET_WATER_USAGE = 2;
+  private static final int METHODID_GET_USAGE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -344,8 +344,8 @@ public final class ResourcesConsumptionGrpc {
           serviceImpl.logWaterUsage((WaterUsage) request,
               (io.grpc.stub.StreamObserver<Empty>) responseObserver);
           break;
-        case METHODID_GET_WATER_USAGE:
-          serviceImpl.getWaterUsage((User) request,
+        case METHODID_GET_USAGE:
+          serviceImpl.getUsage((Empty) request,
               (io.grpc.stub.StreamObserver<ListUsage>) responseObserver);
           break;
         default:
@@ -411,7 +411,7 @@ public final class ResourcesConsumptionGrpc {
               .setSchemaDescriptor(new ResourcesConsumptionFileDescriptorSupplier())
               .addMethod(getLogElectricityUsageMethod())
               .addMethod(getLogWaterUsageMethod())
-              .addMethod(getGetWaterUsageMethod())
+              .addMethod(getGetUsageMethod())
               .build();
         }
       }
