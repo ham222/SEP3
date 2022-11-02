@@ -1,0 +1,46 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+message User{
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+  int32 role = 4;
+}
+
+message WaterUsage{
+  int32 id = 1;
+  double amount = 2;
+  int32 month = 3;
+  int32 year = 4;
+}
+
+message ElectricityUsage{
+  int32 id = 1;
+  double amount = 2;
+  int32 month = 3;
+  int32 year = 4;
+}
+
+message WaterUsageAdvice{
+  int32 id = 1;
+  string body = 2;
+}
+
+message ElectricityUsageAdvice{
+  int32 id = 1;
+  string body = 2;
+}
+
+message Empty{}
+
+message ListUsage{
+  repeated WaterUsage water = 1;
+  repeated ElectricityUsage electricity = 2;
+}
+
+service ResourcesConsumption{
+  rpc LogElectricityUsage(ElectricityUsage) returns (Empty);
+  rpc LogWaterUsage(WaterUsage) returns (Empty);
+  rpc GetWaterUsage(User) returns (ListUsage);
+}

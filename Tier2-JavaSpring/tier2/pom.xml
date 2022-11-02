@@ -9,20 +9,28 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>via.sep3</groupId>
-    <artifactId>tier3</artifactId>
+    <artifactId>tier2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>WE/Save-Tier3</name>
-    <description>gRPC service with database for SEP3 project</description>
+    <name>WE/Save-Tier2</name>
+    <description>Middle tier connecting the presentation tier with the database tier while also providing business logic</description>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
     </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-        <!-- we need actually only 2 grpc dependencies, grpcstarter and protobufjava -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
@@ -41,19 +49,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.4</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.5.0</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -76,18 +71,18 @@
                         <configuration>
                             <protocVersion>3.21.4</protocVersion>
                             <inputDirectories>
-                                <include>src/main/proto</include>
+                                <include>src/main/java/via/sep3/tier2/grpc/proto</include>
                             </inputDirectories>
 
                             <outputTargets>
                                 <outputTarget>
                                     <type>java</type>
-                                    <outputDirectory>src/main/java</outputDirectory>
+                                    <outputDirectory>src/main/java/via/sep3/tier2/grpc/generatedprotos</outputDirectory>
                                 </outputTarget>
                                 <outputTarget>
                                     <type>grpc-java</type>
                                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0</pluginArtifact>
-                                    <outputDirectory>src/main/java</outputDirectory>
+                                    <outputDirectory>src/main/java/via/sep3/tier2/grpc/generatedprotos</outputDirectory>
                                 </outputTarget>
                             </outputTargets>
 
