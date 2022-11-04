@@ -1,0 +1,15 @@
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/bin/Debug/net6.0/HttpClients.deps.json
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/bin/Debug/net6.0/HttpClients.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/bin/Debug/net6.0/HttpClients.pdb
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/bin/Debug/net6.0/Domain.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/bin/Debug/net6.0/Domain.pdb
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.AssemblyInfoInputs.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.AssemblyInfo.cs
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CoreCompileInputs.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.csproj.CopyComplete
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/refint/HttpClients.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.pdb
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/ref/HttpClients.dll

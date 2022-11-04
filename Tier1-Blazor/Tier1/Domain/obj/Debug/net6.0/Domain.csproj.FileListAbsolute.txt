@@ -1,0 +1,12 @@
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/bin/Debug/net6.0/Domain.deps.json
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/bin/Debug/net6.0/Domain.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/bin/Debug/net6.0/Domain.pdb
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/refint/Domain.dll
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.pdb
+/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/ref/Domain.dll

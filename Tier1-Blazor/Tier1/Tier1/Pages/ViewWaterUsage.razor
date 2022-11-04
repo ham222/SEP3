@@ -1,0 +1,67 @@
+@page "/viewwaterusage"
+@using HttpClients.ClientInterface
+@using Domain.Models
+@inject IWaterService waterService
+
+<PageTitle>ViewWaterUsage</PageTitle>
+<h3>ViewWaterUsage</h3>
+<div>
+    <button @onclick="LoadUsage">Load</button>
+</div>
+ <label style="color: red">@msg</label>
+
+@* <table class="table"> *@
+@*         <thead> *@
+@*         <tr> *@
+@*             <th>Water Usage ID</th> *@
+@*             <th>Owner ID</th> *@
+@*             <th>Usage</th> *@
+@*             <th>Month</th> *@
+@*             <th>Year</th> *@
+@*             <th>Edit</th> *@
+@*             <th>Delete?</th> *@
+@*         </tr> *@
+@*         </thead> *@
+@*         <tbody> *@
+@*         @foreach (var item in waterUsages) *@
+@*         { *@
+@*             <tr> *@
+@*                 <td>@item.id</td> *@
+@*                 $1$ <td>@item.userId</td> #1# *@
+@*                 $1$ <td>@item.amount</td> #1# *@
+@*                 $1$ <td>@item.month</td> #1# *@
+@*                 $1$ <td>@item.year</td> #1# *@
+@*                 $1$ <td> #1# *@
+@*                 $1$     <img src="icons/edit.gif" class="funnel" @onclick="@(() => navMgr.NavigateTo($"/EditTodo/{item.Id}"))"/> #1# *@
+@*                 $1$ </td> #1# *@
+@*                 $1$ <td> #1# *@
+@*                 $1$     <label @onclick="@(() => RemoveTodo(item.Id))" style="cursor:pointer; color: red; font-weight: bold"> #1# *@
+@*                 $1$         &#x2717; #1# *@
+@*                 $1$     </label> #1# *@
+@*                 $1$ </td> #1# *@
+@*             </tr> *@
+@*         } *@
+@*         </tbody> *@
+@*     </table> *@
+
+
+
+
+
+@code {
+    string msg = "niece";
+    IEnumerable<WaterUsage> waterUsages;
+    private async Task LoadUsage()
+    {
+        try
+        {
+            waterUsages = await waterService.GetAsync(1);
+        }
+        catch (Exception e)
+            {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+}

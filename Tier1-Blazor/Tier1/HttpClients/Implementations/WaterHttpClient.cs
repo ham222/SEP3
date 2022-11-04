@@ -11,7 +11,7 @@ public class WaterHttpClient : IWaterService
     {
         string query = "";
 
-        HttpResponseMessage response = await client.GetAsync("/api/users/" + userId + "/water");
+        HttpResponseMessage response = await client.GetAsync("/api/users/2/water");
         string content = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
