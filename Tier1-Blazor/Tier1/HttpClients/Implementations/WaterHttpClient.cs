@@ -6,12 +6,18 @@ namespace HttpClients.Implementations;
 
 public class WaterHttpClient : IWaterService
 {
-    private HttpClient client = new HttpClient();
+    private readonly HttpClient client;
+
+    public WaterHttpClient(HttpClient client)
+    {
+        this.client = client;
+    }
     public async Task<ICollection<WaterUsage>> GetAsync(int? userId)
     {
         string query = "";
 
-        HttpResponseMessage response = await client.GetAsync("/api/users/2/water");
+        Console.WriteLine("Base address:" + client.BaseAddress);
+        HttpResponseMessage response = await client.GetAsync("/api/users/1/water");
         string content = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
