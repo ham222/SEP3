@@ -5,46 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/WaterUsageDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/ElectricityUsageAdviceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/ElectricityUsageImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/UserImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/WaterUsageAdviceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/WaterUsageImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/DTOs/GetWaterUsageDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/Models/ElectricityUsage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/Models/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/Models/WaterUsage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/ClientInterface/IWaterService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/Implementations/WaterHttpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/HttpClients.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/HttpClients.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/HttpClients.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/HttpClients.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/HttpClients/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Tier1.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/Definitions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsageAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsageAdviceOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ElectricityUsageOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/Empty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/EmptyOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ListUsage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ListUsageOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/ResourcesConsumptionGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/UserOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsageAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsageAdviceOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/generatedprotos/WaterUsageOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tier2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tier2.iml" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
-    <list id="24008627-7003-4c05-aedb-3c849e7a57df" name="Changes by gavriliuciurie" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/UsageListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/GrpcClient.java" beforeDir="false" />
-    </list>
+    <list id="24008627-7003-4c05-aedb-3c849e7a57df" name="Changes by gavriliuciurie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +72,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -78,24 +81,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="via.sep3.tier2.logic.DAOs" />
@@ -112,9 +100,22 @@
       <recent name="via.sep3.tier2" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Tier2Application">
+  <component name="RunManager" selected="Application.Tier2Application">
     <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
+      <module name="tier2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="via.sep3.tier2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tier2Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.Tier2Application" />
       <module name="tier2" />
       <extension name="coverage">
         <pattern>
@@ -135,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tier2Application" />
         <item itemvalue="Application.GrpcClient" />
       </list>
     </recent_temporary>
@@ -152,6 +154,8 @@
       <workItem from="1667383605524" duration="7234000" />
       <workItem from="1667395700746" duration="223000" />
       <workItem from="1667395937544" duration="2317000" />
+      <workItem from="1667564335306" duration="429000" />
+      <workItem from="1667564776067" duration="66000" />
     </task>
     <servers />
   </component>
@@ -168,5 +172,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
