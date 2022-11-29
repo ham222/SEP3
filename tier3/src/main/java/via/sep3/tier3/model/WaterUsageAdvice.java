@@ -1,12 +1,15 @@
 package via.sep3.tier3.model;
 
-public class ElectricityUsageAdviceImpl {
-
-    public String text;
+public class WaterUsageAdvice
+{
     private int id;
+    private String text;
 
+    public WaterUsageAdvice(String text) {
+        this.text = text;
+    }
 
-    public ElectricityUsageAdviceImpl(int id, String text) {
+    public WaterUsageAdvice(int id, String text) {
         this.id = id;
         this.text = text;
     }
@@ -27,5 +30,3 @@ public class ElectricityUsageAdviceImpl {
         this.text = text;
     }
 }
-
-
