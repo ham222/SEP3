@@ -8,8 +8,9 @@ public class ElectricityUsage
     private int year { get; }
     private int userId { get; }
 
-    public ElectricityUsage(double amount, int month, int year, int userId)
+    public ElectricityUsage(int id,double amount, int month, int year, int userId)
     {
+        this.id = id;
         this.amount = amount;
         this.month = month;
         this.year = year;
