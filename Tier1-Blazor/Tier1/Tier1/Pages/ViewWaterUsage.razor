@@ -57,13 +57,14 @@ else
 
 
 @code {
-    string msg = "niece";
+    string msg = "nice";
     IEnumerable<WaterUsage> waterUsages ;
     private async Task LoadUsage()
     {
         try
         {
             waterUsages = await waterService.GetAsync(1);
+            //TODO change the line above to reference the userID of user that is logged in
         }
         catch (Exception e)
             {

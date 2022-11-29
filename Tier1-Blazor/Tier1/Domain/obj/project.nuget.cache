@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aMNuGl+AoOcCRNrR9VZpNVCrd9azSRFseROhOlDHBH3i2lUzcA2hJKMv4h5So6MG6hLiOFQkqf0QLN9SMM7OVg==",
+  "dgSpecHash": "DsjvNkxQlbA8rLGbCzsF3ZHrPge2aGIpFU5sFslJUB+OrZZxPCywchMDmD6lSmwVgLPC519gl+QCl6Y95KFR4w==",
   "success": true,
-  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

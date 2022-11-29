@@ -2,6 +2,7 @@ namespace Domain.Models;
 
 public class ElectricityUsage
 {
+    private int id { get; }
     private double amount { get; }
     private int month { get; }
     private int year { get; }

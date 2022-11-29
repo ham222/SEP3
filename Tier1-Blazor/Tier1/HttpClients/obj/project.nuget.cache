@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "czPYWfqXtgXUOO/+g2Yfsfweqwj+poOp9hnV5CO2LZfEuX72j2MhzzkDVdj84lcNZqPpq8Z5PMF6LMRlogwWWw==",
+  "dgSpecHash": "pS5O2oPCDa/HbNfVbvgMpF1Wt55H50WLwYH8L76q7hDWnchWRkJHzVqOKTaxEamQmFaWkeo41j0lKYmiz7/AAw==",
   "success": true,
-  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/HttpClients.csproj",
+  "projectFilePath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\HttpClients\\HttpClients.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1604,19 +1604,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/gavriliuciurie/.nuget/packages/": {}
+    "C:\\Users\\Jakub Nowak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Tier1/Tier1.csproj",
+      "projectUniqueName": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Tier1\\Tier1.csproj",
       "projectName": "Tier1",
-      "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Tier1/Tier1.csproj",
-      "packagesPath": "/Users/gavriliuciurie/.nuget/packages/",
-      "outputPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Tier1/obj/",
+      "projectPath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Tier1\\Tier1.csproj",
+      "packagesPath": "C:\\Users\\Jakub Nowak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Tier1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gavriliuciurie/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Jakub Nowak\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1628,11 +1628,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/Domain.csproj": {
-              "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/Domain/Domain.csproj"
+            "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\Domain\\Domain.csproj"
             },
-            "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/HttpClients.csproj": {
-              "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/Tier1/HttpClients/HttpClients.csproj"
+            "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\HttpClients\\HttpClients.csproj": {
+              "projectPath": "C:\\Users\\Jakub Nowak\\IdeaProjects\\SEP3\\Tier1-Blazor\\Tier1\\HttpClients\\HttpClients.csproj"
             }
           }
         }
@@ -1679,7 +1679,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
