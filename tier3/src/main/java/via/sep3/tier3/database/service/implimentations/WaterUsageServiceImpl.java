@@ -39,13 +39,14 @@ public class WaterUsageServiceImpl implements WaterUsageService
     @Override
     public WaterUsageEntity updateWaterUsage(WaterUsageEntity waterUsage)
     {
-        return waterUsageRepository.findById(waterUsage.getId()).map(waterUsageEntity -> {
-            waterUsageEntity.setAmount(waterUsage.getAmount());
-            waterUsageEntity.setMonth(waterUsage.getMonth());
-            waterUsageEntity.setYear(waterUsage.getYear());
-            waterUsageEntity.setUser(waterUsage.getUser());
-            return waterUsageRepository.save(waterUsageEntity);
-        }).orElse(null);
+        waterUsageRepository.updateWaterUsage(
+                waterUsage.getAmount(),
+                waterUsage.getMonth(),
+                waterUsage.getYear(),
+                waterUsage.getUser(),
+                waterUsage.getId()
+        );
+       return waterUsageRepository.findById(waterUsage.getId()).orElse(null);
     }
 
     @Override

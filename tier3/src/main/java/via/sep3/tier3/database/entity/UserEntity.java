@@ -25,15 +25,21 @@ public class UserEntity
     @OneToMany(mappedBy = "user")
     List<WaterUsageEntity> waterUsages;
 
+    @OneToMany(mappedBy = "user")
+    List<ElectricityUsageEntity> electricityUsages;
+
     public UserEntity()
     {
     }
 
-    public UserEntity(String username, String password, int role)
+    public UserEntity(int id, String username, String password, int role, List<WaterUsageEntity> waterUsages, List<ElectricityUsageEntity> electricityUsages)
     {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.role = role;
+        this.waterUsages = waterUsages;
+        this.electricityUsages = electricityUsages;
     }
 
     public int getId()
@@ -74,5 +80,25 @@ public class UserEntity
     public void setRole(int role)
     {
         this.role = role;
+    }
+
+    public List<WaterUsageEntity> getWaterUsages()
+    {
+        return waterUsages;
+    }
+
+    public void setWaterUsages(List<WaterUsageEntity> waterUsages)
+    {
+        this.waterUsages = waterUsages;
+    }
+
+    public List<ElectricityUsageEntity> getElectricityUsages()
+    {
+        return electricityUsages;
+    }
+
+    public void setElectricityUsages(List<ElectricityUsageEntity> electricityUsages)
+    {
+        this.electricityUsages = electricityUsages;
     }
 }
