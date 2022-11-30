@@ -1,12 +1,12 @@
 package via.sep3.tier2.model;
 
-public class ElectricityUsageAdviceImpl {
+public class ElectricityUsageAdvice {
 
     public String text;
     private int id;
 
 
-    public ElectricityUsageAdviceImpl(int id, String text) {
+    public ElectricityUsageAdvice(int id, String text) {
         this.id = id;
         this.text = text;
     }

@@ -3,9 +3,9 @@ package via.sep3.tier2;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import via.generatedprotos.*;
-import via.sep3.tier2.model.ElectricityUsageImpl;
-import via.sep3.tier2.model.UsageListImpl;
-import via.sep3.tier2.model.WaterUsageImpl;
+import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.UsageList;
+import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
 
@@ -21,19 +21,19 @@ public class GrpcClient {
     }
 
 
-    public UsageListImpl getUsage() {
+    public UsageList getUsage() {
         ListUsage response = stub.getUsage(Empty.newBuilder().build());
 
         // get list of water usage from grpc
-        ArrayList<WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
+        ArrayList<via.generatedprotos.WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
 
         // create a model water usage list
-        ArrayList<WaterUsageImpl> wUsage = new ArrayList<>();
+        ArrayList<WaterUsage> wUsage = new ArrayList<>();
 
         // cast grpc object to model
-        for (WaterUsage w : wGrpc) {
+        for (via.generatedprotos.WaterUsage w : wGrpc) {
 
-            WaterUsageImpl currentW = new WaterUsageImpl(
+            WaterUsage currentW = new WaterUsage(
                     w.getId(),
                     w.getAmount(),
                     w.getMonth(),
@@ -45,15 +45,15 @@ public class GrpcClient {
         }
 
         // get list of water usage from grpc
-        ArrayList<ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
+        ArrayList<via.generatedprotos.ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
 
         // create a model water usage list
-        ArrayList<ElectricityUsageImpl> eUsage = new ArrayList<>();
+        ArrayList<ElectricityUsage> eUsage = new ArrayList<>();
 
         // cast grpc object to model
-        for (ElectricityUsage e : eGrpc) {
+        for (via.generatedprotos.ElectricityUsage e : eGrpc) {
 
-            ElectricityUsageImpl currentE = new ElectricityUsageImpl(
+            ElectricityUsage currentE = new ElectricityUsage(
                     e.getId(),
                     e.getAmount(),
                     e.getMonth(),
@@ -65,7 +65,7 @@ public class GrpcClient {
         }
 
 
-        UsageListImpl usageList = UsageListImpl.getInstance();
+        UsageList usageList = UsageList.getInstance();
         usageList.seteUsage(eUsage);
         usageList.setwUsage(wUsage);
         return usageList;

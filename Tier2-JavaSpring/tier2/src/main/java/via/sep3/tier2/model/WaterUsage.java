@@ -1,24 +1,13 @@
 package via.sep3.tier2.model;
 
-public class ElectricityUsageImpl {
-
+public class WaterUsage {
     private int id;
     private double amount;
     private int month;
     private int year;
-
-    public ElectricityUsageImpl(double amount, int month, int year, int userId) {
-        this.amount = amount;
-        this.month = month;
-        this.year = year;
-        this.userId = userId;
-    }
-
     private int userId;
 
-    public ElectricityUsageImpl(int id, double amount, int month, int year, int userId)
-    {
-        this.id = id;
+    public WaterUsage(double amount, int month, int year, int userId) {
         this.amount = amount;
         this.month = month;
         this.year = year;
@@ -75,5 +64,12 @@ public class ElectricityUsageImpl {
         this.userId = userId;
     }
 
-
+    public WaterUsage(int id, double amount, int month, int year, int userId)
+    {
+        this.id = id;
+        this.amount = amount;
+        this.month = month;
+        this.year = year;
+        this.userId = userId;
+    }
 }

@@ -1,14 +1,14 @@
 package via.sep3.tier2.model;
 
-public class WaterUsageAdviceImpl {
+public class WaterUsageAdvice {
     private int id;
     private String text;
 
-    public WaterUsageAdviceImpl(String text) {
+    public WaterUsageAdvice(String text) {
         this.text = text;
     }
 
-    public WaterUsageAdviceImpl(int id, String text) {
+    public WaterUsageAdvice(int id, String text) {
         this.id = id;
         this.text = text;
     }

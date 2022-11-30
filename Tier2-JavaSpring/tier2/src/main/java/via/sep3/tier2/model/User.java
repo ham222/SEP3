@@ -1,13 +1,13 @@
 package via.sep3.tier2.model;
 
-public class UserImpl {
+public class User {
 
     int id;
     String username;
     String password;
     int role;
 
-    public UserImpl(int id, String username, String password, int role) {
+    public User(int id, String username, String password, int role) {
         this.id = id;
         this.username = username;
         this.password = password;
