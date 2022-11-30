@@ -2,7 +2,7 @@ package via.sep3.tier3.database.DAO;
 
 import via.sep3.tier3.database.DAOInterfaces.UserDAO;
 import via.sep3.tier3.database.DatabaseFront;
-import via.sep3.tier3.model.UserImpl;
+import via.sep3.tier3.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,13 +15,13 @@ public class UserDAOImpl implements UserDAO {
     DatabaseFront credentials = DatabaseFront.getInstance();
 
     @Override
-    public ArrayList<UserImpl> getAllUsers() {
+    public ArrayList<User> getAllUsers() {
         try {
             Connection connection = credentials.getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * from Users");
             ResultSet rs = statement.executeQuery();
-            ArrayList<UserImpl> users = new ArrayList<>();
-            UserImpl currentUser = null;
+            ArrayList<User> users = new ArrayList<>();
+            User currentUser = null;
 
             while (rs.next())
             {
@@ -31,7 +31,7 @@ public class UserDAOImpl implements UserDAO {
                     String username = rs.getString("username");
                     String pass = rs.getString("password");
                     int role = rs.getInt("role");
-                    currentUser = new UserImpl(id,username,pass,role);
+                    currentUser = new User(id,username,pass,role);
                     users.add(currentUser);
                 }
             }
@@ -45,7 +45,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public UserImpl getUserById(int id) {
+    public User getUserById(int id) {
      return null;
     }
 

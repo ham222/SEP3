@@ -2,7 +2,7 @@ package via.sep3.tier3.database.DAO;
 
 import via.sep3.tier3.database.DAOInterfaces.WaterConsumptionDAO;
 import via.sep3.tier3.database.DatabaseFront;
-import via.sep3.tier3.model.WaterUsageImpl;
+import via.sep3.tier3.model.WaterUsage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class WaterConsumptionDAOImpl implements WaterConsumptionDAO {
     @Override
-    public void addWaterData(WaterUsageImpl waterUsage) {
+    public void addWaterData(WaterUsage waterUsage) {
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement(
@@ -30,8 +30,8 @@ public class WaterConsumptionDAOImpl implements WaterConsumptionDAO {
     }
 
     @Override
-    public ArrayList<WaterUsageImpl> getAllWaterUsage() {
-        ArrayList<WaterUsageImpl> waterUsages = new ArrayList<>();
+    public ArrayList<WaterUsage> getAllWaterUsage() {
+        ArrayList<WaterUsage> waterUsages = new ArrayList<>();
 
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
@@ -41,7 +41,7 @@ public class WaterConsumptionDAOImpl implements WaterConsumptionDAO {
             ResultSet results = statement.executeQuery();
             while (results.next()) {
 
-                WaterUsageImpl w = new WaterUsageImpl(
+                WaterUsage w = new WaterUsage(
                         results.getInt("id"),
                         results.getDouble("amount"),
                         results.getInt("month"),

@@ -7,8 +7,8 @@ import via.sep3.tier3.database.DAO.ElectricityConsumptionDAOImpl;
 import via.sep3.tier3.database.DAO.WaterConsumptionDAOImpl;
 import via.sep3.tier3.database.DAOInterfaces.ElectricityConsumptionDAO;
 import via.sep3.tier3.database.DAOInterfaces.WaterConsumptionDAO;
-import via.sep3.tier3.model.ElectricityUsageImpl;
-import via.sep3.tier3.model.WaterUsageImpl;
+import via.sep3.tier3.model.ElectricityUsage;
+import via.sep3.tier3.model.WaterUsage;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,8 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
     WaterConsumptionDAO wDao = new WaterConsumptionDAOImpl();
 
     @Override
-    public void logElectricityUsage(ElectricityUsage electricityUsage, StreamObserver<Empty> observer)
+    public void logElectricityUsage(
+        via.generatedprotos.ElectricityUsage electricityUsage, StreamObserver<Empty> observer)
     {
         System.out.println("Got a request in LogElectricityUsage With:" + electricityUsage.toString());
 
@@ -33,7 +34,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         int userId = electricityUsage.getUserId();
 
         // creating ElectricityUsageImpl
-        ElectricityUsageImpl sendElectricity = new ElectricityUsageImpl(amount,month,year,userId);
+        ElectricityUsage sendElectricity = new ElectricityUsage(amount,month,year,userId);
 
         // sending ElectricityUsageImpl to database
         eDao.addElectricityData(sendElectricity);
@@ -44,7 +45,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
     }
 
     @Override
-    public void logWaterUsage(WaterUsage waterUsage, StreamObserver<Empty> observer)
+    public void logWaterUsage(via.generatedprotos.WaterUsage waterUsage, StreamObserver<Empty> observer)
     {
         System.out.println("Got a request in logWaterUsage With:" + waterUsage.toString());
         // set up the arguments for the WaterUsageImpl
@@ -55,7 +56,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         int userId = waterUsage.getUserId();
 
         // creating WaterUsageImpl
-        WaterUsageImpl sendWater = new WaterUsageImpl(amount,month,year,userId);
+        WaterUsage sendWater = new WaterUsage(amount,month,year,userId);
 
         // sending WaterUsageImpl to database
         wDao.addWaterData(sendWater);
@@ -76,10 +77,10 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         // commented for testing
         // todo uncomment after done testing
 
-        ArrayList<WaterUsageImpl> wUsages = wDao.getAllWaterUsage();
+        ArrayList<WaterUsage> wUsages = wDao.getAllWaterUsage();
 
         System.out.println(wUsages.toArray());
-        ArrayList<ElectricityUsageImpl> eUsages = eDao.getAllElectricityUsage();
+        ArrayList<ElectricityUsage> eUsages = eDao.getAllElectricityUsage();
 
         // for testing
         // todo delete later
@@ -97,14 +98,14 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
 
         // Setting the GRPc Objects
 
-        ArrayList<WaterUsage> wGrpcUsages = new ArrayList<>();
-        ArrayList<ElectricityUsage> eGrpcUsages = new ArrayList<>();
+        ArrayList<via.generatedprotos.WaterUsage> wGrpcUsages = new ArrayList<>();
+        ArrayList<via.generatedprotos.ElectricityUsage> eGrpcUsages = new ArrayList<>();
 
 
         // add all the database water info in one GRPc Object
-        for (WaterUsageImpl water : wUsages)
+        for (WaterUsage water : wUsages)
         {
-            WaterUsage temporaryW = WaterUsage.newBuilder()
+            via.generatedprotos.WaterUsage temporaryW = via.generatedprotos.WaterUsage.newBuilder()
                     .setId(water.getId())
                     .setAmount(water.getAmount())
                     .setMonth(water.getMonth())
@@ -117,9 +118,9 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
 
 
         // add all the database electricity info in one GRPc Object
-        for (ElectricityUsageImpl electr : eUsages)
+        for (ElectricityUsage electr : eUsages)
         {
-            ElectricityUsage temporaryE = ElectricityUsage.newBuilder()
+            via.generatedprotos.ElectricityUsage temporaryE = via.generatedprotos.ElectricityUsage.newBuilder()
                     .setId(electr.getId())
                     .setAmount(electr.getAmount())
                     .setMonth(electr.getMonth())

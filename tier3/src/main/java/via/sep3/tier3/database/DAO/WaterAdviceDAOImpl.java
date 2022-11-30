@@ -2,7 +2,7 @@ package via.sep3.tier3.database.DAO;
 
 import via.sep3.tier3.database.DAOInterfaces.WaterAdviceDAO;
 import via.sep3.tier3.database.DatabaseFront;
-import via.sep3.tier3.model.WaterUsageAdviceImpl;
+import via.sep3.tier3.model.WaterUsageAdvice;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class WaterAdviceDAOImpl implements WaterAdviceDAO {
     @Override
-    public void addWaterAdvice(WaterUsageAdviceImpl waterAdvice) {
+    public void addWaterAdvice(WaterUsageAdvice waterAdvice) {
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement(
@@ -28,14 +28,14 @@ public class WaterAdviceDAOImpl implements WaterAdviceDAO {
     }
 
     @Override
-    public ArrayList<WaterUsageAdviceImpl> getAllWaterUsageAdvice() {
-        ArrayList<WaterUsageAdviceImpl> waterAdvice = new ArrayList<>();
+    public ArrayList<WaterUsageAdvice> getAllWaterUsageAdvice() {
+        ArrayList<WaterUsageAdvice> waterAdvice = new ArrayList<>();
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("select * from WaterUsageAdvice");
             ResultSet results = statement.executeQuery();
             while (results.next()) {
-                WaterUsageAdviceImpl w = new WaterUsageAdviceImpl
+                WaterUsageAdvice w = new WaterUsageAdvice
                         (
                                 results.getInt("id"),
                                 results.getString("text")

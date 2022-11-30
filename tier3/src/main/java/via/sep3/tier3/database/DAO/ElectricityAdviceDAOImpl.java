@@ -2,8 +2,7 @@ package via.sep3.tier3.database.DAO;
 
 import via.sep3.tier3.database.DAOInterfaces.ElectricityAdviceDAO;
 import via.sep3.tier3.database.DatabaseFront;
-import via.sep3.tier3.model.ElectricityUsageAdviceImpl;
-import via.sep3.tier3.model.ElectricityUsageImpl;
+import via.sep3.tier3.model.ElectricityUsageAdvice;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +15,7 @@ public class ElectricityAdviceDAOImpl implements ElectricityAdviceDAO {
     DatabaseFront database = DatabaseFront.getInstance();
 
     @Override
-    public void addElectricityAdvice(ElectricityUsageAdviceImpl electricityAdvice) {
+    public void addElectricityAdvice(ElectricityUsageAdvice electricityAdvice) {
 
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
@@ -33,14 +32,14 @@ public class ElectricityAdviceDAOImpl implements ElectricityAdviceDAO {
     }
 
     @Override
-    public ArrayList<ElectricityUsageAdviceImpl> getAllElectricityUsageAdvice() {
-        ArrayList<ElectricityUsageAdviceImpl> electricityUsageAdvices = new ArrayList<>();
+    public ArrayList<ElectricityUsageAdvice> getAllElectricityUsageAdvice() {
+        ArrayList<ElectricityUsageAdvice> electricityUsageAdvices = new ArrayList<>();
         try {
             Connection connection = database.getConnection();
             PreparedStatement statement = connection.prepareStatement("select * from ElectricityUsageAdvice");
             ResultSet resultSet = statement.executeQuery();
 
-            ElectricityUsageAdviceImpl currentAdvice = null;
+            ElectricityUsageAdvice currentAdvice = null;
             while(resultSet.next()){
                 int id = resultSet.getInt("id");
                 if(currentAdvice == null || id != currentAdvice.getId()){

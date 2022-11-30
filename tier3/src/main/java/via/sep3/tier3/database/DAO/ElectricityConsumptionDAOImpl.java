@@ -2,7 +2,7 @@ package via.sep3.tier3.database.DAO;
 
 import via.sep3.tier3.database.DAOInterfaces.ElectricityConsumptionDAO;
 import via.sep3.tier3.database.DatabaseFront;
-import via.sep3.tier3.model.ElectricityUsageImpl;
+import via.sep3.tier3.model.ElectricityUsage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ElectricityConsumptionDAOImpl implements ElectricityConsumptionDAO {
 
     @Override
-    public void addElectricityData(ElectricityUsageImpl electricityUsage) {
+    public void addElectricityData(ElectricityUsage electricityUsage) {
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement(
@@ -32,8 +32,8 @@ public class ElectricityConsumptionDAOImpl implements ElectricityConsumptionDAO 
     }
 
     @Override
-    public ArrayList<ElectricityUsageImpl> getAllElectricityUsage() {
-        ArrayList<ElectricityUsageImpl> electrUsages = new ArrayList<>();
+    public ArrayList<ElectricityUsage> getAllElectricityUsage() {
+        ArrayList<ElectricityUsage> electrUsages = new ArrayList<>();
 
         try {
             Connection connection = DatabaseFront.getInstance().getConnection();
@@ -43,7 +43,7 @@ public class ElectricityConsumptionDAOImpl implements ElectricityConsumptionDAO 
             ResultSet results = statement.executeQuery();
             while (results.next()){
 
-                ElectricityUsageImpl e = new ElectricityUsageImpl(
+                ElectricityUsage e = new ElectricityUsage(
                         results.getInt("id"),
                         results.getDouble("amount"),
                         results.getInt("month"),
