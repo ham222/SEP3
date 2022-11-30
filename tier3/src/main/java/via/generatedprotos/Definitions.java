@@ -45,10 +45,15 @@ public final class Definitions {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_generatedprotos_Empty_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_generatedprotos_ListUsage_descriptor;
+    internal_static_generatedprotos_ListWaterUsage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_generatedprotos_ListUsage_fieldAccessorTable;
+      internal_static_generatedprotos_ListWaterUsage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_generatedprotos_ListElectricityUsage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -67,17 +72,21 @@ public final class Definitions {
       "\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(\005\022\016\n\006userId" +
       "\030\005 \001(\005\",\n\020WaterUsageAdvice\022\n\n\002id\030\001 \001(\005\022\014" +
       "\n\004body\030\002 \001(\t\"2\n\026ElectricityUsageAdvice\022\n" +
-      "\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"\007\n\005Empty\"o\n\tLis" +
-      "tUsage\022*\n\005water\030\001 \003(\0132\033.generatedprotos." +
-      "WaterUsage\0226\n\013electricity\030\002 \003(\0132!.genera" +
-      "tedprotos.ElectricityUsage2\356\001\n\024Resources" +
-      "Consumption\022P\n\023LogElectricityUsage\022!.gen" +
-      "eratedprotos.ElectricityUsage\032\026.generate" +
-      "dprotos.Empty\022D\n\rLogWaterUsage\022\033.generat" +
-      "edprotos.WaterUsage\032\026.generatedprotos.Em" +
-      "pty\022>\n\010GetUsage\022\026.generatedprotos.Empty\032" +
-      "\032.generatedprotos.ListUsageB\027\n\023via.gener" +
-      "atedprotosP\001b\006proto3"
+      "\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"\007\n\005Empty\"<\n\016Lis" +
+      "tWaterUsage\022*\n\005water\030\001 \003(\0132\033.generatedpr" +
+      "otos.WaterUsage\"N\n\024ListElectricityUsage\022" +
+      "6\n\013electricity\030\001 \003(\0132!.generatedprotos.E" +
+      "lectricityUsage2\336\002\n\024ResourcesConsumption" +
+      "\022[\n\023LogElectricityUsage\022!.generatedproto" +
+      "s.ElectricityUsage\032!.generatedprotos.Ele" +
+      "ctricityUsage\022I\n\rLogWaterUsage\022\033.generat" +
+      "edprotos.WaterUsage\032\033.generatedprotos.Wa" +
+      "terUsage\022H\n\rGetWaterUsage\022\026.generatedpro" +
+      "tos.Empty\032\037.generatedprotos.ListWaterUsa" +
+      "ge\022T\n\023GetElectricityUsage\022\026.generatedpro" +
+      "tos.Empty\032%.generatedprotos.ListElectric" +
+      "ityUsageB\027\n\023via.generatedprotosP\001b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -119,12 +128,18 @@ public final class Definitions {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_generatedprotos_Empty_descriptor,
         new java.lang.String[] { });
-    internal_static_generatedprotos_ListUsage_descriptor =
+    internal_static_generatedprotos_ListWaterUsage_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_generatedprotos_ListUsage_fieldAccessorTable = new
+    internal_static_generatedprotos_ListWaterUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_generatedprotos_ListUsage_descriptor,
-        new java.lang.String[] { "Water", "Electricity", });
+        internal_static_generatedprotos_ListWaterUsage_descriptor,
+        new java.lang.String[] { "Water", });
+    internal_static_generatedprotos_ListElectricityUsage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_generatedprotos_ListElectricityUsage_descriptor,
+        new java.lang.String[] { "Electricity", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

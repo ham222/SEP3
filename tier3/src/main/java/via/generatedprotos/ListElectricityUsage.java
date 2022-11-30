@@ -4,19 +4,18 @@
 package via.generatedprotos;
 
 /**
- * Protobuf type {@code generatedprotos.ListUsage}
+ * Protobuf type {@code generatedprotos.ListElectricityUsage}
  */
-public final class ListUsage extends
+public final class ListElectricityUsage extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:generatedprotos.ListUsage)
-    ListUsageOrBuilder {
+    // @@protoc_insertion_point(message_implements:generatedprotos.ListElectricityUsage)
+    ListElectricityUsageOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListUsage.newBuilder() to construct.
-  private ListUsage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListElectricityUsage.newBuilder() to construct.
+  private ListElectricityUsage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListUsage() {
-    water_ = java.util.Collections.emptyList();
+  private ListElectricityUsage() {
     electricity_ = java.util.Collections.emptyList();
   }
 
@@ -24,7 +23,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListUsage();
+    return new ListElectricityUsage();
   }
 
   @java.lang.Override
@@ -32,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ListUsage(
+  private ListElectricityUsage(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -53,17 +52,8 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              water_ = new java.util.ArrayList<via.generatedprotos.WaterUsage>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            water_.add(
-                input.readMessage(via.generatedprotos.WaterUsage.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               electricity_ = new java.util.ArrayList<via.generatedprotos.ElectricityUsage>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             electricity_.add(
                 input.readMessage(via.generatedprotos.ElectricityUsage.parser(), extensionRegistry));
@@ -87,9 +77,6 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        water_ = java.util.Collections.unmodifiableList(water_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         electricity_ = java.util.Collections.unmodifiableList(electricity_);
       }
       this.unknownFields = unknownFields.build();
@@ -98,68 +85,28 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.generatedprotos.Definitions.internal_static_generatedprotos_ListUsage_descriptor;
+    return via.generatedprotos.Definitions.internal_static_generatedprotos_ListElectricityUsage_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.generatedprotos.Definitions.internal_static_generatedprotos_ListUsage_fieldAccessorTable
+    return via.generatedprotos.Definitions.internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.generatedprotos.ListUsage.class, via.generatedprotos.ListUsage.Builder.class);
+            via.generatedprotos.ListElectricityUsage.class, via.generatedprotos.ListElectricityUsage.Builder.class);
   }
 
-  public static final int WATER_FIELD_NUMBER = 1;
-  private java.util.List<via.generatedprotos.WaterUsage> water_;
-  /**
-   * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-   */
-  @java.lang.Override
-  public java.util.List<via.generatedprotos.WaterUsage> getWaterList() {
-    return water_;
-  }
-  /**
-   * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends via.generatedprotos.WaterUsageOrBuilder> 
-      getWaterOrBuilderList() {
-    return water_;
-  }
-  /**
-   * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-   */
-  @java.lang.Override
-  public int getWaterCount() {
-    return water_.size();
-  }
-  /**
-   * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-   */
-  @java.lang.Override
-  public via.generatedprotos.WaterUsage getWater(int index) {
-    return water_.get(index);
-  }
-  /**
-   * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-   */
-  @java.lang.Override
-  public via.generatedprotos.WaterUsageOrBuilder getWaterOrBuilder(
-      int index) {
-    return water_.get(index);
-  }
-
-  public static final int ELECTRICITY_FIELD_NUMBER = 2;
+  public static final int ELECTRICITY_FIELD_NUMBER = 1;
   private java.util.List<via.generatedprotos.ElectricityUsage> electricity_;
   /**
-   * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+   * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
    */
   @java.lang.Override
   public java.util.List<via.generatedprotos.ElectricityUsage> getElectricityList() {
     return electricity_;
   }
   /**
-   * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+   * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends via.generatedprotos.ElectricityUsageOrBuilder> 
@@ -167,21 +114,21 @@ private static final long serialVersionUID = 0L;
     return electricity_;
   }
   /**
-   * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+   * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
    */
   @java.lang.Override
   public int getElectricityCount() {
     return electricity_.size();
   }
   /**
-   * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+   * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
    */
   @java.lang.Override
   public via.generatedprotos.ElectricityUsage getElectricity(int index) {
     return electricity_.get(index);
   }
   /**
-   * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+   * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
    */
   @java.lang.Override
   public via.generatedprotos.ElectricityUsageOrBuilder getElectricityOrBuilder(
@@ -203,11 +150,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < water_.size(); i++) {
-      output.writeMessage(1, water_.get(i));
-    }
     for (int i = 0; i < electricity_.size(); i++) {
-      output.writeMessage(2, electricity_.get(i));
+      output.writeMessage(1, electricity_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -218,13 +162,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < water_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, water_.get(i));
-    }
     for (int i = 0; i < electricity_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, electricity_.get(i));
+        .computeMessageSize(1, electricity_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -236,13 +176,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.generatedprotos.ListUsage)) {
+    if (!(obj instanceof via.generatedprotos.ListElectricityUsage)) {
       return super.equals(obj);
     }
-    via.generatedprotos.ListUsage other = (via.generatedprotos.ListUsage) obj;
+    via.generatedprotos.ListElectricityUsage other = (via.generatedprotos.ListElectricityUsage) obj;
 
-    if (!getWaterList()
-        .equals(other.getWaterList())) return false;
     if (!getElectricityList()
         .equals(other.getElectricityList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -256,10 +194,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getWaterCount() > 0) {
-      hash = (37 * hash) + WATER_FIELD_NUMBER;
-      hash = (53 * hash) + getWaterList().hashCode();
-    }
     if (getElectricityCount() > 0) {
       hash = (37 * hash) + ELECTRICITY_FIELD_NUMBER;
       hash = (53 * hash) + getElectricityList().hashCode();
@@ -269,69 +203,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.generatedprotos.ListUsage parseFrom(byte[] data)
+  public static via.generatedprotos.ListElectricityUsage parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.generatedprotos.ListUsage parseFrom(java.io.InputStream input)
+  public static via.generatedprotos.ListElectricityUsage parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.generatedprotos.ListUsage parseDelimitedFrom(java.io.InputStream input)
+  public static via.generatedprotos.ListElectricityUsage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static via.generatedprotos.ListUsage parseDelimitedFrom(
+  public static via.generatedprotos.ListElectricityUsage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.generatedprotos.ListUsage parseFrom(
+  public static via.generatedprotos.ListElectricityUsage parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -344,7 +278,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.generatedprotos.ListUsage prototype) {
+  public static Builder newBuilder(via.generatedprotos.ListElectricityUsage prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -360,26 +294,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code generatedprotos.ListUsage}
+   * Protobuf type {@code generatedprotos.ListElectricityUsage}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:generatedprotos.ListUsage)
-      via.generatedprotos.ListUsageOrBuilder {
+      // @@protoc_insertion_point(builder_implements:generatedprotos.ListElectricityUsage)
+      via.generatedprotos.ListElectricityUsageOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListUsage_descriptor;
+      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListElectricityUsage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListUsage_fieldAccessorTable
+      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.generatedprotos.ListUsage.class, via.generatedprotos.ListUsage.Builder.class);
+              via.generatedprotos.ListElectricityUsage.class, via.generatedprotos.ListElectricityUsage.Builder.class);
     }
 
-    // Construct using via.generatedprotos.ListUsage.newBuilder()
+    // Construct using via.generatedprotos.ListElectricityUsage.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -392,22 +326,15 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getWaterFieldBuilder();
         getElectricityFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (waterBuilder_ == null) {
-        water_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      } else {
-        waterBuilder_.clear();
-      }
       if (electricityBuilder_ == null) {
         electricity_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         electricityBuilder_.clear();
       }
@@ -417,17 +344,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListUsage_descriptor;
+      return via.generatedprotos.Definitions.internal_static_generatedprotos_ListElectricityUsage_descriptor;
     }
 
     @java.lang.Override
-    public via.generatedprotos.ListUsage getDefaultInstanceForType() {
-      return via.generatedprotos.ListUsage.getDefaultInstance();
+    public via.generatedprotos.ListElectricityUsage getDefaultInstanceForType() {
+      return via.generatedprotos.ListElectricityUsage.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.generatedprotos.ListUsage build() {
-      via.generatedprotos.ListUsage result = buildPartial();
+    public via.generatedprotos.ListElectricityUsage build() {
+      via.generatedprotos.ListElectricityUsage result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -435,22 +362,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.generatedprotos.ListUsage buildPartial() {
-      via.generatedprotos.ListUsage result = new via.generatedprotos.ListUsage(this);
+    public via.generatedprotos.ListElectricityUsage buildPartial() {
+      via.generatedprotos.ListElectricityUsage result = new via.generatedprotos.ListElectricityUsage(this);
       int from_bitField0_ = bitField0_;
-      if (waterBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          water_ = java.util.Collections.unmodifiableList(water_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.water_ = water_;
-      } else {
-        result.water_ = waterBuilder_.build();
-      }
       if (electricityBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           electricity_ = java.util.Collections.unmodifiableList(electricity_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.electricity_ = electricity_;
       } else {
@@ -494,47 +412,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.generatedprotos.ListUsage) {
-        return mergeFrom((via.generatedprotos.ListUsage)other);
+      if (other instanceof via.generatedprotos.ListElectricityUsage) {
+        return mergeFrom((via.generatedprotos.ListElectricityUsage)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.generatedprotos.ListUsage other) {
-      if (other == via.generatedprotos.ListUsage.getDefaultInstance()) return this;
-      if (waterBuilder_ == null) {
-        if (!other.water_.isEmpty()) {
-          if (water_.isEmpty()) {
-            water_ = other.water_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureWaterIsMutable();
-            water_.addAll(other.water_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.water_.isEmpty()) {
-          if (waterBuilder_.isEmpty()) {
-            waterBuilder_.dispose();
-            waterBuilder_ = null;
-            water_ = other.water_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            waterBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getWaterFieldBuilder() : null;
-          } else {
-            waterBuilder_.addAllMessages(other.water_);
-          }
-        }
-      }
+    public Builder mergeFrom(via.generatedprotos.ListElectricityUsage other) {
+      if (other == via.generatedprotos.ListElectricityUsage.getDefaultInstance()) return this;
       if (electricityBuilder_ == null) {
         if (!other.electricity_.isEmpty()) {
           if (electricity_.isEmpty()) {
             electricity_ = other.electricity_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureElectricityIsMutable();
             electricity_.addAll(other.electricity_);
@@ -547,7 +439,7 @@ private static final long serialVersionUID = 0L;
             electricityBuilder_.dispose();
             electricityBuilder_ = null;
             electricity_ = other.electricity_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             electricityBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getElectricityFieldBuilder() : null;
@@ -571,11 +463,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      via.generatedprotos.ListUsage parsedMessage = null;
+      via.generatedprotos.ListElectricityUsage parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (via.generatedprotos.ListUsage) e.getUnfinishedMessage();
+        parsedMessage = (via.generatedprotos.ListElectricityUsage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -586,252 +478,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<via.generatedprotos.WaterUsage> water_ =
-      java.util.Collections.emptyList();
-    private void ensureWaterIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        water_ = new java.util.ArrayList<via.generatedprotos.WaterUsage>(water_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        via.generatedprotos.WaterUsage, via.generatedprotos.WaterUsage.Builder, via.generatedprotos.WaterUsageOrBuilder> waterBuilder_;
-
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public java.util.List<via.generatedprotos.WaterUsage> getWaterList() {
-      if (waterBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(water_);
-      } else {
-        return waterBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public int getWaterCount() {
-      if (waterBuilder_ == null) {
-        return water_.size();
-      } else {
-        return waterBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public via.generatedprotos.WaterUsage getWater(int index) {
-      if (waterBuilder_ == null) {
-        return water_.get(index);
-      } else {
-        return waterBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder setWater(
-        int index, via.generatedprotos.WaterUsage value) {
-      if (waterBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWaterIsMutable();
-        water_.set(index, value);
-        onChanged();
-      } else {
-        waterBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder setWater(
-        int index, via.generatedprotos.WaterUsage.Builder builderForValue) {
-      if (waterBuilder_ == null) {
-        ensureWaterIsMutable();
-        water_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        waterBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder addWater(via.generatedprotos.WaterUsage value) {
-      if (waterBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWaterIsMutable();
-        water_.add(value);
-        onChanged();
-      } else {
-        waterBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder addWater(
-        int index, via.generatedprotos.WaterUsage value) {
-      if (waterBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWaterIsMutable();
-        water_.add(index, value);
-        onChanged();
-      } else {
-        waterBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder addWater(
-        via.generatedprotos.WaterUsage.Builder builderForValue) {
-      if (waterBuilder_ == null) {
-        ensureWaterIsMutable();
-        water_.add(builderForValue.build());
-        onChanged();
-      } else {
-        waterBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder addWater(
-        int index, via.generatedprotos.WaterUsage.Builder builderForValue) {
-      if (waterBuilder_ == null) {
-        ensureWaterIsMutable();
-        water_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        waterBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder addAllWater(
-        java.lang.Iterable<? extends via.generatedprotos.WaterUsage> values) {
-      if (waterBuilder_ == null) {
-        ensureWaterIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, water_);
-        onChanged();
-      } else {
-        waterBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder clearWater() {
-      if (waterBuilder_ == null) {
-        water_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        waterBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public Builder removeWater(int index) {
-      if (waterBuilder_ == null) {
-        ensureWaterIsMutable();
-        water_.remove(index);
-        onChanged();
-      } else {
-        waterBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public via.generatedprotos.WaterUsage.Builder getWaterBuilder(
-        int index) {
-      return getWaterFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public via.generatedprotos.WaterUsageOrBuilder getWaterOrBuilder(
-        int index) {
-      if (waterBuilder_ == null) {
-        return water_.get(index);  } else {
-        return waterBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public java.util.List<? extends via.generatedprotos.WaterUsageOrBuilder> 
-         getWaterOrBuilderList() {
-      if (waterBuilder_ != null) {
-        return waterBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(water_);
-      }
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public via.generatedprotos.WaterUsage.Builder addWaterBuilder() {
-      return getWaterFieldBuilder().addBuilder(
-          via.generatedprotos.WaterUsage.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public via.generatedprotos.WaterUsage.Builder addWaterBuilder(
-        int index) {
-      return getWaterFieldBuilder().addBuilder(
-          index, via.generatedprotos.WaterUsage.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .generatedprotos.WaterUsage water = 1;</code>
-     */
-    public java.util.List<via.generatedprotos.WaterUsage.Builder> 
-         getWaterBuilderList() {
-      return getWaterFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        via.generatedprotos.WaterUsage, via.generatedprotos.WaterUsage.Builder, via.generatedprotos.WaterUsageOrBuilder> 
-        getWaterFieldBuilder() {
-      if (waterBuilder_ == null) {
-        waterBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            via.generatedprotos.WaterUsage, via.generatedprotos.WaterUsage.Builder, via.generatedprotos.WaterUsageOrBuilder>(
-                water_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
-        water_ = null;
-      }
-      return waterBuilder_;
-    }
-
     private java.util.List<via.generatedprotos.ElectricityUsage> electricity_ =
       java.util.Collections.emptyList();
     private void ensureElectricityIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         electricity_ = new java.util.ArrayList<via.generatedprotos.ElectricityUsage>(electricity_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -839,7 +491,7 @@ private static final long serialVersionUID = 0L;
         via.generatedprotos.ElectricityUsage, via.generatedprotos.ElectricityUsage.Builder, via.generatedprotos.ElectricityUsageOrBuilder> electricityBuilder_;
 
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public java.util.List<via.generatedprotos.ElectricityUsage> getElectricityList() {
       if (electricityBuilder_ == null) {
@@ -849,7 +501,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public int getElectricityCount() {
       if (electricityBuilder_ == null) {
@@ -859,7 +511,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public via.generatedprotos.ElectricityUsage getElectricity(int index) {
       if (electricityBuilder_ == null) {
@@ -869,7 +521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder setElectricity(
         int index, via.generatedprotos.ElectricityUsage value) {
@@ -886,7 +538,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder setElectricity(
         int index, via.generatedprotos.ElectricityUsage.Builder builderForValue) {
@@ -900,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder addElectricity(via.generatedprotos.ElectricityUsage value) {
       if (electricityBuilder_ == null) {
@@ -916,7 +568,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder addElectricity(
         int index, via.generatedprotos.ElectricityUsage value) {
@@ -933,7 +585,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder addElectricity(
         via.generatedprotos.ElectricityUsage.Builder builderForValue) {
@@ -947,7 +599,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder addElectricity(
         int index, via.generatedprotos.ElectricityUsage.Builder builderForValue) {
@@ -961,7 +613,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder addAllElectricity(
         java.lang.Iterable<? extends via.generatedprotos.ElectricityUsage> values) {
@@ -976,12 +628,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder clearElectricity() {
       if (electricityBuilder_ == null) {
         electricity_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         electricityBuilder_.clear();
@@ -989,7 +641,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public Builder removeElectricity(int index) {
       if (electricityBuilder_ == null) {
@@ -1002,14 +654,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public via.generatedprotos.ElectricityUsage.Builder getElectricityBuilder(
         int index) {
       return getElectricityFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public via.generatedprotos.ElectricityUsageOrBuilder getElectricityOrBuilder(
         int index) {
@@ -1019,7 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public java.util.List<? extends via.generatedprotos.ElectricityUsageOrBuilder> 
          getElectricityOrBuilderList() {
@@ -1030,14 +682,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public via.generatedprotos.ElectricityUsage.Builder addElectricityBuilder() {
       return getElectricityFieldBuilder().addBuilder(
           via.generatedprotos.ElectricityUsage.getDefaultInstance());
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public via.generatedprotos.ElectricityUsage.Builder addElectricityBuilder(
         int index) {
@@ -1045,7 +697,7 @@ private static final long serialVersionUID = 0L;
           index, via.generatedprotos.ElectricityUsage.getDefaultInstance());
     }
     /**
-     * <code>repeated .generatedprotos.ElectricityUsage electricity = 2;</code>
+     * <code>repeated .generatedprotos.ElectricityUsage electricity = 1;</code>
      */
     public java.util.List<via.generatedprotos.ElectricityUsage.Builder> 
          getElectricityBuilderList() {
@@ -1058,7 +710,7 @@ private static final long serialVersionUID = 0L;
         electricityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             via.generatedprotos.ElectricityUsage, via.generatedprotos.ElectricityUsage.Builder, via.generatedprotos.ElectricityUsageOrBuilder>(
                 electricity_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         electricity_ = null;
@@ -1078,41 +730,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:generatedprotos.ListUsage)
+    // @@protoc_insertion_point(builder_scope:generatedprotos.ListElectricityUsage)
   }
 
-  // @@protoc_insertion_point(class_scope:generatedprotos.ListUsage)
-  private static final via.generatedprotos.ListUsage DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:generatedprotos.ListElectricityUsage)
+  private static final via.generatedprotos.ListElectricityUsage DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.generatedprotos.ListUsage();
+    DEFAULT_INSTANCE = new via.generatedprotos.ListElectricityUsage();
   }
 
-  public static via.generatedprotos.ListUsage getDefaultInstance() {
+  public static via.generatedprotos.ListElectricityUsage getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListUsage>
-      PARSER = new com.google.protobuf.AbstractParser<ListUsage>() {
+  private static final com.google.protobuf.Parser<ListElectricityUsage>
+      PARSER = new com.google.protobuf.AbstractParser<ListElectricityUsage>() {
     @java.lang.Override
-    public ListUsage parsePartialFrom(
+    public ListElectricityUsage parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ListUsage(input, extensionRegistry);
+      return new ListElectricityUsage(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<ListUsage> parser() {
+  public static com.google.protobuf.Parser<ListElectricityUsage> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListUsage> getParserForType() {
+  public com.google.protobuf.Parser<ListElectricityUsage> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public via.generatedprotos.ListUsage getDefaultInstanceForType() {
+  public via.generatedprotos.ListElectricityUsage getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -15,7 +15,8 @@ message WaterUsage{
   double amount = 2;
   int32 month = 3;
   int32 year = 4;
-  int32 userId=5;
+  int32 userId = 5;
+
 }
 
 message ElectricityUsage{
@@ -23,7 +24,7 @@ message ElectricityUsage{
   double amount = 2;
   int32 month = 3;
   int32 year = 4;
-  int32 userId=5;
+  int32 userId = 5;
 }
 
 message WaterUsageAdvice{
@@ -38,13 +39,16 @@ message ElectricityUsageAdvice{
 
 message Empty{}
 
-message ListUsage{
+message ListWaterUsage{
   repeated WaterUsage water =1;
-  repeated ElectricityUsage electricity =2;
+}
+message ListElectricityUsage{
+  repeated ElectricityUsage electricity =1;
 }
 
 service ResourcesConsumption{
-  rpc LogElectricityUsage(ElectricityUsage) returns (Empty);
-  rpc LogWaterUsage(WaterUsage) returns (Empty);
-  rpc GetUsage(Empty) returns (ListUsage);
+  rpc LogElectricityUsage(ElectricityUsage) returns (ElectricityUsage);
+  rpc LogWaterUsage(WaterUsage) returns (WaterUsage);
+  rpc GetWaterUsage(Empty) returns (ListWaterUsage);
+  rpc GetElectricityUsage(Empty) returns (ListElectricityUsage);
 }

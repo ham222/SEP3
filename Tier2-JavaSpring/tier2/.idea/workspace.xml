@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tests/obj/Debug/net6.0/Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tests/obj/Debug/net6.0/Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Pages/ViewWaterUsage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Pages/ViewWaterUsage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/blazor.boot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/9LgcF8l9.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/9LgcF8l9.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/Rr9djBJB.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/Rr9djBJB.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/staticwebassets.pack.sentinel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/ElectricityUsageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/ElectricityUsageGrpcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/UserGrpcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/DAOs/WaterUsageDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/WaterUsageGrpcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -43,12 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="via.sep3.tier2.logic.DAOs" />
@@ -121,10 +135,8 @@
       <workItem from="1667395937544" duration="2317000" />
       <workItem from="1667564335306" duration="429000" />
       <workItem from="1667564776067" duration="66000" />
-      <workItem from="1669723398346" duration="53000" />
-      <workItem from="1669723609389" duration="3829000" />
-      <workItem from="1669801512048" duration="812000" />
-      <workItem from="1669802524413" duration="702000" />
+      <workItem from="1667982012820" duration="1728000" />
+      <workItem from="1668774585263" duration="1363000" />
     </task>
     <servers />
   </component>
@@ -141,5 +153,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
