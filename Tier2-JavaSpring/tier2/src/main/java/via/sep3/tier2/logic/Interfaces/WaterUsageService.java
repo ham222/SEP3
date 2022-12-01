@@ -4,6 +4,6 @@ import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
 
-public interface WaterUsageGrpc {
+public interface WaterUsageService {
     ArrayList<WaterUsage> getUserWaterUsages(int id);
 }
