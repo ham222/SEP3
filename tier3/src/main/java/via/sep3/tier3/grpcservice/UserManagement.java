@@ -6,6 +6,8 @@ import via.generatedprotos.*;
 import via.sep3.tier3.database.entity.UserEntity;
 import via.sep3.tier3.database.service.UserService;
 
+import java.util.ArrayList;
+
 
 @GRpcService
 public class UserManagement extends UserManagementGrpc.UserManagementImplBase
@@ -47,6 +49,65 @@ public class UserManagement extends UserManagementGrpc.UserManagementImplBase
     {
         userService.deleteUser(id.getId());
         observer.onNext(Empty.newBuilder().build());
+        observer.onCompleted();
+    }
+
+    @Override
+    public void updateUser(User user, StreamObserver<User> observer)
+    {
+        UserEntity userEntity = userService.getUserById(user.getId());
+        userEntity.setUsername(user.getUsername());
+        userEntity.setPassword(user.getPassword());
+        userEntity.setRole(user.getRole());
+        userEntity.setId(user.getId());
+        userEntity = userService.updateUser(userEntity);
+        User userToSend = User.newBuilder()
+                .setId(userEntity.getId())
+                .setUsername(userEntity.getUsername())
+                .setPassword(userEntity.getPassword())
+                .setRole(userEntity.getRole())
+                .build();
+
+        observer.onNext(userToSend);
+        observer.onCompleted();
+    }
+
+    @Override
+    public void getUsers(Empty empty, StreamObserver<ListUsers> observer)
+    {
+        ArrayList<UserEntity> allUsers = (ArrayList<UserEntity>) userService.getAllUsers();
+        ArrayList<User> grpcUsers = new ArrayList<>();
+        User grpcUser;
+        for (UserEntity user : allUsers)
+        {
+            grpcUser = User.newBuilder()
+                    .setId(user.getId())
+                    .setUsername(user.getUsername())
+                    .setPassword(user.getPassword())
+                    .setRole(user.getRole())
+                    .build();
+            grpcUsers.add(grpcUser);
+        }
+
+        ListUsers listUsers = ListUsers.newBuilder()
+                .addAllUsers(grpcUsers)
+                .build();
+        observer.onNext(listUsers);
+        observer.onCompleted();
+    }
+
+    @Override
+    public void getUserById(ID id, StreamObserver<User> observer)
+    {
+        UserEntity userEntity = userService.getUserById(id.getId());
+        User userToSend = User.newBuilder()
+                .setId(userEntity.getId())
+                .setUsername(userEntity.getUsername())
+                .setPassword(userEntity.getPassword())
+                .setRole(userEntity.getRole())
+                .build();
+
+        observer.onNext(userToSend);
         observer.onCompleted();
     }
 }

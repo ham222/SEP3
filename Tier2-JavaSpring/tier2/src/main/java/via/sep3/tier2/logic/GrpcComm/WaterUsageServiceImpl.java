@@ -1,22 +1,24 @@
 package via.sep3.tier2.logic.GrpcComm;
 
+import org.springframework.stereotype.Component;
 import via.sep3.tier2.GrpcClient;
-import via.sep3.tier2.logic.Interfaces.WaterUsageGrpc;
+import via.sep3.tier2.logic.Interfaces.WaterUsageService;
 import via.sep3.tier2.model.UsageList;
 import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
 
-public class WaterUsageGrpcImpl implements WaterUsageGrpc {
+@Component
+public class WaterUsageServiceImpl implements WaterUsageService {
 
-    private static WaterUsageGrpcImpl instance;
+    private static WaterUsageServiceImpl instance;
 
-    private WaterUsageGrpcImpl(){
+    private WaterUsageServiceImpl(){
     }
 
-    public static WaterUsageGrpcImpl getInstance(){
+    public static WaterUsageServiceImpl getInstance(){
         if(instance==null){
-            instance = new WaterUsageGrpcImpl();
+            instance = new WaterUsageServiceImpl();
         }
         return instance;
     }

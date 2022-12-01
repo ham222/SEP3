@@ -6,6 +6,7 @@ import via.sep3.tier3.database.repository.WaterUsageRepository;
 import via.sep3.tier3.database.service.WaterUsageService;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -54,5 +55,21 @@ public class WaterUsageServiceImpl implements WaterUsageService
     {
         waterUsageRepository.deleteById(id);
 
+    }
+
+    @Override
+    public ArrayList<WaterUsageEntity> getWaterUsageByUserId(int id)
+    {
+        ArrayList<WaterUsageEntity> result = new ArrayList<>();
+        ArrayList<WaterUsageEntity> entities = (ArrayList<WaterUsageEntity>) getAllWaterUsages();
+        for (WaterUsageEntity   entity : entities)
+        {
+            if (entity.getUser().getId() == id)
+            {
+                result.add(entity);
+            }
+        }
+
+        return result;
     }
 }

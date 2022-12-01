@@ -4,7 +4,7 @@ import via.sep3.tier2.model.User;
 
 import java.util.ArrayList;
 
-public interface UserGrpc {
+public interface UserService {
 
     ArrayList<User> getUsers();
 

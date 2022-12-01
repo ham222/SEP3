@@ -2,7 +2,9 @@ package via.sep3.tier2;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import via.generatedprotos.*;
+import via.generatedprotos.Empty;
+import via.generatedprotos.ListUsage;
+import via.generatedprotos.ResourcesConsumptionGrpc;
 import via.sep3.tier2.model.ElectricityUsage;
 import via.sep3.tier2.model.UsageList;
 import via.sep3.tier2.model.WaterUsage;
@@ -71,17 +73,4 @@ public class GrpcClient {
         return usageList;
     }
 
-
-    //TextConverterGrpc.TextConverterBlockingStub stub = TextConverterGrpc.newBlockingStub(channel);
-//    RequestText request = RequestText.newBuilder().setInputText("Lets try").build();
-//
-//    RequestText request2 = RequestText.newBuilder().setInputText("lets get it try").build();
-//
-//    ResponseText response = stub.toUpper(request);
-//        System.out.println("Received: " + response.getOutputText());
-//
-//    ResponseText response2 = stub.capitalizeFirstCharacter(request2);
-//        System.out.println("Received: " + response2.getOutputText());
-//
-//        channel.shutdown();
 }
