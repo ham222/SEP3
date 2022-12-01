@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface ElectricityUsageGrpc {
 
     ArrayList<ElectricityUsage> getUserElectricityUsages(int id);
+
+    void insertElectricityUsage(ElectricityUsage usage);
 }

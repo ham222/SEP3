@@ -2,14 +2,12 @@ package via.sep3.tier2.rest;
 
 import com.google.gson.Gson;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import via.sep3.tier2.logic.GrpcComm.ElectricityUsageGrpcImpl;
 import via.sep3.tier2.logic.GrpcComm.WaterUsageGrpcImpl;
 import via.sep3.tier2.logic.Interfaces.ElectricityUsageGrpc;
 import via.sep3.tier2.logic.Interfaces.WaterUsageGrpc;
+import via.sep3.tier2.model.ElectricityUsage;
 
 @RestController
 @RequestMapping("/api")
@@ -18,6 +16,9 @@ public class RestApiController {
 
     @GetMapping(path = "/users")
     public String getAllUsers() {
+        ElectricityUsage u1 = new ElectricityUsage(1,5.0,6,2022,1);
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(u1));
         return new Gson().toJson("okay");
     }
 
@@ -37,6 +38,18 @@ public class RestApiController {
     public String getAllUserElectricityUsage(@PathVariable int id){
         ElectricityUsageGrpc electricityUsageGrpc = ElectricityUsageGrpcImpl.getInstance();
         return new Gson().toJson(electricityUsageGrpc.getUserElectricityUsages(id));
+    }
+
+    @PostMapping(path="/users/{id}/electricity"/*,consumes = {MediaType.APPLICATION_JSON_VALUE}*/)
+    public String InsertElectricityUsage(@PathVariable String id,@RequestBody ElectricityUsage usage){
+
+        ElectricityUsageGrpc electricityUsageGrpc = ElectricityUsageGrpcImpl.getInstance();
+        try {
+            electricityUsageGrpc.insertElectricityUsage(usage);
+        } catch (Exception e){
+            return e.getMessage();
+        }
+        return usage.toString();
     }
 }
 
