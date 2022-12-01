@@ -5,6 +5,7 @@ import via.sep3.tier3.database.entity.ElectricityUsageEntity;
 import via.sep3.tier3.database.repository.ElectricityUsageRepository;
 import via.sep3.tier3.database.service.ElectricityUsageService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -52,5 +53,23 @@ public class ElectricityUsageServiceImpl implements ElectricityUsageService
     public void deleteElectricityUsage(int id)
     {
         electricityUsageRepository.deleteById(id);
+    }
+
+    @Override
+    public ArrayList<ElectricityUsageEntity> getElectricityUsageByUserId(int id)
+    {
+        ArrayList<ElectricityUsageEntity> result = new ArrayList<>();
+        ArrayList<ElectricityUsageEntity> electricityUsageEntities = (ArrayList<ElectricityUsageEntity>) getAllElectricityUsages();
+
+        for (ElectricityUsageEntity electricityUsageEntity : electricityUsageEntities)
+        {
+            if (electricityUsageEntity.getUser().getId() == id)
+            {
+                result.add(electricityUsageEntity);
+            }
+        }
+
+        return result;
+
     }
 }
