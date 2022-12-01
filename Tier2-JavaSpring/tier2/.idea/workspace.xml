@@ -5,22 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tests/obj/Debug/net6.0/Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tests/obj/Debug/net6.0/Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Pages/ViewWaterUsage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/Pages/ViewWaterUsage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/Tier1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.dll.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/Tier1.pdb.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/Tier1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/blazor.boot.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/9LgcF8l9.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/9LgcF8l9.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/Rr9djBJB.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/Debug/net6.0/build-gz/Rr9djBJB.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/Tier1/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/ElectricityUsageGrpcImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/UserGrpcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/WaterUsageGrpcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -77,6 +80,10 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="via.sep3.tier2" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="via.sep3.tier2.repository.implementations" />
+      <recent name="via.sep3.tier2.repository.Interfaces" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Tier2Application">
@@ -153,6 +160,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

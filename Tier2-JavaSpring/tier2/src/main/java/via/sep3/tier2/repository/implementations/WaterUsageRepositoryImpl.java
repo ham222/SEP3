@@ -1,25 +1,20 @@
-package via.sep3.tier2.logic.GrpcComm;
+package via.sep3.tier2.repository.implementations;
 
+import org.springframework.stereotype.Component;
 import via.sep3.tier2.GrpcClient;
-import via.sep3.tier2.logic.Interfaces.WaterUsageGrpc;
 import via.sep3.tier2.model.UsageList;
 import via.sep3.tier2.model.WaterUsage;
+import via.sep3.tier2.repository.Interfaces.WaterUsageRepository;
 
 import java.util.ArrayList;
 
-public class WaterUsageGrpcImpl implements WaterUsageGrpc {
+@Component
+public class WaterUsageRepositoryImpl implements WaterUsageRepository {
 
-    private static WaterUsageGrpcImpl instance;
 
-    private WaterUsageGrpcImpl(){
+    private WaterUsageRepositoryImpl() {
     }
 
-    public static WaterUsageGrpcImpl getInstance(){
-        if(instance==null){
-            instance = new WaterUsageGrpcImpl();
-        }
-        return instance;
-    }
 
     @Override
     public ArrayList<WaterUsage> getUserWaterUsages(int id) {
@@ -32,10 +27,9 @@ public class WaterUsageGrpcImpl implements WaterUsageGrpc {
 
         ArrayList<WaterUsage> userW = new ArrayList<>();
 
-        for (WaterUsage currentW:w) {
+        for (WaterUsage currentW : w) {
 
-            if (currentW.getUserId() ==  id)
-            {
+            if (currentW.getUserId() == id) {
                 userW.add(currentW);
             }
 
