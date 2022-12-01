@@ -10,7 +10,7 @@ public class WaterAdviceRepositoryImpl implements WaterAdviceRepository {
 
     @Override
     public WaterUsageAdvice getWaterAdvice() {
-        //TODO implement
+        //TODO implement gRPC calls
         return null;
     }
 }

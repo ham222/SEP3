@@ -22,4 +22,9 @@ public class WaterUsageServiceImpl implements WaterUsageService {
     public ArrayList<WaterUsage> getUserWaterUsages(int id) {
         return repository.getUserWaterUsages(id);
     }
+
+    @Override
+    public String insertWaterUsage(WaterUsage usage) {
+        return repository.insertWaterUsage(usage);
+    }
 }

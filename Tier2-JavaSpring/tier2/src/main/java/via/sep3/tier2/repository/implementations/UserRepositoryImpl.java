@@ -11,7 +11,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public ArrayList<User> getUsers() {
-        //TODO implement
+        //TODO implement gRPC calls
         return null;
     }
 }

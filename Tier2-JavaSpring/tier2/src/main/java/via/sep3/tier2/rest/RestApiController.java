@@ -2,13 +2,13 @@ package via.sep3.tier2.rest;
 
 import com.google.gson.Gson;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import via.sep3.tier2.logic.interfaces.ElectricityUsageService;
 import via.sep3.tier2.logic.interfaces.UserService;
+import via.sep3.tier2.logic.interfaces.WaterAdviceService;
 import via.sep3.tier2.logic.interfaces.WaterUsageService;
+import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.WaterUsage;
 
 @RestController
 @RequestMapping("/api")
@@ -23,10 +23,14 @@ public class RestApiController {
     final
     WaterUsageService waterUsageService;
 
-    public RestApiController(ElectricityUsageService electricityUsageService, UserService userService, WaterUsageService waterUsageService) {
+    final
+    WaterAdviceService waterAdviceService;
+
+    public RestApiController(ElectricityUsageService electricityUsageService, UserService userService, WaterUsageService waterUsageService, WaterAdviceService waterAdviceService) {
         this.electricityUsageService = electricityUsageService;
         this.userService = userService;
         this.waterUsageService = waterUsageService;
+        this.waterAdviceService = waterAdviceService;
     }
 
     @GetMapping(path = "/users")
@@ -49,6 +53,30 @@ public class RestApiController {
     @GetMapping(path = "/users/{id}/electricity", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getAllUserElectricityUsage(@PathVariable int id) {
         return new Gson().toJson(electricityUsageService.getUserElectricityUsages(id));
+    }
+
+    @PostMapping(path = "/users/{id}/electricity", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public String InsertElectricityUsage(@PathVariable String id, @RequestBody String fromPath) {
+        ElectricityUsage usage = new Gson().fromJson(fromPath, ElectricityUsage.class);
+        try {
+            electricityUsageService.insertElectricityUsage(usage);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+
+        return new Gson().toJson(usage);
+    }
+
+    @PostMapping(path = "/users/{id}/water", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public String InsertWaterUsage(@PathVariable String id, @RequestBody String fromPath) {
+        WaterUsage usage = new Gson().fromJson(fromPath, WaterUsage.class);
+        try {
+            waterUsageService.insertWaterUsage(usage);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+
+        return new Gson().toJson(usage);
     }
 }
 

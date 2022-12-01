@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface ElectricityUsageService {
 
     ArrayList<ElectricityUsage> getUserElectricityUsages(int id);
+
+    String insertElectricityUsage(ElectricityUsage usage);
 }

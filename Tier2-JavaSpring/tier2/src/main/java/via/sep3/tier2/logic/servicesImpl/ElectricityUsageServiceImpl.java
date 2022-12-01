@@ -22,4 +22,9 @@ public class ElectricityUsageServiceImpl implements ElectricityUsageService {
     public ArrayList<ElectricityUsage> getUserElectricityUsages(int id) {
         return repository.getUserElectricityUsages(id);
     }
+
+    @Override
+    public String insertElectricityUsage(ElectricityUsage usage) {
+        return repository.insertElectricityUsage(usage);
+    }
 }

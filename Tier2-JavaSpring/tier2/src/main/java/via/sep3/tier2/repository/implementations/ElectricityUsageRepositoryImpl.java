@@ -15,7 +15,13 @@ public  class ElectricityUsageRepositoryImpl implements ElectricityUsageReposito
 
     @Override
     public ArrayList<ElectricityUsage> getUserElectricityUsages(int id) {
-        //TODO implement
+        //TODO implement gRPC calls
+        return null;
+    }
+
+    @Override
+    public String insertElectricityUsage(ElectricityUsage electricityUsage) {
+        //TODO implement gRPC calls
         return null;
     }
 }

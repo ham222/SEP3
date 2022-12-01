@@ -7,4 +7,6 @@ import java.util.ArrayList;
 public interface ElectricityUsageRepository {
 
     ArrayList<ElectricityUsage> getUserElectricityUsages(int id);
+
+    String insertElectricityUsage(ElectricityUsage electricityUsage);
 }

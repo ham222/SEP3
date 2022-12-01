@@ -5,25 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/ElectricityUsageGrpcImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/UserGrpcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/GrpcComm/WaterUsageGrpcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/ElectricityUsageGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/UserGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterAdviceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/Interfaces/WaterUsageGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -53,19 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="via.sep3.tier2.logic.DAOs" />

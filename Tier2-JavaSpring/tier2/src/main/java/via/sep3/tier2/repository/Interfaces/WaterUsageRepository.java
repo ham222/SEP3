@@ -6,4 +6,6 @@ import java.util.ArrayList;
 
 public interface WaterUsageRepository {
     ArrayList<WaterUsage> getUserWaterUsages(int id);
+
+    String insertWaterUsage(WaterUsage usage);
 }
