@@ -2,9 +2,7 @@ package via.sep3.tier3.database.entity;
 
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -29,22 +27,6 @@ public class UserEntity
 
     @OneToMany(mappedBy = "user")
     List<ElectricityUsageEntity> electricityUsages;
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_water_advice",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "water_advice_id")
-    )
-    Set<WaterAdviceEntity> waterAdvices = new HashSet<>();
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_electricity_advice",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "electricity_advice_id")
-    )
-    Set<ElectricityAdviceEntity> electricityAdvices = new HashSet<>();
 
     public UserEntity()
     {
@@ -118,15 +100,5 @@ public class UserEntity
     public void setElectricityUsages(List<ElectricityUsageEntity> electricityUsages)
     {
         this.electricityUsages = electricityUsages;
-    }
-
-    public void assignWaterAdvice(WaterAdviceEntity advice)
-    {
-        waterAdvices.add(advice);
-    }
-
-    public void assignElectricityAdvice(ElectricityAdviceEntity advice)
-    {
-        electricityAdvices.add(advice);
     }
 }

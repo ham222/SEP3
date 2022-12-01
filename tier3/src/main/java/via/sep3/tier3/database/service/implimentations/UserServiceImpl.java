@@ -2,9 +2,7 @@ package via.sep3.tier3.database.service.implimentations;
 
 import org.springframework.stereotype.Service;
 import via.sep3.tier3.database.entity.UserEntity;
-import via.sep3.tier3.database.repository.ElectricityUsageRepository;
 import via.sep3.tier3.database.repository.UserRepository;
-import via.sep3.tier3.database.repository.WaterUsageRepository;
 import via.sep3.tier3.database.service.UserService;
 
 
@@ -15,14 +13,10 @@ import java.util.List;
 public class UserServiceImpl implements UserService
 {
     private final UserRepository userRepository;
-    private final WaterUsageRepository waterUsageRepository;
-    private final ElectricityUsageRepository electricityUsageRepository;
 
-    public UserServiceImpl(UserRepository userRepository, WaterUsageRepository waterUsageRepository, ElectricityUsageRepository electricityUsageRepository)
+    public UserServiceImpl(UserRepository userRepository)
     {
         this.userRepository = userRepository;
-        this.waterUsageRepository = waterUsageRepository;
-        this.electricityUsageRepository = electricityUsageRepository;
     }
 
     @Override
@@ -34,7 +28,7 @@ public class UserServiceImpl implements UserService
     @Override
     public UserEntity getUserById(int id)
     {
-        return userRepository.findById(id).get();
+        return userRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -63,8 +57,6 @@ public class UserServiceImpl implements UserService
     @Override
     public void deleteUser(int id)
     {
-        waterUsageRepository.deleteWhereUserId(id);
-        electricityUsageRepository.deleteWhereUserId(id);
         userRepository.deleteById(id);
     }
 }

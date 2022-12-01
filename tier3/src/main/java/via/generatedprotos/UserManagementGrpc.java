@@ -45,29 +45,29 @@ public final class UserManagementGrpc {
     return getCreateUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<via.generatedprotos.Empty,
-      via.generatedprotos.ListUsers> getGetUsersMethod;
+  private static volatile io.grpc.MethodDescriptor<via.generatedprotos.User,
+      via.generatedprotos.User> getGetUsersMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetUsers",
-      requestType = via.generatedprotos.Empty.class,
-      responseType = via.generatedprotos.ListUsers.class,
+      requestType = via.generatedprotos.User.class,
+      responseType = via.generatedprotos.User.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.generatedprotos.Empty,
-      via.generatedprotos.ListUsers> getGetUsersMethod() {
-    io.grpc.MethodDescriptor<via.generatedprotos.Empty, via.generatedprotos.ListUsers> getGetUsersMethod;
+  public static io.grpc.MethodDescriptor<via.generatedprotos.User,
+      via.generatedprotos.User> getGetUsersMethod() {
+    io.grpc.MethodDescriptor<via.generatedprotos.User, via.generatedprotos.User> getGetUsersMethod;
     if ((getGetUsersMethod = UserManagementGrpc.getGetUsersMethod) == null) {
       synchronized (UserManagementGrpc.class) {
         if ((getGetUsersMethod = UserManagementGrpc.getGetUsersMethod) == null) {
           UserManagementGrpc.getGetUsersMethod = getGetUsersMethod =
-              io.grpc.MethodDescriptor.<via.generatedprotos.Empty, via.generatedprotos.ListUsers>newBuilder()
+              io.grpc.MethodDescriptor.<via.generatedprotos.User, via.generatedprotos.User>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.generatedprotos.Empty.getDefaultInstance()))
+                  via.generatedprotos.User.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.generatedprotos.ListUsers.getDefaultInstance()))
+                  via.generatedprotos.User.getDefaultInstance()))
               .setSchemaDescriptor(new UserManagementMethodDescriptorSupplier("GetUsers"))
               .build();
         }
@@ -226,8 +226,8 @@ public final class UserManagementGrpc {
 
     /**
      */
-    public void getUsers(via.generatedprotos.Empty request,
-        io.grpc.stub.StreamObserver<via.generatedprotos.ListUsers> responseObserver) {
+    public void getUsers(via.generatedprotos.User request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.User> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUsersMethod(), responseObserver);
     }
 
@@ -265,8 +265,8 @@ public final class UserManagementGrpc {
             getGetUsersMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                via.generatedprotos.Empty,
-                via.generatedprotos.ListUsers>(
+                via.generatedprotos.User,
+                via.generatedprotos.User>(
                   this, METHODID_GET_USERS)))
           .addMethod(
             getGetUserByIdMethod(),
@@ -317,8 +317,8 @@ public final class UserManagementGrpc {
 
     /**
      */
-    public void getUsers(via.generatedprotos.Empty request,
-        io.grpc.stub.StreamObserver<via.generatedprotos.ListUsers> responseObserver) {
+    public void getUsers(via.generatedprotos.User request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.User> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUsersMethod(), getCallOptions()), request, responseObserver);
     }
@@ -371,7 +371,7 @@ public final class UserManagementGrpc {
 
     /**
      */
-    public via.generatedprotos.ListUsers getUsers(via.generatedprotos.Empty request) {
+    public via.generatedprotos.User getUsers(via.generatedprotos.User request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUsersMethod(), getCallOptions(), request);
     }
@@ -422,8 +422,8 @@ public final class UserManagementGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.generatedprotos.ListUsers> getUsers(
-        via.generatedprotos.Empty request) {
+    public com.google.common.util.concurrent.ListenableFuture<via.generatedprotos.User> getUsers(
+        via.generatedprotos.User request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUsersMethod(), getCallOptions()), request);
     }
@@ -481,8 +481,8 @@ public final class UserManagementGrpc {
               (io.grpc.stub.StreamObserver<via.generatedprotos.User>) responseObserver);
           break;
         case METHODID_GET_USERS:
-          serviceImpl.getUsers((via.generatedprotos.Empty) request,
-              (io.grpc.stub.StreamObserver<via.generatedprotos.ListUsers>) responseObserver);
+          serviceImpl.getUsers((via.generatedprotos.User) request,
+              (io.grpc.stub.StreamObserver<via.generatedprotos.User>) responseObserver);
           break;
         case METHODID_GET_USER_BY_ID:
           serviceImpl.getUserById((via.generatedprotos.ID) request,

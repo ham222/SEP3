@@ -2,7 +2,6 @@ package via.sep3.tier3.database.service;
 
 import via.sep3.tier3.database.entity.ElectricityUsageEntity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface ElectricityUsageService
@@ -12,6 +11,4 @@ public interface ElectricityUsageService
     ElectricityUsageEntity saveElectricityUsage(ElectricityUsageEntity electricityUsage);
     ElectricityUsageEntity updateElectricityUsage(ElectricityUsageEntity electricityUsage);
     void deleteElectricityUsage(int id);
-
-    ArrayList<ElectricityUsageEntity> getElectricityUsageByUserId(int id);
 }

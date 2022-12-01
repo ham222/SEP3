@@ -12,12 +12,10 @@ import via.sep3.tier3.database.service.WaterUsageService;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 @GRpcService
-public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesConsumptionImplBase
-{
+public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesConsumptionImplBase {
 
     private WaterUsageService waterUsageService;
     private ElectricityUsageService electricityUsageService;
@@ -58,7 +56,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
         observer.onNext(listElectricityrUsage);
         observer.onCompleted();
     }
-
+    
     @Override
     public void getWaterUsages(Empty empty, StreamObserver<ListWaterUsage> observer)
     {
@@ -109,8 +107,8 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
                 .setUserId(returnedWaterUsageEntity.getUser().getId())
                 .build();
 
-        observer.onNext(returnedWaterUsage);
-        observer.onCompleted();
+            observer.onNext(returnedWaterUsage);
+            observer.onCompleted();
 
     }
 
@@ -236,47 +234,7 @@ public class ResourcesConsumption extends ResourcesConsumptionGrpc.ResourcesCons
     }
 
 
-    @Override
-    public void getWaterUsageByUserId(ID id, StreamObserver<ListWaterUsage> observer)
-    {
-        ArrayList<WaterUsageEntity> waterUsageEntities = waterUsageService.getWaterUsageByUserId(id.getId());
-        ArrayList<WaterUsage> grpcWaterUsage = new ArrayList<>();
-        for (WaterUsageEntity waterUsageEntity : waterUsageEntities)
-        {
-            WaterUsage waterUsage = WaterUsage.newBuilder()
-                    .setId(waterUsageEntity.getId())
-                    .setAmount(waterUsageEntity.getAmount())
-                    .setMonth(waterUsageEntity.getMonth())
-                    .setYear(waterUsageEntity.getYear())
-                    .setUserId(waterUsageEntity.getUser().getId())
-                    .build();
-            grpcWaterUsage.add(waterUsage);
-        }
-        ListWaterUsage listWaterUsageBuilder = ListWaterUsage.newBuilder().addAllWater(grpcWaterUsage).build();
-        observer.onNext(listWaterUsageBuilder);
-        observer.onCompleted();
-    }
 
-    @Override
-    public void getElectricityUsageByUserId(ID id, StreamObserver<ListElectricityUsage> observer)
-    {
-        ArrayList<ElectricityUsageEntity> electricityUsageEntities = electricityUsageService.getElectricityUsageByUserId(id.getId());
-        ArrayList<ElectricityUsage> grpcElectricityUsage = new ArrayList<>();
-        for (ElectricityUsageEntity electricityUsageEntity : electricityUsageEntities)
-        {
-            ElectricityUsage electricityUsage = ElectricityUsage.newBuilder()
-                    .setId(electricityUsageEntity.getId())
-                    .setAmount(electricityUsageEntity.getAmount())
-                    .setMonth(electricityUsageEntity.getMonth())
-                    .setYear(electricityUsageEntity.getYear())
-                    .setUserId(electricityUsageEntity.getUser().getId())
-                    .build();
-            grpcElectricityUsage.add(electricityUsage);
-        }
-        ListElectricityUsage listElectricityUsageBuilder = ListElectricityUsage.newBuilder().addAllElectricity(grpcElectricityUsage).build();
-        observer.onNext(listElectricityUsageBuilder);
-        observer.onCompleted();
-    }
 
 
 }

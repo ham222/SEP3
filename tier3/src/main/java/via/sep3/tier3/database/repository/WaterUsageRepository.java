@@ -18,11 +18,4 @@ public interface WaterUsageRepository extends JpaRepository<WaterUsageEntity, In
     @Query("update WaterUsageEntity w set w.amount = ?1, w.month = ?2, w.year = ?3, w.user = ?4 where w.id = ?5")
     void updateWaterUsage(double amount, int month, int year, UserEntity user,@NonNull int idToFind);
 
-    @Transactional
-    @Modifying
-    @Query("delete from WaterUsageEntity w where w.user.id = ?1")
-    void deleteWhereUserId(@NonNull int id);
-
-
-
 }
