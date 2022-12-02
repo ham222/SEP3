@@ -2,14 +2,19 @@ package via.sep3.tier2;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import via.generatedprotos.*;
+import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.stereotype.Service;
+import via.generatedprotos.Empty;
+import via.generatedprotos.ListElectricityUsage;
+import via.generatedprotos.ListWaterUsage;
+import via.generatedprotos.ResourcesConsumptionGrpc;
 import via.sep3.tier2.model.ElectricityUsage;
-import via.sep3.tier2.model.UsageList;
 import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
 
 
+@Service
 public class GrpcClient {
 
 
@@ -21,8 +26,8 @@ public class GrpcClient {
     }
 
 
-    public UsageList getUsage() {
-        ListUsage response = stub.getUsage(Empty.newBuilder().build());
+    public ArrayList<WaterUsage> getWaterUsage() {
+        ListWaterUsage response = stub.getWaterUsages(Empty.newBuilder().build());
 
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
@@ -44,6 +49,11 @@ public class GrpcClient {
             wUsage.add(currentW);
         }
 
+        return wUsage;
+    }
+
+    public ArrayList<ElectricityUsage> getElectricityUsage() {
+        ListElectricityUsage response = stub.getElectricityUsages(Empty.newBuilder().build());
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
 
@@ -64,24 +74,7 @@ public class GrpcClient {
             eUsage.add(currentE);
         }
 
-
-        UsageList usageList = UsageList.getInstance();
-        usageList.seteUsage(eUsage);
-        usageList.setwUsage(wUsage);
-        return usageList;
+        return eUsage;
     }
 
-
-    //TextConverterGrpc.TextConverterBlockingStub stub = TextConverterGrpc.newBlockingStub(channel);
-//    RequestText request = RequestText.newBuilder().setInputText("Lets try").build();
-//
-//    RequestText request2 = RequestText.newBuilder().setInputText("lets get it try").build();
-//
-//    ResponseText response = stub.toUpper(request);
-//        System.out.println("Received: " + response.getOutputText());
-//
-//    ResponseText response2 = stub.capitalizeFirstCharacter(request2);
-//        System.out.println("Received: " + response2.getOutputText());
-//
-//        channel.shutdown();
 }

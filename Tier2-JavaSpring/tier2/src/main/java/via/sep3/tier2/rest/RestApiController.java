@@ -1,6 +1,7 @@
 package via.sep3.tier2.rest;
 
 import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import via.sep3.tier2.logic.interfaces.ElectricityUsageService;
@@ -33,6 +34,7 @@ public class RestApiController {
         this.waterAdviceService = waterAdviceService;
     }
 
+
     @GetMapping(path = "/users")
     public String getAllUsers() {
         return new Gson().toJson(userService.getUsers());
@@ -41,7 +43,6 @@ public class RestApiController {
 
     @GetMapping(path = "/WaterUsageAdvice", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getWaterAdvice() {
-        //TODO
         return new Gson().toJson("");
     }
 

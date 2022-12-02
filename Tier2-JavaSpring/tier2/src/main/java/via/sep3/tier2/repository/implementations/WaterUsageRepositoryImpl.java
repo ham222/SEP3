@@ -1,8 +1,8 @@
 package via.sep3.tier2.repository.implementations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import via.sep3.tier2.GrpcClient;
-import via.sep3.tier2.model.UsageList;
 import via.sep3.tier2.model.WaterUsage;
 import via.sep3.tier2.repository.Interfaces.WaterUsageRepository;
 
@@ -11,6 +11,8 @@ import java.util.ArrayList;
 @Component
 public class WaterUsageRepositoryImpl implements WaterUsageRepository {
 
+    @Autowired
+    GrpcClient grpcClient;
 
     private WaterUsageRepositoryImpl() {
     }
@@ -18,16 +20,11 @@ public class WaterUsageRepositoryImpl implements WaterUsageRepository {
 
     @Override
     public ArrayList<WaterUsage> getUserWaterUsages(int id) {
-        GrpcClient grpc = new GrpcClient();
-        grpc.getUsage();
-
-        UsageList usageList = UsageList.getInstance();
-
-        ArrayList<WaterUsage> w = usageList.getwUsage();
+        ArrayList<WaterUsage> usages = grpcClient.getWaterUsage();
 
         ArrayList<WaterUsage> userW = new ArrayList<>();
 
-        for (WaterUsage currentW : w) {
+        for (WaterUsage currentW : usages) {
 
             if (currentW.getUserId() == id) {
                 userW.add(currentW);

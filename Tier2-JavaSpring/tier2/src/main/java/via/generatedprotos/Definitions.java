@@ -40,15 +40,25 @@ public final class Definitions {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_generatedprotos_ElectricityUsageAdvice_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_generatedprotos_ID_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_generatedprotos_ID_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_generatedprotos_Empty_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_generatedprotos_Empty_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_generatedprotos_ListUsage_descriptor;
+    internal_static_generatedprotos_ListWaterUsage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_generatedprotos_ListUsage_fieldAccessorTable;
+      internal_static_generatedprotos_ListWaterUsage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_generatedprotos_ListElectricityUsage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -67,17 +77,59 @@ public final class Definitions {
       "\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(\005\022\016\n\006userId" +
       "\030\005 \001(\005\",\n\020WaterUsageAdvice\022\n\n\002id\030\001 \001(\005\022\014" +
       "\n\004body\030\002 \001(\t\"2\n\026ElectricityUsageAdvice\022\n" +
-      "\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"\007\n\005Empty\"o\n\tLis" +
-      "tUsage\022*\n\005water\030\001 \003(\0132\033.generatedprotos." +
-      "WaterUsage\0226\n\013electricity\030\002 \003(\0132!.genera" +
-      "tedprotos.ElectricityUsage2\356\001\n\024Resources" +
-      "Consumption\022P\n\023LogElectricityUsage\022!.gen" +
-      "eratedprotos.ElectricityUsage\032\026.generate" +
-      "dprotos.Empty\022D\n\rLogWaterUsage\022\033.generat" +
-      "edprotos.WaterUsage\032\026.generatedprotos.Em" +
-      "pty\022>\n\010GetUsage\022\026.generatedprotos.Empty\032" +
-      "\032.generatedprotos.ListUsageB\027\n\023via.gener" +
-      "atedprotosP\001b\006proto3"
+      "\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"\020\n\002ID\022\n\n\002id\030\001 \001" +
+      "(\005\"\007\n\005Empty\"<\n\016ListWaterUsage\022*\n\005water\030\001" +
+      " \003(\0132\033.generatedprotos.WaterUsage\"N\n\024Lis" +
+      "tElectricityUsage\0226\n\013electricity\030\001 \003(\0132!" +
+      ".generatedprotos.ElectricityUsage2\260\006\n\024Re" +
+      "sourcesConsumption\022[\n\023LogElectricityUsag" +
+      "e\022!.generatedprotos.ElectricityUsage\032!.g" +
+      "eneratedprotos.ElectricityUsage\022I\n\rLogWa" +
+      "terUsage\022\033.generatedprotos.WaterUsage\032\033." +
+      "generatedprotos.WaterUsage\022I\n\016GetWaterUs" +
+      "ages\022\026.generatedprotos.Empty\032\037.generated" +
+      "protos.ListWaterUsage\022U\n\024GetElectricityU" +
+      "sages\022\026.generatedprotos.Empty\032%.generate" +
+      "dprotos.ListElectricityUsage\022L\n\020UpdateWa" +
+      "terUsage\022\033.generatedprotos.WaterUsage\032\033." +
+      "generatedprotos.WaterUsage\022^\n\026UpdateElec" +
+      "tricityUsage\022!.generatedprotos.Electrici" +
+      "tyUsage\032!.generatedprotos.ElectricityUsa" +
+      "ge\022?\n\020DeleteWaterUsage\022\023.generatedprotos" +
+      ".ID\032\026.generatedprotos.Empty\022E\n\026DeleteEle" +
+      "ctricityUsage\022\023.generatedprotos.ID\032\026.gen" +
+      "eratedprotos.Empty\022E\n\021GetWaterUsageById\022" +
+      "\023.generatedprotos.ID\032\033.generatedprotos.W" +
+      "aterUsage\022Q\n\027GetElectricityUsageById\022\023.g" +
+      "eneratedprotos.ID\032!.generatedprotos.Elec" +
+      "tricityUsage2\270\002\n\016UserManagement\022:\n\nCreat" +
+      "eUser\022\025.generatedprotos.User\032\025.generated" +
+      "protos.User\0228\n\010GetUsers\022\025.generatedproto" +
+      "s.User\032\025.generatedprotos.User\0229\n\013GetUser" +
+      "ById\022\023.generatedprotos.ID\032\025.generatedpro" +
+      "tos.User\022:\n\nUpdateUser\022\025.generatedprotos" +
+      ".User\032\025.generatedprotos.User\0229\n\nDeleteUs" +
+      "er\022\023.generatedprotos.ID\032\026.generatedproto" +
+      "s.Empty2\352\005\n\020AdviceManagement\022U\n\023GetWater" +
+      "UsageAdvice\022\033.generatedprotos.WaterUsage" +
+      "\032!.generatedprotos.WaterUsageAdvice\022g\n\031G" +
+      "etElectricityUsageAdvice\022!.generatedprot" +
+      "os.ElectricityUsage\032\'.generatedprotos.El" +
+      "ectricityUsageAdvice\022^\n\026UpdateWaterUsage" +
+      "Advice\022!.generatedprotos.WaterUsageAdvic" +
+      "e\032!.generatedprotos.WaterUsageAdvice\022p\n\034" +
+      "UpdateElectricityUsageAdvice\022\'.generated" +
+      "protos.ElectricityUsageAdvice\032\'.generate" +
+      "dprotos.ElectricityUsageAdvice\022E\n\026Delete" +
+      "WaterUsageAdvice\022\023.generatedprotos.ID\032\026." +
+      "generatedprotos.Empty\022K\n\034DeleteElectrici" +
+      "tyUsageAdvice\022\023.generatedprotos.ID\032\026.gen" +
+      "eratedprotos.Empty\022Q\n\027GetWaterUsageAdvic" +
+      "eById\022\023.generatedprotos.ID\032!.generatedpr" +
+      "otos.WaterUsageAdvice\022]\n\035GetElectricityU" +
+      "sageAdviceById\022\023.generatedprotos.ID\032\'.ge" +
+      "neratedprotos.ElectricityUsageAdviceB\027\n\023" +
+      "via.generatedprotosP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -113,18 +165,30 @@ public final class Definitions {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_generatedprotos_ElectricityUsageAdvice_descriptor,
         new java.lang.String[] { "Id", "Body", });
-    internal_static_generatedprotos_Empty_descriptor =
+    internal_static_generatedprotos_ID_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_generatedprotos_ID_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_generatedprotos_ID_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_generatedprotos_Empty_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_generatedprotos_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_generatedprotos_Empty_descriptor,
         new java.lang.String[] { });
-    internal_static_generatedprotos_ListUsage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_generatedprotos_ListUsage_fieldAccessorTable = new
+    internal_static_generatedprotos_ListWaterUsage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_generatedprotos_ListWaterUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_generatedprotos_ListUsage_descriptor,
-        new java.lang.String[] { "Water", "Electricity", });
+        internal_static_generatedprotos_ListWaterUsage_descriptor,
+        new java.lang.String[] { "Water", });
+    internal_static_generatedprotos_ListElectricityUsage_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_generatedprotos_ListElectricityUsage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_generatedprotos_ListElectricityUsage_descriptor,
+        new java.lang.String[] { "Electricity", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

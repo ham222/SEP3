@@ -5,19 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Definitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Empty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/EmptyOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ResourcesConsumptionGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/UsageList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tier2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tier2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/resources/application.properties" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -52,7 +65,11 @@
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75"
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto",
+    "spring.configuration.checksum": "4d8ef5a46dad80eb8d2ccf5a5e5dfa62"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,8 +77,8 @@
       <recent name="via.sep3.tier2.logic.DAOs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2" />
       <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2\grpc\proto" />
+      <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jakub Nowak\IdeaProjects\SEP3\Tier2-JavaSpring\tier2\src\main\java\via\sep3\tier2\grpc\proto" />
@@ -102,6 +119,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tier2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="via.sep3.tier2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="via.sep3.tier2" />
+      <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.ApiTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTests.addOneWaterUsage_andGetItBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tier2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="via.sep3.tier2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="via.sep3.tier2" />
+      <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.ApiTests" />
+      <option name="METHOD_NAME" value="addOneWaterUsage_andGetItBack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tier2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tier2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="via.sep3.tier2.Tier2Application" />
@@ -111,6 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTests" />
+        <item itemvalue="JUnit.ApiTests.addOneWaterUsage_andGetItBack" />
         <item itemvalue="Application.Tier2Application" />
         <item itemvalue="Application.GrpcClient" />
       </list>
@@ -133,6 +183,10 @@
       <workItem from="1667564776067" duration="66000" />
       <workItem from="1667982012820" duration="1728000" />
       <workItem from="1668774585263" duration="1363000" />
+      <workItem from="1669911173262" duration="35000" />
+      <workItem from="1669911222183" duration="10000" />
+      <workItem from="1669932199276" duration="636000" />
+      <workItem from="1669974614981" duration="7711000" />
     </task>
     <servers />
   </component>
