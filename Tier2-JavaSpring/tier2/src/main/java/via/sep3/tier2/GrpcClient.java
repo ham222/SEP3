@@ -77,4 +77,20 @@ public class GrpcClient {
         return eUsage;
     }
 
+    public void insertWaterUsage(WaterUsage waterUsage){
+        via.generatedprotos.WaterUsage e = via.generatedprotos.WaterUsage.newBuilder()
+                .setId(waterUsage.getId())
+                .setAmount(waterUsage.getAmount())
+                .setMonth(waterUsage.getMonth())
+                .setYear(waterUsage.getYear())
+                .setUserId(waterUsage.getUserId())
+                .build();
+        try {
+            stub.logWaterUsage(e);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error logging water usage via gRPC service! ");
+        }
+    }
+
 }

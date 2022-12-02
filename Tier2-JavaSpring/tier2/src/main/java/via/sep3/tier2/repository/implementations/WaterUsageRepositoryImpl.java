@@ -35,8 +35,7 @@ public class WaterUsageRepositoryImpl implements WaterUsageRepository {
     }
 
     @Override
-    public String insertWaterUsage(WaterUsage usage) {
-        //TODO implement gRPC calls
-        return null;
+    public void insertWaterUsage(WaterUsage usage) {
+        grpcClient.insertWaterUsage(usage);
     }
 }

@@ -7,5 +7,5 @@ import java.util.ArrayList;
 public interface WaterUsageService {
     ArrayList<WaterUsage> getUserWaterUsages(int id);
 
-    String insertWaterUsage(WaterUsage usage);
+    void insertWaterUsage(WaterUsage usage);
 }

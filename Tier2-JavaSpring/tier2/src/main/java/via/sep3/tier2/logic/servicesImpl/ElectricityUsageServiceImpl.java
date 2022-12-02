@@ -24,7 +24,7 @@ public class ElectricityUsageServiceImpl implements ElectricityUsageService {
     }
 
     @Override
-    public String insertElectricityUsage(ElectricityUsage usage) {
-        return repository.insertElectricityUsage(usage);
+    public void insertElectricityUsage(ElectricityUsage usage) {
+        repository.insertElectricityUsage(usage);
     }
 }

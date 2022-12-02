@@ -24,7 +24,7 @@ public class WaterUsageServiceImpl implements WaterUsageService {
     }
 
     @Override
-    public String insertWaterUsage(WaterUsage usage) {
-        return repository.insertWaterUsage(usage);
+    public void insertWaterUsage(WaterUsage usage) {
+        repository.insertWaterUsage(usage);
     }
 }

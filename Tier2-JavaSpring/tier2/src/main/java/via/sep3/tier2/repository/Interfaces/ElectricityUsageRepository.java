@@ -8,5 +8,5 @@ public interface ElectricityUsageRepository {
 
     ArrayList<ElectricityUsage> getUserElectricityUsages(int id);
 
-    String insertElectricityUsage(ElectricityUsage electricityUsage);
+    void insertElectricityUsage(ElectricityUsage electricityUsage);
 }
