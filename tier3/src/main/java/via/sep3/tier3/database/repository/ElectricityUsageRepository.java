@@ -18,5 +18,10 @@ public interface ElectricityUsageRepository extends JpaRepository<ElectricityUsa
     @Query("update ElectricityUsageEntity e set e.amount = ?1, e.month = ?2, e.year = ?3, e.user = ?4 where e.id = ?5")
     void updateElectricityUsage(double amount, int month, int year, UserEntity user, @NonNull int id);
 
+    @Transactional
+    @Modifying
+    @Query("delete from ElectricityUsageEntity e where e.user.id = ?1")
+    void deleteWhereUserId(@NonNull int id);
+
 }
 
