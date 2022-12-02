@@ -7,14 +7,9 @@
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterUsageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterUsageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterUsageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -76,7 +71,7 @@
       <recent name="via.sep3.tier2.repository.Interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Tier2Application">
+  <component name="RunManager" selected="JUnit.ApiTests">
     <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
       <module name="tier2" />
@@ -170,7 +165,7 @@
       <workItem from="1669911173262" duration="35000" />
       <workItem from="1669911222183" duration="10000" />
       <workItem from="1669932199276" duration="636000" />
-      <workItem from="1669974614981" duration="9311000" />
+      <workItem from="1669974614981" duration="10999000" />
     </task>
     <servers />
   </component>

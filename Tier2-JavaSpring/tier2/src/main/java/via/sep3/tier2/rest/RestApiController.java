@@ -43,6 +43,7 @@ public class RestApiController {
 
     @GetMapping(path = "/WaterUsageAdvice", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getWaterAdvice() {
+        //TODO implement
         return new Gson().toJson("");
     }
 

@@ -35,6 +35,6 @@ public  class ElectricityUsageRepositoryImpl implements ElectricityUsageReposito
 
     @Override
     public void insertElectricityUsage(ElectricityUsage electricityUsage) {
-        //TODO implement gRPC calls
+        grpcClient.insertElectricityUsage(electricityUsage);
     }
 }

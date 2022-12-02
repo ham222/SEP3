@@ -93,4 +93,20 @@ public class GrpcClient {
         }
     }
 
+    public void insertElectricityUsage(ElectricityUsage electricityUsage){
+        via.generatedprotos.ElectricityUsage e = via.generatedprotos.ElectricityUsage.newBuilder()
+                .setId(electricityUsage.getId())
+                .setAmount(electricityUsage.getAmount())
+                .setMonth(electricityUsage.getMonth())
+                .setYear(electricityUsage.getYear())
+                .setUserId(electricityUsage.getUserId())
+                .build();
+        try {
+            stub.logElectricityUsage(e);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error logging electricity usage via gRPC service! ");
+        }
+    }
+
 }
