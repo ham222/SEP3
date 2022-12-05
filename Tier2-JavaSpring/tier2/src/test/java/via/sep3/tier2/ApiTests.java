@@ -9,10 +9,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import via.sep3.tier2.logic.interfaces.ElectricityUsageService;
-import via.sep3.tier2.logic.interfaces.UserService;
-import via.sep3.tier2.logic.interfaces.WaterAdviceService;
-import via.sep3.tier2.logic.interfaces.WaterUsageService;
+import via.sep3.tier2.logic.interfaces.*;
 import via.sep3.tier2.model.ElectricityUsage;
 import via.sep3.tier2.model.User;
 import via.sep3.tier2.model.WaterUsage;
@@ -56,6 +53,9 @@ public class ApiTests {
 
     @MockBean
     WaterAdviceService waterAdviceService;
+
+    @MockBean
+    ElectricityAdviceService electricityAdviceService;
 
     //User tests
 
@@ -119,8 +119,8 @@ public class ApiTests {
         ArrayList<WaterUsage> waterUsages = new ArrayList<>(List.of(waterUsage));
         Mockito.when(waterUsageService.getUserWaterUsages(1)).thenReturn(waterUsages);
         mvc.perform(MockMvcRequestBuilders
-                .get("/api/users/1/water")
-                .contentType(MediaType.APPLICATION_JSON))
+                        .get("/api/users/1/water")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$",hasSize(1)))
                 .andExpect(jsonPath("$[0].amount",is(5.0)));

@@ -2,13 +2,10 @@ package via.sep3.tier2;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.stereotype.Service;
-import via.generatedprotos.Empty;
-import via.generatedprotos.ListElectricityUsage;
-import via.generatedprotos.ListWaterUsage;
-import via.generatedprotos.ResourcesConsumptionGrpc;
+import via.generatedprotos.*;
 import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.User;
 import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
@@ -20,6 +17,8 @@ public class GrpcClient {
 
     ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 6565).usePlaintext().build();
     ResourcesConsumptionGrpc.ResourcesConsumptionBlockingStub stub = ResourcesConsumptionGrpc.newBlockingStub(channel);
+    UserManagementGrpc.UserManagementBlockingStub userStub = UserManagementGrpc.newBlockingStub(channel);
+    AdviceManagementGrpc.AdviceManagementBlockingStub adviceStub = AdviceManagementGrpc.newBlockingStub(channel);
 
     public static void main(String[] args) {
 
@@ -107,6 +106,90 @@ public class GrpcClient {
             err.printStackTrace();
             System.err.println("Error logging electricity usage via gRPC service! ");
         }
+    }
+
+    public ArrayList<User> getUsers(){
+        ArrayList<User> users = new ArrayList<>();
+        ListUsers grpcUsers = userStub.getUsers(Empty.newBuilder().build());
+
+        ArrayList<via.generatedprotos.User> eGrpc = new ArrayList<>(grpcUsers.getUsersList());
+
+
+        for (via.generatedprotos.User e : eGrpc) {
+
+            User currentE = new User(
+                    e.getId(),
+                    e.getUsername(),
+                    e.getPassword(),
+                    e.getRole(),
+                    e.getArea()
+            );
+
+            users.add(currentE);
+        }
+        return users;
+    }
+
+    public void createElectricityAdvice(via.sep3.tier2.model.ElectricityUsageAdvice advice){
+        ElectricityUsageAdvice grpcAdvice = ElectricityUsageAdvice.newBuilder()
+                .setId(advice.getId())
+                .setBody(advice.getText())
+                .build();
+        try {
+           adviceStub.createElectricityUsageAdvice(grpcAdvice);
+        } catch (Exception e){
+            System.err.println("Error creating electricity advice via gRPC!\n"+e.getMessage());
+        }
+    }
+
+    public ArrayList<via.sep3.tier2.model.ElectricityUsageAdvice> getAllElectricityAdvice(){
+        ArrayList<via.sep3.tier2.model.ElectricityUsageAdvice> advices = new ArrayList<>();
+        ListElectricityUsageAdvice grpcUsers = adviceStub.getElectricityUsageAdvices(Empty.newBuilder().build());
+
+        ArrayList<via.generatedprotos.ElectricityUsageAdvice> eGrpc = new ArrayList<>(grpcUsers.getElectricityList());
+
+
+        for (via.generatedprotos.ElectricityUsageAdvice e : eGrpc) {
+
+            via.sep3.tier2.model.ElectricityUsageAdvice currentE = new via.sep3.tier2.model.ElectricityUsageAdvice(
+                    e.getId(),
+                    e.getBody()
+            );
+
+            advices.add(currentE);
+        }
+        return advices;
+    }
+
+    public void createWaterAdvice(via.sep3.tier2.model.WaterUsageAdvice advice){
+        WaterUsageAdvice grpcAdvice = WaterUsageAdvice.newBuilder()
+                .setId(advice.getId())
+                .setBody(advice.getText())
+                .build();
+        try {
+            adviceStub.createWaterUsageAdvice(grpcAdvice);
+        } catch (Exception e){
+            System.err.println("Error creating water advice via gRPC!\n"+e.getMessage());
+        }
+    }
+
+    public ArrayList<via.sep3.tier2.model.WaterUsageAdvice> getAllWaterAdvice(){
+        ArrayList<via.sep3.tier2.model.WaterUsageAdvice> advices = new ArrayList<>();
+        ListWaterUsageAdvice grpcUsers = adviceStub.getWaterUsageAdvices(Empty.newBuilder().build());
+
+        ArrayList<via.generatedprotos.WaterUsageAdvice> eGrpc = new ArrayList<>(grpcUsers.getWaterList());
+
+
+        for (via.generatedprotos.WaterUsageAdvice e : eGrpc) {
+
+            via.sep3.tier2.model.WaterUsageAdvice currentE = new via.sep3.tier2.model.WaterUsageAdvice(
+                    e.getId(),
+                    e.getBody()
+            );
+
+            advices.add(currentE);
+        }
+        return advices;
     }
 
 }

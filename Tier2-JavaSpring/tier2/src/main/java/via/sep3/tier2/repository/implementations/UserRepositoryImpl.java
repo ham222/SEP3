@@ -1,6 +1,8 @@
 package via.sep3.tier2.repository.implementations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import via.sep3.tier2.GrpcClient;
 import via.sep3.tier2.model.User;
 import via.sep3.tier2.repository.Interfaces.UserRepository;
 
@@ -9,9 +11,17 @@ import java.util.ArrayList;
 @Component
 public class UserRepositoryImpl implements UserRepository {
 
+    @Autowired
+    GrpcClient grpcClient;
+
     @Override
     public ArrayList<User> getUsers() {
-        //TODO implement gRPC calls
-        return null;
+        ArrayList<User> users = new ArrayList<>();
+        try {
+            users = grpcClient.getUsers();
+        } catch (Exception e){
+            System.err.println("Error fetching all users via gRPC!");
+        }
+        return users;
     }
 }

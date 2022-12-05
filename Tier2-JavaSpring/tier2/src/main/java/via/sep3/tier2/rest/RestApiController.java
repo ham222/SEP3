@@ -1,15 +1,15 @@
 package via.sep3.tier2.rest;
 
 import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import via.sep3.tier2.logic.interfaces.ElectricityUsageService;
-import via.sep3.tier2.logic.interfaces.UserService;
-import via.sep3.tier2.logic.interfaces.WaterAdviceService;
-import via.sep3.tier2.logic.interfaces.WaterUsageService;
+import via.generatedprotos.WaterUsageAdvice;
+import via.sep3.tier2.logic.interfaces.*;
 import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.ElectricityUsageAdvice;
 import via.sep3.tier2.model.WaterUsage;
+
+import java.lang.reflect.Type;
 
 @RestController
 @RequestMapping("/api")
@@ -27,11 +27,14 @@ public class RestApiController {
     final
     WaterAdviceService waterAdviceService;
 
-    public RestApiController(ElectricityUsageService electricityUsageService, UserService userService, WaterUsageService waterUsageService, WaterAdviceService waterAdviceService) {
+    final ElectricityAdviceService electricityAdviceService;
+
+    public RestApiController(ElectricityUsageService electricityUsageService, UserService userService, WaterUsageService waterUsageService, WaterAdviceService waterAdviceService, ElectricityAdviceService electricityAdviceService) {
         this.electricityUsageService = electricityUsageService;
         this.userService = userService;
         this.waterUsageService = waterUsageService;
         this.waterAdviceService = waterAdviceService;
+        this.electricityAdviceService = electricityAdviceService;
     }
 
 
@@ -80,6 +83,60 @@ public class RestApiController {
 
         return new Gson().toJson(usage);
     }
+
+    @PostMapping(path = "/advice/electricity", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public String createElectricityAdvice(@PathVariable String id, @RequestBody String fromPath) {
+        ElectricityUsageAdvice usage = new Gson().fromJson(fromPath, ElectricityUsageAdvice.class);
+        try {
+            electricityAdviceService.createAdvice(usage);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        return new Gson().toJson(usage);
+    }
+
+    @GetMapping(path = "/advice/electricity/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String getElectricityAdviceById(@PathVariable int id) {
+        return new Gson().toJson(electricityAdviceService.getAdviceById(id));
+    }
+
+    @DeleteMapping(path = "/advice/electricity/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String deleteElectricityAdviceById(@PathVariable int id) {
+        try {
+            electricityAdviceService.deleteAdviceById(id);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        return new Gson().toJson("");
+    }
+
+    @GetMapping(path = "/advice/water/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String getWaterAdviceById(@PathVariable int id) {
+        return new Gson().toJson(waterAdviceService.getWaterAdviceById(id));
+    }
+
+    @DeleteMapping(path = "/advice/water/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String deleteWaterAdviceById(@PathVariable int id) {
+        try {
+            waterAdviceService.DeleteAdviceById(id);
+        }catch (Exception e){
+            return e.getMessage();
+        }
+        return new Gson().toJson("");
+    }
+
+    @PostMapping(path = "/advice/water", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public String createWaterAdvice(@PathVariable String id, @RequestBody String fromPath) {
+        via.sep3.tier2.model.WaterUsageAdvice usage = new Gson().fromJson(fromPath, (Type) WaterUsageAdvice.class);
+        try {
+            waterAdviceService.CreateAdvice(usage);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        return new Gson().toJson(usage);
+    }
+
+// maybe?
 }
 
 

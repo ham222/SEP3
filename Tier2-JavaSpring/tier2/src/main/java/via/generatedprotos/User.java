@@ -72,6 +72,11 @@ private static final long serialVersionUID = 0L;
             role_ = input.readInt32();
             break;
           }
+          case 40: {
+
+            area_ = input.readInt32();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -204,6 +209,17 @@ private static final long serialVersionUID = 0L;
     return role_;
   }
 
+  public static final int AREA_FIELD_NUMBER = 5;
+  private int area_;
+  /**
+   * <code>int32 area = 5;</code>
+   * @return The area.
+   */
+  @java.lang.Override
+  public int getArea() {
+    return area_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -230,6 +246,9 @@ private static final long serialVersionUID = 0L;
     if (role_ != 0) {
       output.writeInt32(4, role_);
     }
+    if (area_ != 0) {
+      output.writeInt32(5, area_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -252,6 +271,10 @@ private static final long serialVersionUID = 0L;
     if (role_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, role_);
+    }
+    if (area_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, area_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -276,6 +299,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPassword())) return false;
     if (getRole()
         != other.getRole()) return false;
+    if (getArea()
+        != other.getArea()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -295,6 +320,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPassword().hashCode();
     hash = (37 * hash) + ROLE_FIELD_NUMBER;
     hash = (53 * hash) + getRole();
+    hash = (37 * hash) + AREA_FIELD_NUMBER;
+    hash = (53 * hash) + getArea();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -436,6 +463,8 @@ private static final long serialVersionUID = 0L;
 
       role_ = 0;
 
+      area_ = 0;
+
       return this;
     }
 
@@ -466,6 +495,7 @@ private static final long serialVersionUID = 0L;
       result.username_ = username_;
       result.password_ = password_;
       result.role_ = role_;
+      result.area_ = area_;
       onBuilt();
       return result;
     }
@@ -527,6 +557,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getRole() != 0) {
         setRole(other.getRole());
+      }
+      if (other.getArea() != 0) {
+        setArea(other.getArea());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -767,6 +800,37 @@ private static final long serialVersionUID = 0L;
     public Builder clearRole() {
       
       role_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int area_ ;
+    /**
+     * <code>int32 area = 5;</code>
+     * @return The area.
+     */
+    @java.lang.Override
+    public int getArea() {
+      return area_;
+    }
+    /**
+     * <code>int32 area = 5;</code>
+     * @param value The area to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArea(int value) {
+      
+      area_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 area = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearArea() {
+      
+      area_ = 0;
       onChanged();
       return this;
     }
