@@ -10,12 +10,17 @@ message User{
   int32 role = 4;
 }
 
+message ListUsers{
+  repeated User users = 1;
+}
+
 message WaterUsage{
   int32 id = 1;
   double amount = 2;
   int32 month = 3;
   int32 year = 4;
-  int32 userId=5;
+  int32 userId = 5;
+
 }
 
 message ElectricityUsage{
@@ -23,7 +28,7 @@ message ElectricityUsage{
   double amount = 2;
   int32 month = 3;
   int32 year = 4;
-  int32 userId=5;
+  int32 userId = 5;
 }
 
 message WaterUsageAdvice{
@@ -35,16 +40,69 @@ message ElectricityUsageAdvice{
   int32 id = 1;
   string body = 2;
 }
+message ID{
+  int32 id = 1;
+}
 
 message Empty{}
 
-message ListUsage{
+message ListWaterUsage{
   repeated WaterUsage water =1;
-  repeated ElectricityUsage electricity =2;
+}
+message ListElectricityUsage{
+  repeated ElectricityUsage electricity =1;
+}
+
+message ListWaterUsageAdvice{
+  repeated WaterUsageAdvice water =1;
+}
+message ListElectricityUsageAdvice{
+  repeated ElectricityUsageAdvice electricity =1;
 }
 
 service ResourcesConsumption{
-  rpc LogElectricityUsage(ElectricityUsage) returns (Empty);
-  rpc LogWaterUsage(WaterUsage) returns (Empty);
-  rpc GetUsage(Empty) returns (ListUsage);
+  rpc LogElectricityUsage(ElectricityUsage) returns (ElectricityUsage);
+  rpc LogWaterUsage(WaterUsage) returns (WaterUsage);
+  rpc GetWaterUsages(Empty) returns (ListWaterUsage);
+  rpc GetElectricityUsages(Empty) returns (ListElectricityUsage);
+  rpc UpdateWaterUsage(WaterUsage) returns (WaterUsage);
+  rpc UpdateElectricityUsage(ElectricityUsage) returns (ElectricityUsage);
+  rpc DeleteWaterUsage(ID) returns (Empty);
+  rpc DeleteElectricityUsage(ID) returns (Empty);
+  rpc GetWaterUsageById(ID) returns (WaterUsage);
+  rpc GetElectricityUsageById(ID) returns (ElectricityUsage);
+
+  rpc GetWaterUsageByUserId(ID) returns (ListWaterUsage);
+  rpc GetElectricityUsageByUserId(ID) returns (ListElectricityUsage);
+}
+
+service UserManagement{
+  rpc CreateUser(User) returns (User);
+  rpc GetUsers(Empty) returns (ListUsers);
+  rpc GetUserById(ID) returns (User);
+  rpc UpdateUser(User) returns (User);
+  rpc DeleteUser(ID) returns (Empty);
+}
+
+message AdviceCreation{
+  int32 userId = 1;
+  int32 adviceId = 2;
+}
+service AdviceManagement{
+  rpc CreateWaterUsageAdvice(WaterUsageAdvice) returns (WaterUsageAdvice);
+  rpc CreateElectricityUsageAdvice(ElectricityUsageAdvice) returns (ElectricityUsageAdvice);
+  rpc GetWaterUsageAdvices(Empty) returns (ListWaterUsageAdvice);
+  rpc GetElectricityUsageAdvices(Empty) returns (ListElectricityUsageAdvice);
+  rpc UpdateWaterUsageAdvice(WaterUsageAdvice) returns (WaterUsageAdvice);
+  rpc UpdateElectricityUsageAdvice(ElectricityUsageAdvice) returns (ElectricityUsageAdvice);
+  rpc DeleteWaterUsageAdvice(ID) returns (Empty);
+  rpc DeleteElectricityUsageAdvice(ID) returns (Empty);
+  rpc GetWaterUsageAdviceById(ID) returns (WaterUsageAdvice);
+  rpc GetElectricityUsageAdviceById(ID) returns (ElectricityUsageAdvice);
+
+  rpc GetWaterAdvicesByUserId(ID) returns (ListWaterUsageAdvice);
+  rpc GetElectricityAdvicesByUserId(ID) returns (ListElectricityUsageAdvice);
+
+  rpc AssignWaterUsageAdviceToUser(AdviceCreation) returns (ListWaterUsageAdvice);
+  rpc AssignElectricityUsageAdviceToUser(AdviceCreation) returns (ListElectricityUsageAdvice);
 }

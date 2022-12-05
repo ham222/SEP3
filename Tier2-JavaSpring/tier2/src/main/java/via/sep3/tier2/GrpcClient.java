@@ -2,14 +2,19 @@ package via.sep3.tier2;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import via.generatedprotos.*;
-import via.sep3.tier2.model.ElectricityUsageImpl;
-import via.sep3.tier2.model.UsageListImpl;
-import via.sep3.tier2.model.WaterUsageImpl;
+import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.stereotype.Service;
+import via.generatedprotos.Empty;
+import via.generatedprotos.ListElectricityUsage;
+import via.generatedprotos.ListWaterUsage;
+import via.generatedprotos.ResourcesConsumptionGrpc;
+import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
 
 
+@Service
 public class GrpcClient {
 
 
@@ -21,19 +26,19 @@ public class GrpcClient {
     }
 
 
-    public UsageListImpl getUsage() {
-        ListUsage response = stub.getUsage(Empty.newBuilder().build());
+    public ArrayList<WaterUsage> getWaterUsage() {
+        ListWaterUsage response = stub.getWaterUsages(Empty.newBuilder().build());
 
         // get list of water usage from grpc
-        ArrayList<WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
+        ArrayList<via.generatedprotos.WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
 
         // create a model water usage list
-        ArrayList<WaterUsageImpl> wUsage = new ArrayList<>();
+        ArrayList<WaterUsage> wUsage = new ArrayList<>();
 
         // cast grpc object to model
-        for (WaterUsage w : wGrpc) {
+        for (via.generatedprotos.WaterUsage w : wGrpc) {
 
-            WaterUsageImpl currentW = new WaterUsageImpl(
+            WaterUsage currentW = new WaterUsage(
                     w.getId(),
                     w.getAmount(),
                     w.getMonth(),
@@ -44,16 +49,21 @@ public class GrpcClient {
             wUsage.add(currentW);
         }
 
+        return wUsage;
+    }
+
+    public ArrayList<ElectricityUsage> getElectricityUsage() {
+        ListElectricityUsage response = stub.getElectricityUsages(Empty.newBuilder().build());
         // get list of water usage from grpc
-        ArrayList<ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
+        ArrayList<via.generatedprotos.ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
 
         // create a model water usage list
-        ArrayList<ElectricityUsageImpl> eUsage = new ArrayList<>();
+        ArrayList<ElectricityUsage> eUsage = new ArrayList<>();
 
         // cast grpc object to model
-        for (ElectricityUsage e : eGrpc) {
+        for (via.generatedprotos.ElectricityUsage e : eGrpc) {
 
-            ElectricityUsageImpl currentE = new ElectricityUsageImpl(
+            ElectricityUsage currentE = new ElectricityUsage(
                     e.getId(),
                     e.getAmount(),
                     e.getMonth(),
@@ -64,24 +74,39 @@ public class GrpcClient {
             eUsage.add(currentE);
         }
 
-
-        UsageListImpl usageList = UsageListImpl.getInstance();
-        usageList.seteUsage(eUsage);
-        usageList.setwUsage(wUsage);
-        return usageList;
+        return eUsage;
     }
 
+    public void insertWaterUsage(WaterUsage waterUsage){
+        via.generatedprotos.WaterUsage e = via.generatedprotos.WaterUsage.newBuilder()
+                .setId(waterUsage.getId())
+                .setAmount(waterUsage.getAmount())
+                .setMonth(waterUsage.getMonth())
+                .setYear(waterUsage.getYear())
+                .setUserId(waterUsage.getUserId())
+                .build();
+        try {
+            stub.logWaterUsage(e);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error logging water usage via gRPC service! ");
+        }
+    }
 
-    //TextConverterGrpc.TextConverterBlockingStub stub = TextConverterGrpc.newBlockingStub(channel);
-//    RequestText request = RequestText.newBuilder().setInputText("Lets try").build();
-//
-//    RequestText request2 = RequestText.newBuilder().setInputText("lets get it try").build();
-//
-//    ResponseText response = stub.toUpper(request);
-//        System.out.println("Received: " + response.getOutputText());
-//
-//    ResponseText response2 = stub.capitalizeFirstCharacter(request2);
-//        System.out.println("Received: " + response2.getOutputText());
-//
-//        channel.shutdown();
+    public void insertElectricityUsage(ElectricityUsage electricityUsage){
+        via.generatedprotos.ElectricityUsage e = via.generatedprotos.ElectricityUsage.newBuilder()
+                .setId(electricityUsage.getId())
+                .setAmount(electricityUsage.getAmount())
+                .setMonth(electricityUsage.getMonth())
+                .setYear(electricityUsage.getYear())
+                .setUserId(electricityUsage.getUserId())
+                .build();
+        try {
+            stub.logElectricityUsage(e);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error logging electricity usage via gRPC service! ");
+        }
+    }
+
 }
