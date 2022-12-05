@@ -324,6 +324,68 @@ public final class ResourcesConsumptionGrpc {
     return getGetElectricityUsageByIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.generatedprotos.ID,
+      via.generatedprotos.ListWaterUsage> getGetWaterUsageByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetWaterUsageByUserId",
+      requestType = via.generatedprotos.ID.class,
+      responseType = via.generatedprotos.ListWaterUsage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.generatedprotos.ID,
+      via.generatedprotos.ListWaterUsage> getGetWaterUsageByUserIdMethod() {
+    io.grpc.MethodDescriptor<via.generatedprotos.ID, via.generatedprotos.ListWaterUsage> getGetWaterUsageByUserIdMethod;
+    if ((getGetWaterUsageByUserIdMethod = ResourcesConsumptionGrpc.getGetWaterUsageByUserIdMethod) == null) {
+      synchronized (ResourcesConsumptionGrpc.class) {
+        if ((getGetWaterUsageByUserIdMethod = ResourcesConsumptionGrpc.getGetWaterUsageByUserIdMethod) == null) {
+          ResourcesConsumptionGrpc.getGetWaterUsageByUserIdMethod = getGetWaterUsageByUserIdMethod =
+              io.grpc.MethodDescriptor.<via.generatedprotos.ID, via.generatedprotos.ListWaterUsage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWaterUsageByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.generatedprotos.ID.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.generatedprotos.ListWaterUsage.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourcesConsumptionMethodDescriptorSupplier("GetWaterUsageByUserId"))
+              .build();
+        }
+      }
+    }
+    return getGetWaterUsageByUserIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.generatedprotos.ID,
+      via.generatedprotos.ListElectricityUsage> getGetElectricityUsageByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetElectricityUsageByUserId",
+      requestType = via.generatedprotos.ID.class,
+      responseType = via.generatedprotos.ListElectricityUsage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.generatedprotos.ID,
+      via.generatedprotos.ListElectricityUsage> getGetElectricityUsageByUserIdMethod() {
+    io.grpc.MethodDescriptor<via.generatedprotos.ID, via.generatedprotos.ListElectricityUsage> getGetElectricityUsageByUserIdMethod;
+    if ((getGetElectricityUsageByUserIdMethod = ResourcesConsumptionGrpc.getGetElectricityUsageByUserIdMethod) == null) {
+      synchronized (ResourcesConsumptionGrpc.class) {
+        if ((getGetElectricityUsageByUserIdMethod = ResourcesConsumptionGrpc.getGetElectricityUsageByUserIdMethod) == null) {
+          ResourcesConsumptionGrpc.getGetElectricityUsageByUserIdMethod = getGetElectricityUsageByUserIdMethod =
+              io.grpc.MethodDescriptor.<via.generatedprotos.ID, via.generatedprotos.ListElectricityUsage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetElectricityUsageByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.generatedprotos.ID.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.generatedprotos.ListElectricityUsage.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourcesConsumptionMethodDescriptorSupplier("GetElectricityUsageByUserId"))
+              .build();
+        }
+      }
+    }
+    return getGetElectricityUsageByUserIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -442,6 +504,20 @@ public final class ResourcesConsumptionGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetElectricityUsageByIdMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getWaterUsageByUserId(via.generatedprotos.ID request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.ListWaterUsage> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWaterUsageByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getElectricityUsageByUserId(via.generatedprotos.ID request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.ListElectricityUsage> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetElectricityUsageByUserIdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -514,6 +590,20 @@ public final class ResourcesConsumptionGrpc {
                 via.generatedprotos.ID,
                 via.generatedprotos.ElectricityUsage>(
                   this, METHODID_GET_ELECTRICITY_USAGE_BY_ID)))
+          .addMethod(
+            getGetWaterUsageByUserIdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.generatedprotos.ID,
+                via.generatedprotos.ListWaterUsage>(
+                  this, METHODID_GET_WATER_USAGE_BY_USER_ID)))
+          .addMethod(
+            getGetElectricityUsageByUserIdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.generatedprotos.ID,
+                via.generatedprotos.ListElectricityUsage>(
+                  this, METHODID_GET_ELECTRICITY_USAGE_BY_USER_ID)))
           .build();
     }
   }
@@ -611,6 +701,22 @@ public final class ResourcesConsumptionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetElectricityUsageByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getWaterUsageByUserId(via.generatedprotos.ID request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.ListWaterUsage> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetWaterUsageByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getElectricityUsageByUserId(via.generatedprotos.ID request,
+        io.grpc.stub.StreamObserver<via.generatedprotos.ListElectricityUsage> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetElectricityUsageByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -695,6 +801,20 @@ public final class ResourcesConsumptionGrpc {
     public via.generatedprotos.ElectricityUsage getElectricityUsageById(via.generatedprotos.ID request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetElectricityUsageByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.generatedprotos.ListWaterUsage getWaterUsageByUserId(via.generatedprotos.ID request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetWaterUsageByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.generatedprotos.ListElectricityUsage getElectricityUsageByUserId(via.generatedprotos.ID request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetElectricityUsageByUserIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -791,6 +911,22 @@ public final class ResourcesConsumptionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetElectricityUsageByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.generatedprotos.ListWaterUsage> getWaterUsageByUserId(
+        via.generatedprotos.ID request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetWaterUsageByUserIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.generatedprotos.ListElectricityUsage> getElectricityUsageByUserId(
+        via.generatedprotos.ID request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetElectricityUsageByUserIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LOG_ELECTRICITY_USAGE = 0;
@@ -803,6 +939,8 @@ public final class ResourcesConsumptionGrpc {
   private static final int METHODID_DELETE_ELECTRICITY_USAGE = 7;
   private static final int METHODID_GET_WATER_USAGE_BY_ID = 8;
   private static final int METHODID_GET_ELECTRICITY_USAGE_BY_ID = 9;
+  private static final int METHODID_GET_WATER_USAGE_BY_USER_ID = 10;
+  private static final int METHODID_GET_ELECTRICITY_USAGE_BY_USER_ID = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -860,6 +998,14 @@ public final class ResourcesConsumptionGrpc {
         case METHODID_GET_ELECTRICITY_USAGE_BY_ID:
           serviceImpl.getElectricityUsageById((via.generatedprotos.ID) request,
               (io.grpc.stub.StreamObserver<via.generatedprotos.ElectricityUsage>) responseObserver);
+          break;
+        case METHODID_GET_WATER_USAGE_BY_USER_ID:
+          serviceImpl.getWaterUsageByUserId((via.generatedprotos.ID) request,
+              (io.grpc.stub.StreamObserver<via.generatedprotos.ListWaterUsage>) responseObserver);
+          break;
+        case METHODID_GET_ELECTRICITY_USAGE_BY_USER_ID:
+          serviceImpl.getElectricityUsageByUserId((via.generatedprotos.ID) request,
+              (io.grpc.stub.StreamObserver<via.generatedprotos.ListElectricityUsage>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -932,6 +1078,8 @@ public final class ResourcesConsumptionGrpc {
               .addMethod(getDeleteElectricityUsageMethod())
               .addMethod(getGetWaterUsageByIdMethod())
               .addMethod(getGetElectricityUsageByIdMethod())
+              .addMethod(getGetWaterUsageByUserIdMethod())
+              .addMethod(getGetElectricityUsageByUserIdMethod())
               .build();
         }
       }

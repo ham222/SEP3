@@ -1,0 +1,9 @@
+﻿@page "/BlockPageWithPolicy"
+@attribute [Authorize(Policy="MustBeUser")]
+
+<h3>BlockPageWithPolicy</h3>
+<p>This page can only be viewed if you're VIA</p>
+
+@code {
+
+}

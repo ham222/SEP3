@@ -2,13 +2,10 @@ package via.sep3.tier2;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.stereotype.Service;
-import via.generatedprotos.Empty;
-import via.generatedprotos.ListElectricityUsage;
-import via.generatedprotos.ListWaterUsage;
-import via.generatedprotos.ResourcesConsumptionGrpc;
+import via.generatedprotos.*;
 import via.sep3.tier2.model.ElectricityUsage;
+import via.sep3.tier2.model.User;
 import via.sep3.tier2.model.WaterUsage;
 
 import java.util.ArrayList;
@@ -19,15 +16,13 @@ public class GrpcClient {
 
 
     ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 6565).usePlaintext().build();
-    ResourcesConsumptionGrpc.ResourcesConsumptionBlockingStub stub = ResourcesConsumptionGrpc.newBlockingStub(channel);
+    ResourcesConsumptionGrpc.ResourcesConsumptionBlockingStub stubResources = ResourcesConsumptionGrpc.newBlockingStub(channel);
+    UserManagementGrpc.UserManagementBlockingStub stubUser = UserManagementGrpc.newBlockingStub(channel);
 
-    public static void main(String[] args) {
-
-    }
 
 
     public ArrayList<WaterUsage> getWaterUsage() {
-        ListWaterUsage response = stub.getWaterUsages(Empty.newBuilder().build());
+        ListWaterUsage response = stubResources.getWaterUsages(Empty.newBuilder().build());
 
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
@@ -53,7 +48,7 @@ public class GrpcClient {
     }
 
     public ArrayList<ElectricityUsage> getElectricityUsage() {
-        ListElectricityUsage response = stub.getElectricityUsages(Empty.newBuilder().build());
+        ListElectricityUsage response = stubResources.getElectricityUsages(Empty.newBuilder().build());
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
 
@@ -86,7 +81,7 @@ public class GrpcClient {
                 .setUserId(waterUsage.getUserId())
                 .build();
         try {
-            stub.logWaterUsage(e);
+            stubResources.logWaterUsage(e);
         } catch (Exception err){
             err.printStackTrace();
             System.err.println("Error logging water usage via gRPC service! ");
@@ -102,11 +97,50 @@ public class GrpcClient {
                 .setUserId(electricityUsage.getUserId())
                 .build();
         try {
-            stub.logElectricityUsage(e);
+            stubResources.logElectricityUsage(e);
         } catch (Exception err){
             err.printStackTrace();
             System.err.println("Error logging electricity usage via gRPC service! ");
         }
     }
 
+    public User createUser(User user)
+    {
+        via.generatedprotos.User grpcUser = via.generatedprotos.User.newBuilder()
+                .setId(0)
+                .setPassword(user.getPassword())
+                .setUsername(user.getUsername())
+                .setRole(1)
+                .build();
+        User response = null;
+        via.generatedprotos.User grpcResponse = null;
+        try{
+            grpcResponse = stubUser.createUser(grpcUser);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error creating user via gRPC service!");
+        }
+
+        if(grpcResponse != null)
+        {
+            response = new User(grpcResponse.getId(),grpcResponse.getUsername(), grpcResponse.getPassword(), grpcResponse.getRole());
+        }
+
+        return response;
+    }
+
+
+    public User findUserByUsername(String username)
+    {
+        ListUsers response = stubUser.getUsers(Empty.newBuilder().build());
+        ArrayList<via.generatedprotos.User> users = new ArrayList<>(response.getUsersList());
+        User user = null;
+        for (via.generatedprotos.User u : users) {
+            if(u.getUsername().equals(username))
+            {
+                user = new User(u.getId(),u.getUsername(), u.getPassword(), u.getRole());
+            }
+        }
+        return user;
+    }
 }
