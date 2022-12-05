@@ -61,7 +61,7 @@ public class ApiTests {
 
     @Test
     public void addOneUser_andGetThemBack() throws Exception {
-        User u1 = new User(1, "Jakub", "pwd", 1);
+        User u1 = new User(1, "Jakub", "pwd", 1, 1);
         ArrayList<User> users = new ArrayList<>(List.of(u1));
         Mockito.when(userService.getUsers()).thenReturn(users);
         mvc.perform(MockMvcRequestBuilders
@@ -74,8 +74,8 @@ public class ApiTests {
 
     @Test
     public void addTwoUsers_andGetThemBack() throws Exception {
-        User u1 = new User(1, "Jakub", "pwd", 1);
-        User u2 = new User(2, "Iurie", "pwd", 1);
+        User u1 = new User(1, "Jakub", "pwd", 1, 1);
+        User u2 = new User(2, "Iurie", "pwd", 1, 2);
         ArrayList<User> users = new ArrayList<>(List.of(u1,u2));
         Mockito.when(userService.getUsers()).thenReturn(users);
         mvc.perform(MockMvcRequestBuilders
@@ -89,12 +89,12 @@ public class ApiTests {
 
     @Test
     public void addMultipleUsers_andGetThemBack() throws Exception {
-        User u1 = new User(1, "Jakub", "pwd", 1);
-        User u2 = new User(2, "Iurie", "pwd", 1);
-        User u3 = new User(2, "Dragos", "pwd", 1);
-        User u4 = new User(2, "Filip", "pwd", 1);
-        User u5 = new User(2, "Daniel", "pwd", 1);
-        User u6 = new User(2, "Joseph", "pwd", 1);
+        User u1 = new User(1, "Jakub", "pwd", 1, 1);
+        User u2 = new User(2, "Iurie", "pwd", 1, 2);
+        User u3 = new User(2, "Dragos", "pwd", 1, 3);
+        User u4 = new User(2, "Filip", "pwd", 1, 1);
+        User u5 = new User(2, "Daniel", "pwd", 1, 2);
+        User u6 = new User(2, "Joseph", "pwd", 1, 3);
         ArrayList<User> users = new ArrayList<>(List.of(u1,u2,u3,u4,u5,u6));
         Mockito.when(userService.getUsers()).thenReturn(users);
         mvc.perform(MockMvcRequestBuilders
