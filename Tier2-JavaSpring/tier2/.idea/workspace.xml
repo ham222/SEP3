@@ -5,11 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceCreationOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsageAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsageAdviceOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsersOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsageAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsageAdviceOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityAdviceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityAdviceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityAdviceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityAdviceRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceManagementGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceManagementGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Definitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Definitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ResourcesConsumptionGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ResourcesConsumptionGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserManagementGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserManagementGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserOrBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/proto/definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tier3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/src/main/resources/application.properties" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -39,18 +60,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto",
-    "spring.configuration.checksum": "4d8ef5a46dad80eb8d2ccf5a5e5dfa62"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="via.sep3.tier2.logic.DAOs" />
@@ -71,7 +92,7 @@
       <recent name="via.sep3.tier2.repository.Interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTests">
+  <component name="RunManager" selected="Spring Boot.Tier2Application">
     <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
       <module name="tier2" />
@@ -113,6 +134,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiTests.addOneUser_andGetThemBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tier2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="via.sep3.tier2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="via.sep3.tier2" />
+      <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.ApiTests" />
+      <option name="METHOD_NAME" value="addOneUser_andGetThemBack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiTests.addOneWaterUsage_andGetItBack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tier2" />
       <extension name="coverage">
@@ -139,6 +176,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ApiTests" />
+        <item itemvalue="JUnit.ApiTests.addOneUser_andGetThemBack" />
         <item itemvalue="JUnit.ApiTests.addOneWaterUsage_andGetItBack" />
         <item itemvalue="Application.Tier2Application" />
         <item itemvalue="Application.GrpcClient" />
@@ -166,6 +204,8 @@
       <workItem from="1669911222183" duration="10000" />
       <workItem from="1669932199276" duration="636000" />
       <workItem from="1669974614981" duration="10999000" />
+      <workItem from="1670242372516" duration="6187000" />
+      <workItem from="1670250746418" duration="330000" />
     </task>
     <servers />
   </component>

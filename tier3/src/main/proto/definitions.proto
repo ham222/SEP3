@@ -8,6 +8,7 @@ message User{
   string username = 2;
   string password = 3;
   int32 role = 4;
+  int32 area = 5;
 }
 
 message ListUsers{
