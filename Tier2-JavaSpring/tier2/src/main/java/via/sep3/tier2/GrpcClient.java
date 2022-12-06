@@ -161,6 +161,7 @@ public class GrpcClient {
         return advices;
     }
 
+
     public User createUser(User user)
     {
         via.generatedprotos.User grpcUser = via.generatedprotos.User.newBuilder()
@@ -200,4 +201,37 @@ public class GrpcClient {
         }
         return user;
     }
+
+    public void createWaterAdvice(via.sep3.tier2.model.WaterUsageAdvice advice){
+        WaterUsageAdvice grpcAdvice = WaterUsageAdvice.newBuilder()
+                .setId(advice.getId())
+                .setBody(advice.getText())
+                .build();
+        try {
+            adviceStub.createWaterUsageAdvice(grpcAdvice);
+        } catch (Exception e){
+            System.err.println("Error creating water advice via gRPC!\n"+e.getMessage());
+        }
+    }
+
+    public ArrayList<via.sep3.tier2.model.WaterUsageAdvice> getAllWaterAdvice(){
+        ArrayList<via.sep3.tier2.model.WaterUsageAdvice> advices = new ArrayList<>();
+        ListWaterUsageAdvice grpcUsers = adviceStub.getWaterUsageAdvices(Empty.newBuilder().build());
+
+        ArrayList<via.generatedprotos.WaterUsageAdvice> eGrpc = new ArrayList<>(grpcUsers.getWaterList());
+
+
+        for (via.generatedprotos.WaterUsageAdvice e : eGrpc) {
+
+            via.sep3.tier2.model.WaterUsageAdvice currentE = new via.sep3.tier2.model.WaterUsageAdvice(
+                    e.getId(),
+                    e.getBody()
+            );
+
+            advices.add(currentE);
+        }
+        return advices;
+    }
+
+
 }
