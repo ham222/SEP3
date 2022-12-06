@@ -37,4 +37,9 @@ public  class ElectricityUsageRepositoryImpl implements ElectricityUsageReposito
     public void insertElectricityUsage(ElectricityUsage electricityUsage) {
         grpcClient.insertElectricityUsage(electricityUsage);
     }
+
+    @Override
+    public ElectricityUsage editElectricityUsage(ElectricityUsage usage) {
+        return grpcClient.editElectricityUsage(usage);
+    }
 }

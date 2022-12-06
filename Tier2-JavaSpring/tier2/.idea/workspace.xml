@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
+    <list default="true" id="9a688b5b-d40b-4028-9e5a-fa2030b7f55f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityAdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityAdviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityAdviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityAdviceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityAdviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityAdviceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityAdviceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tier2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tier2.iml" afterDir="false" />
     </list>
-    <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
-    <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
-    <list id="24008627-7003-4c05-aedb-3c849e7a57df" name="Changes by gavriliuciurie" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +56,9 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
   }
 }</component>
@@ -73,7 +82,7 @@
       <recent name="via.sep3.tier2.repository.Interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Tier2Application">
+  <component name="RunManager" selected="JUnit.ApiTests">
     <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
       <module name="tier2" />
@@ -167,7 +176,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="" />
+      <changelist id="9a688b5b-d40b-4028-9e5a-fa2030b7f55f" name="Changes" comment="" />
       <created>1667340724333</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -188,6 +197,11 @@
       <workItem from="1670242372516" duration="6187000" />
       <workItem from="1670250746418" duration="330000" />
       <workItem from="1670257477074" duration="5018000" />
+      <workItem from="1670321636381" duration="2146000" />
+      <workItem from="1670328122103" duration="4000" />
+      <workItem from="1670328131507" duration="33000" />
+      <workItem from="1670328172230" duration="22000" />
+      <workItem from="1670328200777" duration="6050000" />
     </task>
     <servers />
   </component>

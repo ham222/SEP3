@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User createUser(LoginCredentials loginCredentials)
     {
-        User user = new User(0, loginCredentials.getUsername(), loginCredentials.getPassword(), 1);
+        User user = new User(0, loginCredentials.getUsername(), loginCredentials.getPassword(), 1,1);
         return repository.saveUser(user);
     }
 

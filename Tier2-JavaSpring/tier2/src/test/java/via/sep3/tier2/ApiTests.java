@@ -10,12 +10,11 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import via.sep3.tier2.logic.interfaces.*;
-import via.sep3.tier2.model.ElectricityUsage;
-import via.sep3.tier2.model.User;
-import via.sep3.tier2.model.WaterUsage;
+import via.sep3.tier2.model.*;
 import via.sep3.tier2.rest.RestApiController;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
@@ -167,12 +166,64 @@ public class ApiTests {
                 .andExpect(jsonPath("$[0].amount",is(5.0)));
     }
 
+    @Test
+    public void editElectricityUsage() throws Exception {
+        ElectricityUsage electricityUsageToChange = new ElectricityUsage(1,5,2,2022,1);
+        ElectricityUsage change = new ElectricityUsage(1,10,2,2022,1);
+        Mockito.when(electricityUsageService.editElectricityUsage(electricityUsageToChange)).thenReturn(electricityUsageToChange = change);
+        ArrayList<ElectricityUsage> usages = new ArrayList<>();
+        usages.add(electricityUsageToChange);
+        Mockito.when(electricityUsageService.getUserElectricityUsages(1)).thenReturn(usages);
+        mvc.perform(MockMvcRequestBuilders
+                        .get("/api/users/1/electricity")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$",hasSize(1)))
+                .andExpect(jsonPath("$[0].amount",is(10.0)));
+    }
+
+
+
+
 
     //Water usage advice tests
-
+    @Test
+    public void createWaterAdvice() throws Exception {
+        WaterUsageAdvice advice = new WaterUsageAdvice(1,"Close the tap when brushing your teeth!");
+        Mockito.when(waterAdviceService.getWaterAdviceById(1)).thenReturn(advice);
+        mvc.perform(MockMvcRequestBuilders
+                        .get("/api/advice/water/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id",is(advice.getId())))
+                .andExpect(jsonPath("$.text",is(advice.getText())));
+    }
 
 
     //Electricity usage advice tests
+    @Test
+    public void createElectricityAdvice() throws Exception {
+        ElectricityUsageAdvice advice = new ElectricityUsageAdvice(1,"Turn off the lights when you exit a room");
+        Mockito.when(electricityAdviceService.getAdviceById(1)).thenReturn(advice);
+        mvc.perform(MockMvcRequestBuilders
+                        .get("/api/advice/electricity/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id",is(1)))
+                .andExpect(jsonPath("$.text",is("Turn off the lights when you exit a room")));
+    }
 
+    @Test
+    public void deleteElectricityAdvice() throws Exception {
+        ElectricityUsageAdvice advice = new ElectricityUsageAdvice(1,"Turn off the lights when you exit a room");
+        Mockito.when(electricityAdviceService.getAdviceById(1)).thenReturn(advice);
+
+        electricityAdviceService.deleteAdviceById(1);
+        mvc.perform(MockMvcRequestBuilders
+                        .delete("/api/advice/electricity/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$",is("")));
+    }
 
 }

@@ -233,5 +233,15 @@ public class GrpcClient {
         return advices;
     }
 
+    public via.sep3.tier2.model.ElectricityUsageAdvice editElectricityAdviceById(int id){
+        //TODO implement
+        return null;
+    }
+
+    public ElectricityUsage editElectricityUsage(ElectricityUsage usage){
+        //TODO implement
+        return null;
+    }
+
 
 }
