@@ -16,17 +16,17 @@ public class GrpcClient {
 
 
     ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 6565).usePlaintext().build();
-    ResourcesConsumptionGrpc.ResourcesConsumptionBlockingStub stub = ResourcesConsumptionGrpc.newBlockingStub(channel);
+
+
     UserManagementGrpc.UserManagementBlockingStub userStub = UserManagementGrpc.newBlockingStub(channel);
     AdviceManagementGrpc.AdviceManagementBlockingStub adviceStub = AdviceManagementGrpc.newBlockingStub(channel);
 
-    public static void main(String[] args) {
+    ResourcesConsumptionGrpc.ResourcesConsumptionBlockingStub stubResources = ResourcesConsumptionGrpc.newBlockingStub(channel);
 
-    }
 
 
     public ArrayList<WaterUsage> getWaterUsage() {
-        ListWaterUsage response = stub.getWaterUsages(Empty.newBuilder().build());
+        ListWaterUsage response = stubResources.getWaterUsages(Empty.newBuilder().build());
 
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.WaterUsage> wGrpc = new ArrayList<>(response.getWaterList());
@@ -52,7 +52,7 @@ public class GrpcClient {
     }
 
     public ArrayList<ElectricityUsage> getElectricityUsage() {
-        ListElectricityUsage response = stub.getElectricityUsages(Empty.newBuilder().build());
+        ListElectricityUsage response = stubResources.getElectricityUsages(Empty.newBuilder().build());
         // get list of water usage from grpc
         ArrayList<via.generatedprotos.ElectricityUsage> eGrpc = new ArrayList<>(response.getElectricityList());
 
@@ -85,7 +85,7 @@ public class GrpcClient {
                 .setUserId(waterUsage.getUserId())
                 .build();
         try {
-            stub.logWaterUsage(e);
+            stubResources.logWaterUsage(e);
         } catch (Exception err){
             err.printStackTrace();
             System.err.println("Error logging water usage via gRPC service! ");
@@ -101,13 +101,13 @@ public class GrpcClient {
                 .setUserId(electricityUsage.getUserId())
                 .build();
         try {
-            stub.logElectricityUsage(e);
+            stubResources.logElectricityUsage(e);
         } catch (Exception err){
             err.printStackTrace();
             System.err.println("Error logging electricity usage via gRPC service! ");
         }
     }
-
+    
     public ArrayList<User> getUsers(){
         ArrayList<User> users = new ArrayList<>();
         ListUsers grpcUsers = userStub.getUsers(Empty.newBuilder().build());
@@ -161,4 +161,43 @@ public class GrpcClient {
         return advices;
     }
 
+    public User createUser(User user)
+    {
+        via.generatedprotos.User grpcUser = via.generatedprotos.User.newBuilder()
+                .setId(0)
+                .setPassword(user.getPassword())
+                .setUsername(user.getUsername())
+                .setRole(1)
+                .build();
+        User response = null;
+        via.generatedprotos.User grpcResponse = null;
+        try{
+            grpcResponse = userStub.createUser(grpcUser);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error creating user via gRPC service!");
+        }
+
+        if(grpcResponse != null)
+        {
+            response = new User(grpcResponse.getId(),grpcResponse.getUsername(), grpcResponse.getPassword(), grpcResponse.getRole(),grpcResponse.getArea());
+        }
+
+        return response;
+    }
+
+
+    public User findUserByUsername(String username)
+    {
+        ListUsers response = userStub.getUsers(Empty.newBuilder().build());
+        ArrayList<via.generatedprotos.User> users = new ArrayList<>(response.getUsersList());
+        User user = null;
+        for (via.generatedprotos.User u : users) {
+            if(u.getUsername().equals(username))
+            {
+                user = new User(u.getId(),u.getUsername(), u.getPassword(), u.getRole(),u.getArea());
+            }
+        }
+        return user;
+    }
 }

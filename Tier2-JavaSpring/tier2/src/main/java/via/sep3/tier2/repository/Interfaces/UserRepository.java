@@ -8,4 +8,7 @@ public interface UserRepository {
 
     ArrayList<User> getUsers();
 
+    User saveUser(User user);
+
+    User findUserByUsername(String username);
 }

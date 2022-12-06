@@ -24,4 +24,16 @@ public class UserRepositoryImpl implements UserRepository {
         }
         return users;
     }
+
+    @Override
+    public User saveUser(User user)
+    {
+        return grpcClient.createUser(user);
+    }
+
+    @Override
+    public User findUserByUsername(String username)
+    {
+        return grpcClient.findUserByUsername(username);
+    }
 }
