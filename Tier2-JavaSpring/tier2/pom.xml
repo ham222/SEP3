@@ -139,8 +139,8 @@
                                 </outputTarget>
                                 <outputTarget>
                                     <type>grpc-java</type>
-<!--                                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0</pluginArtifact>-->
-                                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0:exe:osx-x86_64</pluginArtifact>
+                                   <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0</pluginArtifact>
+                                    <!--<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0:exe:osx-x86_64</pluginArtifact> -->
                                     <outputDirectory>src/main/java</outputDirectory>
                                 </outputTarget>
                             </outputTargets>

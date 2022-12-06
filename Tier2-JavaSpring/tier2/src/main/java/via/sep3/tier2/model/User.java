@@ -16,6 +16,13 @@ public class User {
         this.area=area;
     }
 
+    public User(int id, String username, String password, int role) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
     public int getId() {
         return id;
     }

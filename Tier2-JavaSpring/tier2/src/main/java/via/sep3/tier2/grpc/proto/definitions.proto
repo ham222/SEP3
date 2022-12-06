@@ -15,7 +15,6 @@ message ListUsers{
   repeated User users = 1;
 }
 
-
 message WaterUsage{
   int32 id = 1;
   double amount = 2;
