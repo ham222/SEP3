@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PeQ1j1N6qT9wYXHPJWrm36o+GAIX2pttwnmMudWz14wARrmHs7yuwSxoJ96uZy4Gy5SO9JdBqYufbqXkmWg6NQ==",
+  "dgSpecHash": "rIkyAbfh5RpS9DRvh2Akj9lrWjdHjmv8KDhmpz9lRH0v50/yPWKIIL7lLIaYWRRU5CFpD253rJi2KZgo2LtX2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dlope\\OneDrive\\Documents\\GitHub\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

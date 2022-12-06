@@ -5,13 +5,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/CreateAdvice.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Elecusage.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/ViewWaterUsage.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Waterusage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/BlazorWasm.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/BlazorWasm.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/BlazorWasm.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/BlazorWasm.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/DTOs/GetWaterUsageDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/DTOs/GetWaterUsageDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/ElectricityUsage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/ElectricityUsage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/WaterUsage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/Models/WaterUsage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/ClientInterface/IWaterService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/ClientInterface/IWaterService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/HttpClients.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/HttpClients.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/Implementations/WaterHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/Implementations/WaterHttpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/Debug/net6.0/HttpClients.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/HttpClients.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/HttpClients.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/HttpClients.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/HttpClients/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Debug/net6.0/Shared.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Shared.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Shared.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Shared.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/Shared.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/Shared/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/WebApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/WebApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/WebApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/GrpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/WaterAdviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/WaterAdviceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/WaterAdviceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/WaterAdviceRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceCreation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceCreationOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/AdviceManagementGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Definitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ElectricityUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/Empty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/EmptyOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/IDOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListElectricityUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListUsersOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ListWaterUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/ResourcesConsumptionGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserManagementGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/UserOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageAdviceOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/generatedprotos/WaterUsageOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/grpc/proto/definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tier3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tier3/pom.xml" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
@@ -41,18 +132,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub Nowak/IdeaProjects/SEP3/Tier2-JavaSpring/tier2/src/main/java/via/sep3/tier2/grpc/proto&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4d8ef5a46dad80eb8d2ccf5a5e5dfa62&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tier3" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="via.sep3.tier2.logic.DAOs" />
@@ -73,7 +155,7 @@
       <recent name="via.sep3.tier2.repository.Interfaces" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Tier2Application">
+  <component name="RunManager" selected="Application.Tier2Application">
     <configuration name="GrpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="via.sep3.tier2.GrpcClient" />
       <module name="tier2" />
@@ -156,10 +238,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tier2Application" />
         <item itemvalue="JUnit.ApiTests" />
         <item itemvalue="JUnit.ApiTests.addOneUser_andGetThemBack" />
         <item itemvalue="JUnit.ApiTests.addOneWaterUsage_andGetItBack" />
-        <item itemvalue="Application.Tier2Application" />
         <item itemvalue="Application.GrpcClient" />
       </list>
     </recent_temporary>

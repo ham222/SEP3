@@ -1,6 +1,8 @@
-﻿namespace HttpClients.ClientInterface;
+﻿using Domain.Models;
 
-public class IWaterService
+namespace HttpClients.ClientInterface;
+
+public interface IWaterService
 {
-    
+    Task<ICollection<WaterUsage>> GetAsync(int? userId);
 }

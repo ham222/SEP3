@@ -42,4 +42,10 @@ public interface UserOrBuilder extends
    * @return The role.
    */
   int getRole();
+
+  /**
+   * <code>int32 area = 5;</code>
+   * @return The area.
+   */
+  int getArea();
 }

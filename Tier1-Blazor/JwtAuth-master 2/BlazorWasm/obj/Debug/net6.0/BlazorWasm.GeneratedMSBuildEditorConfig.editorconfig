@@ -5,75 +5,89 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = browser
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = true
-build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorWasm
 build_property.RootNamespace = BlazorWasm
-build_property.ProjectDir = C:\Users\dlope\OneDrive\Documents\GitHub\SEP3\Tier1-Blazor\JwtAuth-master 2\BlazorWasm\
+build_property.ProjectDir = C:\Users\Danny\OneDrive\Documentos\GitHub\exam\SEP3\Tier1-Blazor\JwtAuth-master 2\BlazorWasm\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dlope\OneDrive\Documents\GitHub\SEP3\Tier1-Blazor\JwtAuth-master 2\BlazorWasm
+build_property.MSBuildProjectDirectory = C:\Users\Danny\OneDrive\Documentos\GitHub\exam\SEP3\Tier1-Blazor\JwtAuth-master 2\BlazorWasm
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/App.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/BlockPageWithPolicy.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/BlockPageWithPolicy.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvY2tQYWdlV2l0aFBvbGljeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Counter.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Index.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/CreateAdvice.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQWR2aWNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Elecusage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWxlY3VzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/MustBeLoggedInToView.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/MustBeLoggedInToView.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVzdEJlTG9nZ2VkSW5Ub1ZpZXcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/PolicyExampleManual.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/PolicyExampleManual.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9saWN5RXhhbXBsZU1hbnVhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/PolicyExampleWithComponent.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/PolicyExampleWithComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9saWN5RXhhbXBsZVdpdGhDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Register.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/ShowCredentialsAuthState.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/ShowCredentialsAuthState.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd0NyZWRlbnRpYWxzQXV0aFN0YXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/SurveyPrompt.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/ViewWaterUsage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1dhdGVyVXNhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Waterusage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2F0ZXJ1c2FnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/_Imports.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Login.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ggyo7swwbw
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/LoginButtons.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/LoginButtons.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5CdXR0b25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-lhd5b4yoyf
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/MainLayout.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-2ar46ifnr2
 
-[C:/Users/dlope/OneDrive/Documents/GitHub/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/NavMenu.razor]
+[C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-oede2f5y32

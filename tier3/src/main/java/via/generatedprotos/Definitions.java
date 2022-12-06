@@ -88,95 +88,95 @@ public final class Definitions {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021definitions.proto\022\017generatedprotos\"D\n\004" +
+      "\n\021definitions.proto\022\017generatedprotos\"R\n\004" +
       "User\022\n\n\002id\030\001 \001(\005\022\020\n\010username\030\002 \001(\t\022\020\n\010pa" +
-      "ssword\030\003 \001(\t\022\014\n\004role\030\004 \001(\005\"1\n\tListUsers\022" +
-      "$\n\005users\030\001 \003(\0132\025.generatedprotos.User\"U\n" +
-      "\nWaterUsage\022\n\n\002id\030\001 \001(\005\022\016\n\006amount\030\002 \001(\001\022" +
-      "\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(\005\022\016\n\006userId\030\005" +
-      " \001(\005\"[\n\020ElectricityUsage\022\n\n\002id\030\001 \001(\005\022\016\n\006" +
-      "amount\030\002 \001(\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001(" +
-      "\005\022\016\n\006userId\030\005 \001(\005\",\n\020WaterUsageAdvice\022\n\n" +
-      "\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"2\n\026ElectricityUs" +
-      "ageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"\020\n\002I" +
-      "D\022\n\n\002id\030\001 \001(\005\"\007\n\005Empty\"<\n\016ListWaterUsage" +
-      "\022*\n\005water\030\001 \003(\0132\033.generatedprotos.WaterU" +
-      "sage\"N\n\024ListElectricityUsage\0226\n\013electric" +
-      "ity\030\001 \003(\0132!.generatedprotos.ElectricityU" +
-      "sage\"H\n\024ListWaterUsageAdvice\0220\n\005water\030\001 " +
-      "\003(\0132!.generatedprotos.WaterUsageAdvice\"Z" +
-      "\n\032ListElectricityUsageAdvice\022<\n\013electric" +
-      "ity\030\001 \003(\0132\'.generatedprotos.ElectricityU" +
-      "sageAdvice\"2\n\016AdviceCreation\022\016\n\006userId\030\001" +
-      " \001(\005\022\020\n\010adviceId\030\002 \001(\0052\332\007\n\024ResourcesCons" +
-      "umption\022[\n\023LogElectricityUsage\022!.generat" +
-      "edprotos.ElectricityUsage\032!.generatedpro" +
-      "tos.ElectricityUsage\022I\n\rLogWaterUsage\022\033." +
-      "generatedprotos.WaterUsage\032\033.generatedpr" +
-      "otos.WaterUsage\022I\n\016GetWaterUsages\022\026.gene" +
-      "ratedprotos.Empty\032\037.generatedprotos.List" +
-      "WaterUsage\022U\n\024GetElectricityUsages\022\026.gen" +
-      "eratedprotos.Empty\032%.generatedprotos.Lis" +
-      "tElectricityUsage\022L\n\020UpdateWaterUsage\022\033." +
-      "generatedprotos.WaterUsage\032\033.generatedpr" +
-      "otos.WaterUsage\022^\n\026UpdateElectricityUsag" +
-      "e\022!.generatedprotos.ElectricityUsage\032!.g" +
-      "eneratedprotos.ElectricityUsage\022?\n\020Delet" +
-      "eWaterUsage\022\023.generatedprotos.ID\032\026.gener" +
-      "atedprotos.Empty\022E\n\026DeleteElectricityUsa" +
-      "ge\022\023.generatedprotos.ID\032\026.generatedproto" +
-      "s.Empty\022E\n\021GetWaterUsageById\022\023.generated" +
-      "protos.ID\032\033.generatedprotos.WaterUsage\022Q" +
-      "\n\027GetElectricityUsageById\022\023.generatedpro" +
-      "tos.ID\032!.generatedprotos.ElectricityUsag" +
-      "e\022M\n\025GetWaterUsageByUserId\022\023.generatedpr" +
-      "otos.ID\032\037.generatedprotos.ListWaterUsage" +
-      "\022Y\n\033GetElectricityUsageByUserId\022\023.genera" +
-      "tedprotos.ID\032%.generatedprotos.ListElect" +
-      "ricityUsage2\276\002\n\016UserManagement\022:\n\nCreate" +
-      "User\022\025.generatedprotos.User\032\025.generatedp" +
-      "rotos.User\022>\n\010GetUsers\022\026.generatedprotos" +
-      ".Empty\032\032.generatedprotos.ListUsers\0229\n\013Ge" +
-      "tUserById\022\023.generatedprotos.ID\032\025.generat" +
-      "edprotos.User\022:\n\nUpdateUser\022\025.generatedp" +
-      "rotos.User\032\025.generatedprotos.User\0229\n\nDel" +
-      "eteUser\022\023.generatedprotos.ID\032\026.generated" +
-      "protos.Empty2\314\n\n\020AdviceManagement\022^\n\026Cre" +
-      "ateWaterUsageAdvice\022!.generatedprotos.Wa" +
-      "terUsageAdvice\032!.generatedprotos.WaterUs" +
-      "ageAdvice\022p\n\034CreateElectricityUsageAdvic" +
-      "e\022\'.generatedprotos.ElectricityUsageAdvi" +
-      "ce\032\'.generatedprotos.ElectricityUsageAdv" +
-      "ice\022U\n\024GetWaterUsageAdvices\022\026.generatedp" +
-      "rotos.Empty\032%.generatedprotos.ListWaterU" +
-      "sageAdvice\022a\n\032GetElectricityUsageAdvices" +
-      "\022\026.generatedprotos.Empty\032+.generatedprot" +
-      "os.ListElectricityUsageAdvice\022^\n\026UpdateW" +
-      "aterUsageAdvice\022!.generatedprotos.WaterU" +
-      "sageAdvice\032!.generatedprotos.WaterUsageA" +
-      "dvice\022p\n\034UpdateElectricityUsageAdvice\022\'." +
-      "generatedprotos.ElectricityUsageAdvice\032\'" +
-      ".generatedprotos.ElectricityUsageAdvice\022" +
-      "E\n\026DeleteWaterUsageAdvice\022\023.generatedpro" +
-      "tos.ID\032\026.generatedprotos.Empty\022K\n\034Delete" +
-      "ElectricityUsageAdvice\022\023.generatedprotos" +
-      ".ID\032\026.generatedprotos.Empty\022Q\n\027GetWaterU" +
-      "sageAdviceById\022\023.generatedprotos.ID\032!.ge" +
-      "neratedprotos.WaterUsageAdvice\022]\n\035GetEle" +
-      "ctricityUsageAdviceById\022\023.generatedproto" +
-      "s.ID\032\'.generatedprotos.ElectricityUsageA" +
-      "dvice\022U\n\027GetWaterAdvicesByUserId\022\023.gener" +
-      "atedprotos.ID\032%.generatedprotos.ListWate" +
-      "rUsageAdvice\022a\n\035GetElectricityAdvicesByU" +
-      "serId\022\023.generatedprotos.ID\032+.generatedpr" +
-      "otos.ListElectricityUsageAdvice\022f\n\034Assig" +
-      "nWaterUsageAdviceToUser\022\037.generatedproto" +
-      "s.AdviceCreation\032%.generatedprotos.ListW" +
-      "aterUsageAdvice\022r\n\"AssignElectricityUsag" +
-      "eAdviceToUser\022\037.generatedprotos.AdviceCr" +
-      "eation\032+.generatedprotos.ListElectricity" +
-      "UsageAdviceB\027\n\023via.generatedprotosP\001b\006pr" +
-      "oto3"
+      "ssword\030\003 \001(\t\022\014\n\004role\030\004 \001(\005\022\014\n\004area\030\005 \001(\005" +
+      "\"1\n\tListUsers\022$\n\005users\030\001 \003(\0132\025.generated" +
+      "protos.User\"U\n\nWaterUsage\022\n\n\002id\030\001 \001(\005\022\016\n" +
+      "\006amount\030\002 \001(\001\022\r\n\005month\030\003 \001(\005\022\014\n\004year\030\004 \001" +
+      "(\005\022\016\n\006userId\030\005 \001(\005\"[\n\020ElectricityUsage\022\n" +
+      "\n\002id\030\001 \001(\005\022\016\n\006amount\030\002 \001(\001\022\r\n\005month\030\003 \001(" +
+      "\005\022\014\n\004year\030\004 \001(\005\022\016\n\006userId\030\005 \001(\005\",\n\020Water" +
+      "UsageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004body\030\002 \001(\t\"2\n" +
+      "\026ElectricityUsageAdvice\022\n\n\002id\030\001 \001(\005\022\014\n\004b" +
+      "ody\030\002 \001(\t\"\020\n\002ID\022\n\n\002id\030\001 \001(\005\"\007\n\005Empty\"<\n\016" +
+      "ListWaterUsage\022*\n\005water\030\001 \003(\0132\033.generate" +
+      "dprotos.WaterUsage\"N\n\024ListElectricityUsa" +
+      "ge\0226\n\013electricity\030\001 \003(\0132!.generatedproto" +
+      "s.ElectricityUsage\"H\n\024ListWaterUsageAdvi" +
+      "ce\0220\n\005water\030\001 \003(\0132!.generatedprotos.Wate" +
+      "rUsageAdvice\"Z\n\032ListElectricityUsageAdvi" +
+      "ce\022<\n\013electricity\030\001 \003(\0132\'.generatedproto" +
+      "s.ElectricityUsageAdvice\"2\n\016AdviceCreati" +
+      "on\022\016\n\006userId\030\001 \001(\005\022\020\n\010adviceId\030\002 \001(\0052\332\007\n" +
+      "\024ResourcesConsumption\022[\n\023LogElectricityU" +
+      "sage\022!.generatedprotos.ElectricityUsage\032" +
+      "!.generatedprotos.ElectricityUsage\022I\n\rLo" +
+      "gWaterUsage\022\033.generatedprotos.WaterUsage" +
+      "\032\033.generatedprotos.WaterUsage\022I\n\016GetWate" +
+      "rUsages\022\026.generatedprotos.Empty\032\037.genera" +
+      "tedprotos.ListWaterUsage\022U\n\024GetElectrici" +
+      "tyUsages\022\026.generatedprotos.Empty\032%.gener" +
+      "atedprotos.ListElectricityUsage\022L\n\020Updat" +
+      "eWaterUsage\022\033.generatedprotos.WaterUsage" +
+      "\032\033.generatedprotos.WaterUsage\022^\n\026UpdateE" +
+      "lectricityUsage\022!.generatedprotos.Electr" +
+      "icityUsage\032!.generatedprotos.Electricity" +
+      "Usage\022?\n\020DeleteWaterUsage\022\023.generatedpro" +
+      "tos.ID\032\026.generatedprotos.Empty\022E\n\026Delete" +
+      "ElectricityUsage\022\023.generatedprotos.ID\032\026." +
+      "generatedprotos.Empty\022E\n\021GetWaterUsageBy" +
+      "Id\022\023.generatedprotos.ID\032\033.generatedproto" +
+      "s.WaterUsage\022Q\n\027GetElectricityUsageById\022" +
+      "\023.generatedprotos.ID\032!.generatedprotos.E" +
+      "lectricityUsage\022M\n\025GetWaterUsageByUserId" +
+      "\022\023.generatedprotos.ID\032\037.generatedprotos." +
+      "ListWaterUsage\022Y\n\033GetElectricityUsageByU" +
+      "serId\022\023.generatedprotos.ID\032%.generatedpr" +
+      "otos.ListElectricityUsage2\276\002\n\016UserManage" +
+      "ment\022:\n\nCreateUser\022\025.generatedprotos.Use" +
+      "r\032\025.generatedprotos.User\022>\n\010GetUsers\022\026.g" +
+      "eneratedprotos.Empty\032\032.generatedprotos.L" +
+      "istUsers\0229\n\013GetUserById\022\023.generatedproto" +
+      "s.ID\032\025.generatedprotos.User\022:\n\nUpdateUse" +
+      "r\022\025.generatedprotos.User\032\025.generatedprot" +
+      "os.User\0229\n\nDeleteUser\022\023.generatedprotos." +
+      "ID\032\026.generatedprotos.Empty2\314\n\n\020AdviceMan" +
+      "agement\022^\n\026CreateWaterUsageAdvice\022!.gene" +
+      "ratedprotos.WaterUsageAdvice\032!.generated" +
+      "protos.WaterUsageAdvice\022p\n\034CreateElectri" +
+      "cityUsageAdvice\022\'.generatedprotos.Electr" +
+      "icityUsageAdvice\032\'.generatedprotos.Elect" +
+      "ricityUsageAdvice\022U\n\024GetWaterUsageAdvice" +
+      "s\022\026.generatedprotos.Empty\032%.generatedpro" +
+      "tos.ListWaterUsageAdvice\022a\n\032GetElectrici" +
+      "tyUsageAdvices\022\026.generatedprotos.Empty\032+" +
+      ".generatedprotos.ListElectricityUsageAdv" +
+      "ice\022^\n\026UpdateWaterUsageAdvice\022!.generate" +
+      "dprotos.WaterUsageAdvice\032!.generatedprot" +
+      "os.WaterUsageAdvice\022p\n\034UpdateElectricity" +
+      "UsageAdvice\022\'.generatedprotos.Electricit" +
+      "yUsageAdvice\032\'.generatedprotos.Electrici" +
+      "tyUsageAdvice\022E\n\026DeleteWaterUsageAdvice\022" +
+      "\023.generatedprotos.ID\032\026.generatedprotos.E" +
+      "mpty\022K\n\034DeleteElectricityUsageAdvice\022\023.g" +
+      "eneratedprotos.ID\032\026.generatedprotos.Empt" +
+      "y\022Q\n\027GetWaterUsageAdviceById\022\023.generated" +
+      "protos.ID\032!.generatedprotos.WaterUsageAd" +
+      "vice\022]\n\035GetElectricityUsageAdviceById\022\023." +
+      "generatedprotos.ID\032\'.generatedprotos.Ele" +
+      "ctricityUsageAdvice\022U\n\027GetWaterAdvicesBy" +
+      "UserId\022\023.generatedprotos.ID\032%.generatedp" +
+      "rotos.ListWaterUsageAdvice\022a\n\035GetElectri" +
+      "cityAdvicesByUserId\022\023.generatedprotos.ID" +
+      "\032+.generatedprotos.ListElectricityUsageA" +
+      "dvice\022f\n\034AssignWaterUsageAdviceToUser\022\037." +
+      "generatedprotos.AdviceCreation\032%.generat" +
+      "edprotos.ListWaterUsageAdvice\022r\n\"AssignE" +
+      "lectricityUsageAdviceToUser\022\037.generatedp" +
+      "rotos.AdviceCreation\032+.generatedprotos.L" +
+      "istElectricityUsageAdviceB\027\n\023via.generat" +
+      "edprotosP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -187,7 +187,7 @@ public final class Definitions {
     internal_static_generatedprotos_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_generatedprotos_User_descriptor,
-        new java.lang.String[] { "Id", "Username", "Password", "Role", });
+        new java.lang.String[] { "Id", "Username", "Password", "Role", "Area", });
     internal_static_generatedprotos_ListUsers_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_generatedprotos_ListUsers_fieldAccessorTable = new
