@@ -34,7 +34,15 @@ public class UserServiceImpl implements UserService
     @Override
     public UserEntity getUserById(int id)
     {
-        return userRepository.findById(id).get();
+        try
+        {
+            return userRepository.findById(id).get();
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
+
     }
 
     @Override

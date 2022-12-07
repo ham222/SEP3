@@ -36,4 +36,22 @@ public class UserRepositoryImpl implements UserRepository {
     {
         return grpcClient.findUserByUsername(username);
     }
+
+    @Override
+    public User updateUser(User user)
+    {
+        return grpcClient.updateUser(user);
+    }
+
+    @Override
+    public User getUserById(int id)
+    {
+        return grpcClient.getUserById(id);
+    }
+
+    @Override
+    public void deleteUser(int id)
+    {
+        grpcClient.deleteUser(id);
+    }
 }

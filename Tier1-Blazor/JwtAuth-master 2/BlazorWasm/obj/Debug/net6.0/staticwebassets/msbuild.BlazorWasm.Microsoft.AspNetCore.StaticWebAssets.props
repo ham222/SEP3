@@ -329,7 +329,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>C:\Users\Danny\OneDrive\Documentos\GitHub\exam\SEP3\Tier1-Blazor\JwtAuth-master 2\BlazorWasm\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
+      <RelatedAsset>/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

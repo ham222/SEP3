@@ -516,30 +516,6 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "HttpClients/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Domain": "1.0.0",
-          "Shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HttpClients.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HttpClients.dll": {}
-        }
-      },
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1061,30 +1037,6 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "HttpClients/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Domain": "1.0.0",
-          "Shared": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HttpClients.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HttpClients.dll": {}
         }
       },
       "Shared/1.0.0": {
@@ -1877,16 +1829,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
-    },
-    "HttpClients/1.0.0": {
-      "type": "project",
-      "path": "../HttpClients/HttpClients.csproj",
-      "msbuildProject": "../HttpClients/HttpClients.csproj"
-    },
     "Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/Shared.csproj",
@@ -1895,8 +1837,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Domain >= 1.0.0",
-      "HttpClients >= 1.0.0",
       "Microsoft.AspNetCore.Components.Authorization >= 6.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.0",
@@ -1904,44 +1844,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Danny\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/gavriliuciurie/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\BlazorWasm\\BlazorWasm.csproj",
+      "projectUniqueName": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj",
       "projectName": "BlazorWasm",
-      "projectPath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\BlazorWasm\\BlazorWasm.csproj",
-      "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\BlazorWasm\\obj\\",
+      "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj",
+      "packagesPath": "/Users/gavriliuciurie/.nuget/packages/",
+      "outputPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/gavriliuciurie/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj"
-            },
-            "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\HttpClients\\HttpClients.csproj": {
-              "projectPath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\HttpClients\\HttpClients.csproj"
-            },
-            "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Danny\\OneDrive\\Documentos\\GitHub\\exam\\SEP3\\Tier1-Blazor\\JwtAuth-master 2\\Shared\\Shared.csproj"
+            "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj": {
+              "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj"
             }
           }
         }
@@ -1983,19 +1911,7 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[6.0.11, 6.0.11]"
           }
         ],
@@ -2004,7 +1920,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

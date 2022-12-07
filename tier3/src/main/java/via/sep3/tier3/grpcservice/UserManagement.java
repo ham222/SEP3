@@ -100,6 +100,12 @@ public class UserManagement extends UserManagementGrpc.UserManagementImplBase
     public void getUserById(ID id, StreamObserver<User> observer)
     {
         UserEntity userEntity = userService.getUserById(id.getId());
+        if(userEntity == null)
+        {
+            observer.onNext(User.newBuilder().setUsername("User not found").build());
+            observer.onCompleted();
+            return;
+        }
         User userToSend = User.newBuilder()
                 .setId(userEntity.getId())
                 .setUsername(userEntity.getUsername())
