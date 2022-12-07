@@ -833,6 +833,7 @@
 /Users/gavriliuciurie/Programare/Examples/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/BlazorWasm.pdb
 /Users/gavriliuciurie/Programare/Examples/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/ref/BlazorWasm.dll
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/bin/Debug/net6.0/wwwroot/_framework/BlazorWasm.dll
@@ -1683,6 +1684,8 @@ C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/build-gz/6cS1afMh.gz
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/build-gz/0h1TWpbM.gz
 C:/Users/Danny/OneDrive/Documentos/GitHub/exam/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/obj/Debug/net6.0/build-gz/j6ikuZjT.gz
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 /Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json

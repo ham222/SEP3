@@ -137,7 +137,10 @@ public class RestApiController {
     }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 //    USER MANAGEMENT
 
     @GetMapping(path = "/users")
@@ -152,7 +155,10 @@ public class RestApiController {
 
     @PutMapping(path = "/users/{id}")
     public String updateUser(@PathVariable int id, @RequestBody User userfromPath) {
+<<<<<<< Updated upstream
         userfromPath.setId(id);
+=======
+>>>>>>> Stashed changes
         userfromPath.setPassword(passwordEncoder.encode(userfromPath.getPassword()));
         try {
             userService.updateUser(userfromPath);
@@ -161,6 +167,7 @@ public class RestApiController {
         }
         return new Gson().toJson(userService.getUserById(userfromPath.getId()));
     }
+<<<<<<< Updated upstream
 
     @DeleteMapping(path = "/users/{id}")
     public String deleteUser(@PathVariable int id) {
@@ -196,6 +203,9 @@ public class RestApiController {
         return new Gson().toJson(electricityUsageService.editElectricityUsage(usage));
     }
 
+=======
+//    END USER MANAGEMENT
+>>>>>>> Stashed changes
 }
 
 // maybe?

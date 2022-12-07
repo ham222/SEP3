@@ -28,7 +28,10 @@ public class UserServiceImpl implements UserService {
     public User createUser(RegisterCredentials registerCredentials)
     {
         User user = new User(0, registerCredentials.getUsername(), registerCredentials.getPassword(), 1, registerCredentials.getArea());
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         return repository.saveUser(user);
     }
 
@@ -49,10 +52,13 @@ public class UserServiceImpl implements UserService {
     {
         return repository.getUserById(id);
     }
+<<<<<<< Updated upstream
 
     @Override
     public void deleteUser(int id)
     {
         repository.deleteUser(id);
     }
+=======
+>>>>>>> Stashed changes
 }

@@ -28,6 +28,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/CreateAdvice.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWR2aWNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +37,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWxlY3VzYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +63,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hvd0NyZWRlbnRpYWxzQXV0aFN0YXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Pages/ViewWaterUsage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmlld1dhdGVyVXNhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +72,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2F0ZXJ1c2FnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

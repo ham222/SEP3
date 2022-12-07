@@ -16,7 +16,10 @@ public interface UserService {
     User updateUser(User user);
 
     User getUserById(int id);
+<<<<<<< Updated upstream
 
     void deleteUser(int id);
 
+=======
+>>>>>>> Stashed changes
 }

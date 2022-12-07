@@ -16,6 +16,9 @@ public interface UserRepository {
     User updateUser(User user);
 
     User getUserById(int id);
+<<<<<<< Updated upstream
 
     void deleteUser(int id);
+=======
+>>>>>>> Stashed changes
 }

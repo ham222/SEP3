@@ -270,11 +270,63 @@ public class GrpcClient {
         return response;
     }
 
+<<<<<<< Updated upstream
     public User getUserById(int id)
     {
         via.generatedprotos.ID grpcId = via.generatedprotos.ID.newBuilder()
                 .setId(id)
+=======
+    public User updateUser(User user)
+    {
+        via.generatedprotos.User grpcUser = via.generatedprotos.User.newBuilder()
+                .setId(user.getId())
+                .setPassword(user.getPassword())
+                .setUsername(user.getUsername())
+                .setRole(user.getRole())
+                .setArea(user.getArea())
+>>>>>>> Stashed changes
                 .build();
+        User response = null;
+        via.generatedprotos.User grpcResponse = null;
+        try{
+<<<<<<< Updated upstream
+            grpcResponse = userStub.getUserById(grpcId);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error getting user via gRPC service!");
+=======
+            grpcResponse = userStub.updateUser(grpcUser);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error updating user via gRPC service!");
+>>>>>>> Stashed changes
+        }
+
+        if(grpcResponse != null)
+        {
+            response = new User(grpcResponse.getId(),grpcResponse.getUsername(), grpcResponse.getPassword(), grpcResponse.getRole(),grpcResponse.getArea());
+        }
+
+        return response;
+    }
+
+<<<<<<< Updated upstream
+    public void deleteUser(int id)
+=======
+    public User getUserById(int id)
+>>>>>>> Stashed changes
+    {
+        via.generatedprotos.ID grpcId = via.generatedprotos.ID.newBuilder()
+                .setId(id)
+                .build();
+<<<<<<< Updated upstream
+        try{
+            userStub.deleteUser(grpcId);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error deleting user via gRPC service!");
+        }
+=======
         User response = null;
         via.generatedprotos.User grpcResponse = null;
         try{
@@ -290,18 +342,6 @@ public class GrpcClient {
         }
 
         return response;
-    }
-
-    public void deleteUser(int id)
-    {
-        via.generatedprotos.ID grpcId = via.generatedprotos.ID.newBuilder()
-                .setId(id)
-                .build();
-        try{
-            userStub.deleteUser(grpcId);
-        } catch (Exception err){
-            err.printStackTrace();
-            System.err.println("Error deleting user via gRPC service!");
-        }
+>>>>>>> Stashed changes
     }
 }

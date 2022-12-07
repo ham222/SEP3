@@ -48,10 +48,13 @@ public class UserRepositoryImpl implements UserRepository {
     {
         return grpcClient.getUserById(id);
     }
+<<<<<<< Updated upstream
 
     @Override
     public void deleteUser(int id)
     {
         grpcClient.deleteUser(id);
     }
+=======
+>>>>>>> Stashed changes
 }

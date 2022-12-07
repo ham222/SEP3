@@ -1,6 +1,9 @@
 package via.sep3.tier2.rest;
 
+<<<<<<< Updated upstream
 import com.google.gson.Gson;
+=======
+>>>>>>> Stashed changes
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -40,7 +43,11 @@ public class AuthController
 
     // Defining the function to handle the POST route for registering a user
     @PostMapping("/register")
+<<<<<<< Updated upstream
     public String registerHandler(@RequestBody RegisterCredentials registerCredentials){
+=======
+    public void registerHandler(@RequestBody RegisterCredentials registerCredentials){
+>>>>>>> Stashed changes
         // Encoding Password using Bcrypt
         String encodedPass = passwordEncoder.encode(registerCredentials.getPassword());
 
@@ -53,7 +60,10 @@ public class AuthController
         User repoUser = userService.findUserByUsername(user.getUsername());
         return new Gson().toJson(repoUser);
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
 
     // Defining the function to handle the POST route for logging in a user
