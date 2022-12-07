@@ -9,6 +9,4 @@ public interface ElectricityUsageRepository {
     ArrayList<ElectricityUsage> getUserElectricityUsages(int id);
 
     void insertElectricityUsage(ElectricityUsage electricityUsage);
-
-    ElectricityUsage editElectricityUsage(ElectricityUsage usage);
 }

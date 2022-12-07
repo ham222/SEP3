@@ -67,10 +67,15 @@ public class JwtAuthService : IAuthService
         return Task.CompletedTask;
     }
 
-    public async Task RegisterAsync(UserRegisterDto userRegisterDto)
+    public async Task RegisterAsync(string username, string password)
     {
-        
-        string userAsJson = JsonSerializer.Serialize(userRegisterDto);
+        UserLoginDto userLoginDto = new()
+        {
+            username = username,
+            password = password
+        };
+
+        string userAsJson = JsonSerializer.Serialize(userLoginDto);
         StringContent content = new(userAsJson, Encoding.UTF8, "application/json");
         HttpResponseMessage response = await client.PostAsync("http://localhost:8081/auth/register", content);
         string responseContent = await response.Content.ReadAsStringAsync();

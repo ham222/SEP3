@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import via.sep3.tier2.logic.interfaces.UserService;
 import via.sep3.tier2.model.User;
 import via.sep3.tier2.model.dto.LoginCredentials;
-import via.sep3.tier2.model.dto.RegisterCredentials;
 import via.sep3.tier2.repository.Interfaces.UserRepository;
 
 import java.util.ArrayList;
@@ -25,9 +24,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User createUser(RegisterCredentials registerCredentials)
+    public User createUser(LoginCredentials loginCredentials)
     {
-        User user = new User(0, registerCredentials.getUsername(), registerCredentials.getPassword(), 1, registerCredentials.getArea());
+        User user = new User(0, loginCredentials.getUsername(), loginCredentials.getPassword(), 1);
         return repository.saveUser(user);
     }
 
@@ -35,23 +34,5 @@ public class UserServiceImpl implements UserService {
     public User findUserByUsername(String username)
     {
         return repository.findUserByUsername(username);
-    }
-
-    @Override
-    public User updateUser(User user)
-    {
-        return repository.updateUser(user);
-    }
-
-    @Override
-    public User getUserById(int id)
-    {
-        return repository.getUserById(id);
-    }
-
-    @Override
-    public void deleteUser(int id)
-    {
-        repository.deleteUser(id);
     }
 }

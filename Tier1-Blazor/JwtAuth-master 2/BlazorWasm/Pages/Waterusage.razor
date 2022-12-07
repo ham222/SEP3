@@ -1,4 +1,6 @@
-﻿@page "/waterusage"
+﻿@page "/Waterusage"
+@using BlazorWasm.Services
+@inject IWaterInsert Insert
 
 <PageTitle>Insert Water Usage</PageTitle>
 
@@ -6,24 +8,57 @@
 <form>
     <div class="form-group">
         <label for="wateramount">Amount</label>
-        <input type="text" class="form-control" id="wateramount" placeholder="Enter Water Usage Amount">
+        <input type="text" class="form-control" id="wateramount" placeholder="Enter Water Usage Amount" @bind="_usage">
         <small id="waterhelp" class="form-text text-muted">We'll never share your water usage with anyone else.</small>
     </div>
     <div class="form-group">
-        <label for="month">Amount</label>
-        <input type="text" class="form-control" id="month" placeholder="Enter month of the data inserted">
+        <label for="month">Month</label>
+        <input type="text" class="form-control" id="month" placeholder="Enter month of the data inserted" @bind="_month">
         <small id="monthhelp" class="form-text text-muted">Month.</small>
     </div>
     <div class="form-group">
-        <label for="year">Amount</label>
-        <input type="text" class="form-control" id="year" placeholder="Enter year of the data insertedt">
+        <label for="year">Year</label>
+        <input type="text" class="form-control" id="year" placeholder="Enter year of the data insertedt" @bind="_year">
         <small id="yearhelp" class="form-text text-muted">Year.</small>
     </div>
-     <div class="form-group">
+    <div class="form-group">
         <label for="userid">User ID</label>
-        <input type="text" class="form-control" id="userid" placeholder="Enter your UserId">
+        <input type="text" class="form-control" id="userid" placeholder="Enter your UserId" @bind="_userid">
         <small id="useridhelp" class="form-text text-muted">Check it sep mates.</small>
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    @if (!string.IsNullOrEmpty(_errorLabel))
+                {
+                    <div class="field">
+                        <label style="color: red">
+                            @_errorLabel
+                        </label>
+                    </div>
+                }
+    <button type="submit" class="btn btn-primary" @onclick="InsertWater">Submit</button>
 </form>
+
+@code{
+
+    private double _usage;
+    private int _month;
+    private int _year;
+    private int _userid;
+    private string _errorLabel = "";
+    
+    private async Task InsertWater()
+    {
+        _errorLabel = "";
+        try
+        {
+            await Insert.InsertWaterAsync(_usage, _year, _month, _userid);
+            //navMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _errorLabel = $"Error: {e.Message}";
+        }
+    }
+
+}
 

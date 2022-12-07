@@ -4,6 +4,8 @@ using BlazorWasm;
 using BlazorWasm.Auth;
 using BlazorWasm.Services;
 using BlazorWasm.Services.Http;
+using HttpClients.ClientInterface;
+using HttpClients.Implementations;
 using Microsoft.AspNetCore.Components.Authorization;
 using Shared.Auth;
 
@@ -13,8 +15,11 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
-builder.Services.AddScoped<IUserHttpService, UserHttpService>();
 builder.Services.AddScoped<IWeatherService, HttpWeatherService>();
+builder.Services.AddScoped<IWaterInsert, WaterInsertService>();
+builder.Services.AddScoped<IElecInsert, ElecInsertService>();
+builder.Services.AddScoped<ICreateAdvice, CreateAdviceService>();
+builder.Services.AddScoped<IWaterService, WaterHttpClient>();
 
 AuthorizationPolicies.AddPolicies(builder.Services);
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PMeb7v4P+eEzB0gqti/yRBZb1PXpZ+wKdaQzRy0bY5P8rCRkAhG5Mvo+/KzeMDI5/n7EzHEGb1wRNwL/LpOTbg==",
+  "dgSpecHash": "YFYNpRPawfR/Q8SLfJ0dpddIaaFrul6t9CFP80WPrtdFWuKsY8yuAcIVSQMMFwSiTlYK84E8iqHg9AZIdRwyjA==",
   "success": true,
-  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\dlope\\OneDrive\\Desktop\\SEP3-working-for-me-danny\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

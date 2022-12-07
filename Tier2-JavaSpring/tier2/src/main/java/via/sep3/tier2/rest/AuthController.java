@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import via.sep3.tier2.logic.interfaces.UserService;
-import via.sep3.tier2.model.dto.RegisterCredentials;
 import via.sep3.tier2.security.*;
 import via.sep3.tier2.model.User;
 import via.sep3.tier2.model.dto.LoginCredentials;
@@ -40,19 +39,23 @@ public class AuthController
 
     // Defining the function to handle the POST route for registering a user
     @PostMapping("/register")
-    public void registerHandler(@RequestBody RegisterCredentials registerCredentials){
+    public String registerHandler(@RequestBody LoginCredentials loginCredentials){
         // Encoding Password using Bcrypt
-        String encodedPass = passwordEncoder.encode(registerCredentials.getPassword());
+        String encodedPass = passwordEncoder.encode(loginCredentials.getPassword());
 
         // Setting the encoded password
-        registerCredentials.setPassword(encodedPass);
+        loginCredentials.setPassword(encodedPass);
 
         // Persisting the User Entity to H2 Database
-        User user = userService.createUser(registerCredentials);
+        User user = userService.createUser(loginCredentials);
 
         User repoUser = userService.findUserByUsername(user.getUsername());
 
+        // Generating JWT
+        String token = jwtUtil.generateToken(repoUser);
 
+        // Responding with JWT
+        return token;
     }
 
     // Defining the function to handle the POST route for logging in a user

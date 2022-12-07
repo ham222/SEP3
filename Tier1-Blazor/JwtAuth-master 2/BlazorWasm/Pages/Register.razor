@@ -1,45 +1,36 @@
 ﻿@page "/Register"
 @using BlazorWasm.Services
-@using global::Shared.Dtos
 @inject IAuthService authService
 @inject NavigationManager navMgr
 
 <AuthorizeView>
     <NotAuthorized>
-
         <div class="card">
-            <div class="card-body">
-
-
-                <div class="mb-3">
-                    <label for="1" class="form-label">Username👨‍💼</label>
-                    <input @bind="userName" type="text" class="form-control" id="1"/>
-                    <div id="emailHelp" class="form-text">Example: bobik</div>
+            <h3>Please register</h3>
+            <div class="field">
+                <label>User name:</label>
+                <input type="text" @bind="userName"/>
+            </div>
+            <div class="field">
+                <label style="text-align: center">Password:</label>
+                <input type="password" @bind="password"/>
+            </div>
+            @if (!string.IsNullOrEmpty(errorLabel))
+            {
+                <div class="field">
+                    <label style="color: red">
+                        @errorLabel
+                    </label>
                 </div>
-                <div class="mb-3">
-                    <label for="2" class="form-label">Password🔑</label>
-                    <input @bind="password" type="password" class="form-control" id="2">
-                </div>
-                <div class="mb-3">
-                    <label for="1" class="form-label">Area📍</label>
-                    <input @bind="area" type="text" class="form-control" id="1"/>
-                </div>
-                @if (!string.IsNullOrEmpty(errorLabel))
-                            {
-                                <div class="field">
-                                    <label style="color: red">
-                                        @errorLabel
-                                    </label>
-                                </div>
-                            }
-                <button class="btn btn-primary" @onclick="RegisterAsync">Register</button>
+            }
+            <div class="field">
+                <button class="" @onclick="RegisterAsync">Register</button>
             </div>
         </div>
-
     </NotAuthorized>
     <Authorized>
         <div class="card">
-            <h3>Hello, @context.User.Claims.First(c => c.Type.Equals("username")).Value</h3>
+            <h3>Hello, @context.User.Identity.Name</h3>
         </div>
     </Authorized>
 </AuthorizeView>
@@ -47,22 +38,14 @@
 @code {
     private string userName;
     private string password;
-    private int area;
     private string errorLabel;
 
     private async Task RegisterAsync()
     {
-               
-        UserRegisterDto userRegisterDto = new UserRegisterDto
-            {
-                username = userName,
-                password = password,
-                area = area
-            };   
-        
+        errorLabel = "";
         try
         {
-            await authService.RegisterAsync(userRegisterDto);
+            await authService.RegisterAsync(userName, password);
             navMgr.NavigateTo("/");
         }
         catch (Exception e)
