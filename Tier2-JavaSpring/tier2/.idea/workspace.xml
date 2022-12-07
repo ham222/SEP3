@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a50c2a-a135-4851-a6ab-09ca5893af72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/.idea/.idea.Tier1/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Tier1-Blazor/Tier1/.idea/.idea.Tier1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/bin/Debug/net6.0/Microsoft.AspNetCore.Authorization.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/bin/Debug/net6.0/Microsoft.AspNetCore.Metadata.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tier1-Blazor/JwtAuth-master 2/WebApi/bin/Debug/net6.0/Shared.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityAdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityAdviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/ElectricityUsageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/interfaces/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityAdviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityAdviceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/logic/servicesImpl/ElectricityUsageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityAdviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityAdviceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/Interfaces/ElectricityUsageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityAdviceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityAdviceRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/repository/implementations/ElectricityUsageRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/via/sep3/tier2/rest/RestApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/via/sep3/tier2/ApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tier2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tier2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="02460853-d006-427e-9314-83900b5bddda" name="Changes by 48504" comment="" />
     <list id="cd265b48-ab56-4805-a6a9-9f79dfc45704" name="Changes by BORIOS JOPALAU" comment="" />
