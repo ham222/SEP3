@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
     public User createUser(RegisterCredentials registerCredentials)
     {
         User user = new User(0, registerCredentials.getUsername(), registerCredentials.getPassword(), 1, registerCredentials.getArea());
+
         return repository.saveUser(user);
     }
 

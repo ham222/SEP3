@@ -137,6 +137,7 @@ public class RestApiController {
     }
 
 
+
 //    USER MANAGEMENT
 
     @GetMapping(path = "/users")
@@ -172,6 +173,29 @@ public class RestApiController {
 
     }
 //    END USER MANAGEMENT
+
+    @GetMapping(path = "/advice/electricity", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public String getAllElectricityAdvice(){
+        String toSend;
+        try {
+            toSend = new Gson().toJson(electricityAdviceService.getAllElectricityAdvice());
+        } catch (Exception e){
+            return e.getMessage();
+        }
+        return toSend;
+    }
+
+    @PatchMapping(path = "/advice/electricity/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String editElectricityAdvice(@PathVariable int id) {
+        return new Gson().toJson(electricityAdviceService.editAdviceById(id));
+    }
+
+    @PatchMapping(path = "/users/{id}/electricity", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String editElectricityUsage(@PathVariable int id,@RequestBody String fromPath) {
+        ElectricityUsage usage = new Gson().fromJson(fromPath,ElectricityUsage.class);
+        return new Gson().toJson(electricityUsageService.editElectricityUsage(usage));
+    }
+
 }
 
 // maybe?
