@@ -14,10 +14,4 @@ public interface UserService {
 
     User findUserByUsername(String username);
 
-    User updateUser(User user);
-
-    User getUserById(int id);
-
-    void deleteUser(int id);
-
 }

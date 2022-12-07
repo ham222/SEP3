@@ -2,15 +2,15 @@ package via.sep3.tier2.model;
 
 public class WaterUsageAdvice {
     private int id;
-    private String text;
+    private String body;
 
     public WaterUsageAdvice(String text) {
-        this.text = text;
+        this.body = text;
     }
 
     public WaterUsageAdvice(int id, String text) {
         this.id = id;
-        this.text = text;
+        this.body = text;
     }
 
     public int getId() {
@@ -22,10 +22,10 @@ public class WaterUsageAdvice {
     }
 
     public String getText() {
-        return text;
+        return body;
     }
 
     public void setText(String text) {
-        this.text = text;
+        this.body = text;
     }
 }

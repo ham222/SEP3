@@ -14,6 +14,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+
+
+
 builder.Services.AddScoped<IAuthService, AuthService>();
 
 // added auth handling
@@ -52,6 +55,7 @@ app.UseAuthentication(); // now using authentication middleware
 app.UseCors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader()
+    .AllowAnyOrigin()
     .SetIsOriginAllowed(origin => true) // allow any origin
     .AllowCredentials());
 
@@ -59,5 +63,9 @@ app.UseCors(x => x
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+//
+app.UseCors("_myAllowSpecificOrigins");
 
 app.Run();

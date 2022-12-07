@@ -3,7 +3,6 @@ package via.sep3.tier2.logic.servicesImpl;
 import org.springframework.stereotype.Service;
 import via.sep3.tier2.logic.interfaces.ElectricityUsageService;
 import via.sep3.tier2.model.ElectricityUsage;
-import via.sep3.tier2.model.ElectricityUsageAdvice;
 import via.sep3.tier2.repository.Interfaces.ElectricityUsageRepository;
 
 import java.util.ArrayList;
@@ -27,10 +26,5 @@ public class ElectricityUsageServiceImpl implements ElectricityUsageService {
     @Override
     public void insertElectricityUsage(ElectricityUsage usage) {
         repository.insertElectricityUsage(usage);
-    }
-
-    @Override
-    public ElectricityUsage editElectricityUsage(ElectricityUsage usage) {
-        return repository.editElectricityUsage(usage);
     }
 }

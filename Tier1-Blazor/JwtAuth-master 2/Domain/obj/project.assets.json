@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/gavriliuciurie/.nuget/packages/": {}
+    "C:\\Users\\dlope\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Domain/Domain.csproj",
+      "projectUniqueName": "C:\\Users\\dlope\\OneDrive\\Desktop\\SEP3-working-for-me-danny\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Domain/Domain.csproj",
-      "packagesPath": "/Users/gavriliuciurie/.nuget/packages/",
-      "outputPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Domain/obj/",
+      "projectPath": "C:\\Users\\dlope\\OneDrive\\Desktop\\SEP3-working-for-me-danny\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\dlope\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dlope\\OneDrive\\Desktop\\SEP3-working-for-me-danny\\Tier1-Blazor\\JwtAuth-master 2\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gavriliuciurie/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dlope\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

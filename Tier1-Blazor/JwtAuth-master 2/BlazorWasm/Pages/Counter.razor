@@ -1,92 +1,21 @@
 @page "/counter"
-@using BlazorWasm.Services
-@using BlazorWasm.Services.Http
-@using global::Shared.Models
-@inject IUserHttpService UserHttpService
 
 <PageTitle>Counter</PageTitle>
 
-<h3>ViewPost</h3>
+<h1>Counter</h1>
 
-    <div class="card">
-        <div class="card-body">
+<p role="status">Current count: @currentCount</p>
 
-            <div class="mb-3">
-                <label for="1" class="form-label">Username👨‍💼</label>
-                <input @bind="sid" type="text" class="form-control" id="1"/>
-                <div id="emailHelp" class="form-text">Example: bobik</div>
-            </div>
-            <div class="mb-3">
-                <label for="1" class="form-label">Username👨‍💼</label>
-                <input @bind="userName" type="text" class="form-control" id="1"/>
-                <div id="emailHelp" class="form-text">Example: bobik</div>
-            </div>
-            <div class="mb-3">
-                <label for="2" class="form-label">Password🔑</label>
-                <input @bind="password1" type="password" class="form-control" id="2">
-            </div>
-            <div class="mb-3">
-                <label for="1" class="form-label">Area📍</label>
-                <input @bind="area1" type="text" class="form-control" id="1"/>
-            </div>
-            @if (!string.IsNullOrEmpty(errorLabel))
-            {
-                <div class="field">
-                    <label style="color: red">
-                        @errorLabel
-                    </label>
-                </div>
-            }
-            <button class="btn btn-primary" @onclick="UpdateAsync">Register</button>
-        </div>
-    </div>
-
-<a href="ViewPosts" class="btn btn-primary mt-5">Go Back</a>
-
-<label>@errorMessage</label>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
-    string errorLabel = "";
-    string sid;
-    string userName;
-    string password1;
-    string area1;
-    string errorLabel1;
+    private int currentCount = 0;
 
-    string errorMessage = "";
-
-    private ICollection<User>? post;
-
-
-    private async Task UpdateAsync()
+    private void IncrementCount()
     {
-        try
-        {
-            int id = int.Parse(sid);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            errorLabel = $"Error: {e.Message}";
-        }
-        try
-        {
-            User user = new User
-            {
-                username = userName,
-                password = password1,
-                role = 1,
-                area = int.Parse(area1),
-                id = int.Parse(sid)
-            };
-            await UserHttpService.updateUser(user);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            errorLabel = $"Error: {e.Message}";
-        }
-    }
+        currentCount++;
 
+        List<string> list;
+    }
 
 }

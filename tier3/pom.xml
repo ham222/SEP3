@@ -26,7 +26,7 @@
         <!--        Dependencies for JPA Connection-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
         <dependency>
@@ -69,7 +69,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.7.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
@@ -108,10 +109,10 @@
                                 <outputTarget>
                                     <type>grpc-java</type>
                                     <!-- for windows-->
-                                    <!-- <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0</pluginArtifact>-->
+                                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0</pluginArtifact>
 
                                     <!-- for mac-->
-                                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0:exe:osx-x86_64</pluginArtifact>
+                                    <!--<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.39.0:exe:osx-x86_64</pluginArtifact> -->
                                     <outputDirectory>src/main/java</outputDirectory>
                                 </outputTarget>
                             </outputTargets>

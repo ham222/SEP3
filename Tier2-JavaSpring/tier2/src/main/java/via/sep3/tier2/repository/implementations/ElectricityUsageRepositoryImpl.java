@@ -39,13 +39,7 @@ public  class ElectricityUsageRepositoryImpl implements ElectricityUsageReposito
     }
 
     @Override
-    public ElectricityUsage editElectricityUsage(ElectricityUsage usage)
-    {
-        return null;
+    public ElectricityUsage editElectricityUsage(ElectricityUsage usage) {
+        return grpcClient.editElectricityUsage(usage);
     }
-
-//    @Override
-//    public ElectricityUsage editElectricityUsage(ElectricityUsage usage) {
-//        return grpcClient.editElectricityUsage(usage);
-//    }
 }
