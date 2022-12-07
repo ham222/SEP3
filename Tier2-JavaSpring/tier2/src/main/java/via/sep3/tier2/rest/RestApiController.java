@@ -114,16 +114,18 @@ public class RestApiController {
     public String getWaterAdviceById(@PathVariable int id) {
         return new Gson().toJson(waterAdviceService.getWaterAdviceById(id));
     }
+    //Does not
 
     @DeleteMapping(path = "/advice/water/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public String deleteWaterAdviceById(@PathVariable int id) {
         try {
             waterAdviceService.DeleteAdviceById(id);
-        }catch (Exception e){
+        } catch (Exception e) {
             return e.getMessage();
         }
-        return new Gson().toJson("");
+        return new Gson().toJson("Erased and deleted" + " id" + " " + id);
     }
+    //works
 
     @PostMapping(path = "/advice/water", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public String createWaterAdvice(@RequestBody String fromPath) {
@@ -135,7 +137,23 @@ public class RestApiController {
         }
         return new Gson().toJson(usage);
     }
-// maybe?
+    //works
+
+    @PutMapping(path = "/advice/water/{id}")
+    public String UpdadateAdvice(@PathVariable int id, @RequestBody WaterUsageAdvice fromPath) {
+        fromPath.setId(id);
+        WaterUsageAdvice result = null;
+        try {
+            result = waterAdviceService.UpdateAdvice(fromPath);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        if(result == null) return "Error";
+
+        return new Gson().toJson(result);
+    }
+    //works
+
 }
 
 

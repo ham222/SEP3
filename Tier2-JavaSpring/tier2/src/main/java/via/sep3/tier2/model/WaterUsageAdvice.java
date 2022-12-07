@@ -4,13 +4,14 @@ public class WaterUsageAdvice {
     private int id;
     private String body;
 
+    public WaterUsageAdvice(){}
     public WaterUsageAdvice(String text) {
         this.body = text;
     }
 
-    public WaterUsageAdvice(int id, String text) {
+    public WaterUsageAdvice(int id, String body) {
         this.id = id;
-        this.body = text;
+        this.body = body;
     }
 
     public int getId() {
@@ -21,11 +22,11 @@ public class WaterUsageAdvice {
         this.id = id;
     }
 
-    public String getText() {
+    public String getBody() {
         return body;
     }
 
-    public void setText(String text) {
-        this.body = text;
+    public void setBody() {
+        this.body = body;
     }
 }

@@ -13,4 +13,6 @@ public interface WaterAdviceService {
 
     ArrayList<WaterUsageAdvice> getAllWaterAdvice();
 
+    WaterUsageAdvice UpdateAdvice(WaterUsageAdvice advice);
+
 }

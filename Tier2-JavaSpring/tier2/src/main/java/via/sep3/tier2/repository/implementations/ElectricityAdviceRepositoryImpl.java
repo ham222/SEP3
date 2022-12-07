@@ -34,8 +34,9 @@ public class ElectricityAdviceRepositoryImpl implements ElectricityAdviceReposit
         return grpcClient.getAllElectricityAdvice();
     }
 
-    @Override
-    public ElectricityUsageAdvice editAdviceById(int id) {
-        return grpcClient.editElectricityAdviceById(id);
-    }
+   // @Override
+  //  public ElectricityUsageAdvice editAdviceById(int id) {
+       // return grpcClient.editElectricityAdviceById(id);
+       // return null;
+  //  }
 }

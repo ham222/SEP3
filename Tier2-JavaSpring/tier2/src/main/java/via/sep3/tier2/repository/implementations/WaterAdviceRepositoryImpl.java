@@ -1,5 +1,6 @@
 package via.sep3.tier2.repository.implementations;
 
+import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import via.sep3.tier2.GrpcClient;
@@ -28,12 +29,19 @@ public class WaterAdviceRepositoryImpl implements WaterAdviceRepository {
 
     @Override
     public void deleteAdviceById(int id) {
-        //TODO implement
+        grpcClient.deleteAdviceById(id);
     }
 
 
     public ArrayList<WaterUsageAdvice> getAllWaterAdvice(){
         return grpcClient.getAllWaterAdvice();
+    }
+
+
+
+    @Override
+    public via.sep3.tier2.model.WaterUsageAdvice UpdateAdvice(via.sep3.tier2.model.WaterUsageAdvice waterUsageAdvice) {
+        return grpcClient.UpdateAdvice(waterUsageAdvice);
     }
 }
 

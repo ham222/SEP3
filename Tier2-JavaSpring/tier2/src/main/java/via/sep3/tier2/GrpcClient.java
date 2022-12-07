@@ -205,7 +205,7 @@ public class GrpcClient {
     public void createWaterAdvice(via.sep3.tier2.model.WaterUsageAdvice advice){
         WaterUsageAdvice grpcAdvice = WaterUsageAdvice.newBuilder()
                 .setId(advice.getId())
-                .setBody(advice.getText())
+                .setBody(advice.getBody())
                 .build();
         try {
             adviceStub.createWaterUsageAdvice(grpcAdvice);
@@ -232,6 +232,43 @@ public class GrpcClient {
         }
         return advices;
     }
+
+    public via.sep3.tier2.model.WaterUsageAdvice UpdateAdvice(via.sep3.tier2.model.WaterUsageAdvice waterUsageAdvice) {
+
+        via.generatedprotos.WaterUsageAdvice grpc = via.generatedprotos.WaterUsageAdvice.newBuilder()
+                .setId(waterUsageAdvice.getId())
+                .setBody(waterUsageAdvice.getBody())
+                .build();
+        via.sep3.tier2.model.WaterUsageAdvice response = null;
+        via.generatedprotos.WaterUsageAdvice grpcResponse = null;
+        try{
+            grpcResponse = adviceStub.updateWaterUsageAdvice(grpc);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error updating Advice via gRPC service!");
+        }
+
+        if(grpcResponse != null)
+        {
+            response = new via.sep3.tier2.model.WaterUsageAdvice(grpcResponse.getId(),grpcResponse.getBody());
+        }
+
+        return response;
+    }
+
+    public void deleteAdviceById(int id)
+    {
+        via.generatedprotos.ID grpcId = via.generatedprotos.ID.newBuilder()
+                .setId(id)
+                .build();
+        try{
+            adviceStub.deleteWaterUsageAdvice(grpcId);
+        } catch (Exception err){
+            err.printStackTrace();
+            System.err.println("Error deleting water advice via gRPC service!");
+        }
+    }
+
 
 
 }
