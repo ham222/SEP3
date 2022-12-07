@@ -13,6 +13,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
+builder.Services.AddScoped<IUserHttpService, UserHttpService>();
 builder.Services.AddScoped<IWeatherService, HttpWeatherService>();
 
 AuthorizationPolicies.AddPolicies(builder.Services);
