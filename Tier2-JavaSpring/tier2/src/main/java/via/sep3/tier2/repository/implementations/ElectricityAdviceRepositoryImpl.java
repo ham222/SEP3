@@ -33,4 +33,9 @@ public class ElectricityAdviceRepositoryImpl implements ElectricityAdviceReposit
     public ArrayList<ElectricityUsageAdvice> getAllElectricityAdvice(){
         return grpcClient.getAllElectricityAdvice();
     }
+
+    @Override
+    public ElectricityUsageAdvice editAdviceById(int id) {
+        return grpcClient.editElectricityAdviceById(id);
+    }
 }

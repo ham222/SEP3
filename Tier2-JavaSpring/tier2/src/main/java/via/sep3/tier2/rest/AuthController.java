@@ -1,6 +1,6 @@
 package via.sep3.tier2.rest;
 
-import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -40,7 +40,7 @@ public class AuthController
 
     // Defining the function to handle the POST route for registering a user
     @PostMapping("/register")
-    public String registerHandler(@RequestBody RegisterCredentials registerCredentials){
+    public void registerHandler(@RequestBody RegisterCredentials registerCredentials){
         // Encoding Password using Bcrypt
         String encodedPass = passwordEncoder.encode(registerCredentials.getPassword());
 
@@ -51,7 +51,6 @@ public class AuthController
         User user = userService.createUser(registerCredentials);
 
         User repoUser = userService.findUserByUsername(user.getUsername());
-        return new Gson().toJson(repoUser);
 
 
     }

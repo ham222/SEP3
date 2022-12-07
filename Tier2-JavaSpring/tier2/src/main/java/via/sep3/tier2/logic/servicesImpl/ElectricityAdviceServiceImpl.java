@@ -38,4 +38,9 @@ public class ElectricityAdviceServiceImpl implements ElectricityAdviceService {
     public ArrayList<ElectricityUsageAdvice> getAllElectricityAdvice() {
         return repository.getAllElectricityAdvice();
     }
+
+    @Override
+    public ElectricityUsageAdvice editAdviceById(int id) {
+        return repository.editAdviceById(id);
+    }
 }

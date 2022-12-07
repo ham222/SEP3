@@ -16,4 +16,6 @@ public interface ElectricityAdviceRepository {
     void deleteAdviceById(int id);
 
     ArrayList<ElectricityUsageAdvice> getAllElectricityAdvice();
+
+    ElectricityUsageAdvice editAdviceById(int id);
 }
