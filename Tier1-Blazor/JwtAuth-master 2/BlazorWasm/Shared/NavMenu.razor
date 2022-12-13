@@ -1,0 +1,79 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorWasm</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+       
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="self" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+            </div>
+
+        <AuthorizeView Policy="MustBeAdminOrManager">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="Users">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Users
+                </NavLink>
+            </div>
+        </AuthorizeView>
+        <AuthorizeView Policy="MustBeManager">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="advices">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Advices
+                </NavLink>
+            </div>
+        </AuthorizeView>
+        <AuthorizeView Policy="MustBeAdminOrManager">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="area">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Area
+                </NavLink>
+            </div>
+        </AuthorizeView>
+        <AuthorizeView Policy="MustBeManager">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="createlectricityeadvice">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Create Electricity Adv.
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="creatwatereadvice">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Create Water Advice
+                </NavLink>
+            </div>
+        </AuthorizeView>
+
+        <AuthorizeView>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="waterusage">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span>Log Water Usage
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="elecusage">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span>Log Electricity Usage
+                </NavLink>
+            </div>
+        </AuthorizeView>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+}

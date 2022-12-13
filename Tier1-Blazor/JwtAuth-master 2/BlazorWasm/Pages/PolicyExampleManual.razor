@@ -1,0 +1,35 @@
+﻿@page "/PolicyExampleManual"
+@using System.Security.Claims
+<h3>PolicyExampleManual</h3>
+@if (user.Identity == null)
+{
+    <p>You're not logged in</p>
+
+} else if (claims.First(c => c.Type.Equals("role")).Value.Equals("1"))
+{
+    <p>You can see this if your domain is VIA</p>
+}
+else
+{ 
+    <p>You are not VIA and must not look at the secrets</p>
+}
+
+
+@code {
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
+
+    private IEnumerable<Claim> claims;
+    private ClaimsPrincipal user;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        user = authState.User;
+        if (user.Identity == null) return;
+
+        claims = user.Claims;
+    }
+
+}

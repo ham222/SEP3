@@ -1,0 +1,98 @@
+@page "/Users/{userId:int}/water/{usageId:int}"
+@using BlazorWasm.Services
+@using global::Shared.Models
+@inject NavigationManager navMgr
+@inject IUsageHttpService usageHttpService
+
+
+
+<h1>Edit Water Usage</h1>
+<form>
+    <div class="form-group">
+        <label for="wateramount">Amount</label>
+        <input type="text" @bind="amount" class="form-control" id="wateramount" placeholder="Enter Water Usage Amount">
+        <small id="waterhelp" class="form-text text-muted">We'll never share your water usage with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="month">Month</label>
+        <input type="text" @bind="month" class="form-control" id="month" placeholder="Enter month of the data inserted">
+        <small id="monthhelp" class="form-text text-muted">Month.</small>
+    </div>
+    <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" @bind="year" class="form-control" id="year" placeholder="Enter year of the data insertedt">
+        <small id="yearhelp" class="form-text text-muted">Year.</small>
+    </div>
+    
+</form>
+
+<button @onclick="UpdateWaterUsage" class="btn btn-primary">Submit</button>
+<button @onclick="NavigateBack" class="btn btn-dark">Cancel</button>
+@if (!string.IsNullOrEmpty(errorLabel))
+    {
+        <div class="field">
+            <label style="color: red">
+                @errorLabel
+            </label>
+        </div>
+    }
+
+@code {
+    [Parameter]
+    public int userId { get; set; }
+    
+    [Parameter]
+    public int usageId { get; set; }
+    
+    private string amount;
+    private string month;
+    private string year;
+   
+    private string errorLabel = "";
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await GetWaterUsage();
+    }
+
+    private async Task GetWaterUsage()
+    {
+        ICollection<WaterUsage> waterUsages = await usageHttpService.GetWaterUsagesByUserId(userId);
+        WaterUsage waterUsage = waterUsages.FirstOrDefault(w => w.id == usageId);
+        amount = waterUsage.amount.ToString();
+        month = waterUsage.month.ToString();
+        year = waterUsage.year.ToString();
+        
+    }
+
+    private async Task UpdateWaterUsage()
+    {
+        try
+        {
+            WaterUsage waterUsage = new WaterUsage();
+            waterUsage.id = usageId;
+            waterUsage.amount = Convert.ToInt32(amount);
+            waterUsage.month = Convert.ToInt32(month);
+            waterUsage.year = Convert.ToInt32(year);
+            waterUsage.userId = userId;
+            await usageHttpService.UpdateWaterUsage(waterUsage);
+            NavigateBack();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = e.Message;
+        }
+        
+    }
+    
+    private void NavigateBack()
+    {
+        navMgr.NavigateTo($"/users/{userId}");
+    }
+
+
+
+
+
+}

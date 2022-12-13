@@ -1,0 +1,126 @@
+@page "/Users/{userId:int}/edit" 
+@using global::Shared.Models
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IUsageHttpService usageHttpService
+<AuthorizeView Policy="MustBeAdmin">
+<h3>Edit User</h3>
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="1" class="form-label">Username👨‍💼</label>
+            <input @bind="userName" type="text" class="form-control" id="1"/>
+            <div id="emailHelp" class="form-text">Example: bobik</div>
+        </div>
+        <div class="mb-3">
+            <select @bind="roleOption" class="form-select" aria-label="Select Role">
+                <option selected>Select Role Here</option>
+                <option  value="1">Basic User</option>
+                <option  value="2">Manager</option>
+                <option  value="3">Admin</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="1" class="form-label">Area📍</label>
+            <input @bind="area" type="text" class="form-control" id="1"/>
+        </div>
+        @if (!string.IsNullOrEmpty(errorLabel))
+        {
+            <div class="field">
+                <label style="color: red">
+                    @errorLabel
+                </label>
+            </div>
+        }
+        <button class="btn btn-primary" @onclick="UpdateUser">Update</button>
+        <button @onclick="NavigateBack" class="btn btn-dark">Cancel</button>
+        <button @onclick="DeleteUser" class="btn btn-danger">Delete User</button>
+    </div>
+</div>
+</AuthorizeView>
+
+@code {
+    
+    [Parameter]
+    public int userId { get; set; }
+    private string roleOption { get; set; }
+    private string userName;
+    private string area;
+    private string errorLabel;
+    private bool basicUserSelected;
+    private bool managerSelected;
+    private bool adminSelected;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        var user = await userHttpService.getUserById(userId);
+        userName = user.username;
+        area = Convert.ToString(user.area);
+        if (user.role == 1)
+        {
+            basicUserSelected = true;
+        }
+        else if (user.role == 2)
+        {
+            managerSelected = true;
+        }
+        else if (user.role == 3)
+        {
+            adminSelected = true;
+        }
+    }
+
+    private async Task UpdateUser()
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(area) || !int.TryParse(roleOption, out int monthParsed))
+            {
+                errorLabel = "Please fill all fields";
+                return;
+            }
+            User user = new User
+            {
+                id = userId,
+                username = userName,
+                area = Convert.ToInt32(area),
+                role = Convert.ToInt32(roleOption)
+            };
+            await userHttpService.updateUser(user);
+            NavigateBack();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = e.Message;
+        }
+        
+    }
+
+    private async Task DeleteUser()
+    {
+        try
+        {
+            await userHttpService.deleteUser(userId);
+            NavigateBack();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = e.Message;
+        }
+        
+    }
+    
+    private void NavigateBack()
+    {
+        navMgr.NavigateTo($"/users");
+    }
+    
+    
+    
+
+}

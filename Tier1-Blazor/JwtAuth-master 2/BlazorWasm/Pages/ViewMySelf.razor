@@ -1,0 +1,99 @@
+@page "/self"
+@using global::Shared.Models
+@using BlazorWasm.Services
+@using System.Security.Claims
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IUsageHttpService usageHttpService
+@inject IAdviceHttpService adviceHttpService
+@attribute [Authorize]
+<AuthorizeView>
+    <h3>Hi @context.User.Claims.First(c => c.Type.Equals("username")).Value </h3>
+    
+    <h4>My Info</h4>
+    <h3>Area: @mySelf.area</h3>
+    <h3>Role: @mySelf.role</h3>
+    <h6 >Average Electricity Consumption in your area: @Convert.ToInt32(electricityConsumption) Khw</h6>
+    <h6 >Average Water Consumption in your area: @Convert.ToInt32(waterConsumption) Liters </h6>
+    
+    <a class="mt-3 btn btn-dark" href="@navMgr.BaseUri/users/@mySelf.id">See Usages</a>
+    
+    <h5 class="mt-5">Water Advices</h5>
+    @foreach(var advice in waterAdvices)
+    {
+        <div class="alert alert-primary" role="alert">
+            @advice.text
+        </div>
+    }
+    
+    <h5>Electricity Advices</h5>
+    @foreach(var advice in electricityAdvices)
+    {
+        <div class="alert alert-warning" role="alert">
+            @advice.text
+        </div>
+    }
+    
+
+</AuthorizeView>
+
+
+
+@code {
+    
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
+
+    private IEnumerable<Claim> claims;
+    private ClaimsPrincipal user;
+    User mySelf = new User();
+
+    private ICollection<WaterUsageAdvice> waterAdvices = new List<WaterUsageAdvice>();
+    private ICollection<ElectricityUsageAdvice> electricityAdvices = new List<ElectricityUsageAdvice>();
+    
+    private double electricityConsumption = 0;
+    private double waterConsumption = 0;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        user = authState.User;
+        if (user.Identity == null) return;
+
+        claims = user.Claims;
+
+        mySelf = await userHttpService.getUserByUserName(claims.First(c => c.Type.Equals("username")).Value);
+
+        await LoadElectricityAdvices();
+        await LoadWaterAdvices();
+        await LoadWaterAverage();
+        await LoadElectricityAverage();
+
+
+    }
+
+    private async Task LoadElectricityAdvices()
+    {
+        electricityAdvices = await adviceHttpService.GetElectricityUsageAdvicesByUserId(mySelf.id);
+    }
+    private async Task LoadWaterAdvices()
+    {
+        waterAdvices = await adviceHttpService.GetWaterUsageAdvicesByUserId(mySelf.id);
+    }
+    
+    private async Task LoadWaterAverage()
+    {
+        waterConsumption =  await usageHttpService.GetWaterAverage(Convert.ToInt32(mySelf.area));
+    }
+    private async Task LoadElectricityAverage()
+    {
+        electricityConsumption =  await usageHttpService.GetElectricityAverage(Convert.ToInt32(mySelf.area));
+    }
+
+
+
+
+
+
+}

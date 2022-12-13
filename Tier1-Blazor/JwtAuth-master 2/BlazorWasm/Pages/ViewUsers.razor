@@ -1,0 +1,72 @@
+@page "/Users"
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@using System.Net
+@inject IUserHttpService userHttpService
+<h3>Users</h3>
+
+
+@if (users == null)
+{
+    <h1>No Users</h1>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Role</th>
+            <th scope="col">Area</th>
+            <th scope="col">View Usage</th>
+            <AuthorizeView Policy="MustBeAdmin">
+            <th scope="col">Edit</th>
+            </AuthorizeView>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in users)
+        {
+            <tr>
+
+                <th scope="row">@user.id</th>
+                <td>@user.username</td>
+                <td>@user.role</td>
+                <td>@user.area</td>
+                <td><a class="text-black" href="@navMgr.Uri/@user.id">View</a></td>
+                 <AuthorizeView Policy="MustBeAdmin">
+                 <td><a class = "text-black" href="@navMgr.Uri/@user.id/edit">Edit</a></td>
+                 </AuthorizeView>
+
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@if (string.IsNullOrEmpty(errorMessage))
+{
+    <div class="field">
+        <label style="color: red">
+            @errorMessage
+        </label>
+    </div>
+}
+
+
+
+
+@code {
+    string errorMessage;
+
+    ICollection<global::Shared.Models.User>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await userHttpService.getAllUsers();
+        users = users.OrderBy(user => user.id).ToList();
+        users = users.OrderByDescending(user => user.role).ToList();
+    }
+
+}

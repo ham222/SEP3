@@ -1,0 +1,82 @@
+@page "/advices/water/{adviceId:int}"
+@using global::Shared.Models
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IAdviceHttpService adviceHttpService
+
+
+<h3>Edit Water Advice</h3>
+
+
+<form>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" placeholder="Enter the advice" @bind="text">
+    </div>
+
+</form>
+
+        @if (!string.IsNullOrEmpty(errorLabel))
+        {
+            <div class="field">
+                <label style="color: red">
+                    @errorLabel
+                </label>
+            </div>
+        }
+        <button class="mt-5 btn btn-primary" @onclick="UpdateAdvice">Update</button>
+        <button @onclick="NavigateBack" class=" mt-5 btn btn-dark">Cancel</button>
+        <button @onclick="DeleteAdvice" class="mt-5 btn btn-danger">Delete Advice</button>
+
+
+
+
+@code {
+    
+    [Parameter]
+    public int adviceId { get; set; }
+    
+    public string text { get; set; }
+    
+    public string errorLabel { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await GetWaterUsage();
+    }
+
+    private async Task GetWaterUsage()
+    {
+        var advice = await adviceHttpService.GetWaterUsageAdviceById(adviceId);
+        text = advice.text;
+    }
+    
+    private async Task UpdateAdvice()
+    {
+        var advice = new WaterUsageAdvice
+        {
+            id = adviceId,
+            text = text
+        };
+        await adviceHttpService.UpdateWaterUsageAdvice(advice);
+       NavigateBack();
+    }
+    
+    private void NavigateBack()
+    {
+        navMgr.NavigateTo("/advices");
+    }
+    
+    private async Task DeleteAdvice()
+    {
+        await adviceHttpService.DeleteWaterUsageAdvice(adviceId);
+        NavigateBack();
+    }
+
+
+
+
+
+
+}

@@ -1,0 +1,67 @@
+﻿@page "/Login"
+@using BlazorWasm.Services
+@inject IAuthService authService
+@inject NavigationManager navMgr
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div class="card">
+                     <div class="card-body">
+         
+         
+                         <div class="mb-3">
+                             <label for="exampleInputEmail1" class="form-label">Username</label>
+                             <input @bind="userName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                             <div id="emailHelp" class="form-text">Example: bobik</div>
+                         </div>
+                         <div class="mb-3">
+                             <label for="exampleInputPassword1" class="form-label">Password</label>
+                             <input @bind="password" type="password" class="form-control" id="exampleInputPassword1">
+                         </div>
+                         @if (!string.IsNullOrEmpty(errorLabel))
+                         {
+                             <div class="field">
+                                 <label style="color: red">
+                                     @errorLabel
+                                 </label>
+                             </div>
+                         }
+                         <button class="btn btn-dark" @onclick="LoginAsync">Log in</button>
+                         <a class="btn btn-primary" href="/Register">Register</a>
+                         
+                     </div>
+                 </div>
+    </NotAuthorized>
+    <Authorized>
+        <div class="card">
+            <h3>Hello, @context.User.Identity.Name</h3>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string userName;
+    private string password;
+    private string errorLabel;
+
+    private async Task LoginAsync()
+    {
+        errorLabel = "";
+        try
+        {
+            await authService.LoginAsync(userName, password);
+            navMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = $"Error: {e.Message}";
+        }
+    }
+
+    private async Task SendToRegister()
+    {
+            navMgr.NavigateTo("/Register");
+    }
+
+}

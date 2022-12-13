@@ -1,0 +1,73 @@
+﻿@page "/createlectricityeadvice"
+@using BlazorWasm.Services
+@using global::Shared.Models
+@inject IAdviceHttpService Insert
+
+
+<PageTitle>Create Electricity Advice</PageTitle>
+
+<h1>Create Electricity Advice</h1>
+<form>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" placeholder="Enter the advice" @bind="_desc">
+    </div>
+
+    
+</form>
+<button class="mt-5 btn btn-primary" @onclick="createElectricityAdvice">Submit</button>
+    @if (!string.IsNullOrEmpty(_errorLabel))
+    {
+        <div class="field">
+            <label style="color: red">
+                @_errorLabel
+            </label>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(successLabel))
+    {
+        <div class="field">
+            <label style="color: #00ff22">
+                @successLabel
+            </label>
+        </div>
+    }
+
+
+@code{
+    private string successLabel = "";
+    private string _desc;
+    private string _errorLabel = "";
+
+
+    private async Task createElectricityAdvice()
+    {
+        Console.WriteLine("My debug output.");
+        if(string.IsNullOrEmpty(_desc))
+        {
+            _errorLabel = "Please enter a description";
+            return;
+        }
+        
+        try
+        {
+            ElectricityUsageAdvice _advice = new ElectricityUsageAdvice
+            {
+                id = 0,
+                text = _desc
+            };
+            await Insert.CreateElectricityUsageAdvice(_advice);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _errorLabel = $"Error: {e.Message}";
+        }
+        finally
+        {
+            _errorLabel = "";
+            successLabel = "Advice created";
+        }
+    }
+
+}

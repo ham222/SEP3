@@ -1,0 +1,89 @@
+@page "/area"
+@using global::Shared.Models
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IUsageHttpService usageHttpService
+<h3>ViewAreaAverage</h3>
+
+
+<h3>Water average</h3>
+<div class="mb-3">
+    <label for="1" class="form-label">Area</label>
+    <input @bind="areaW" type="text" class="form-control" id="1"/>
+    <div id="emailHelp" class="form-text">Example: 8700</div>
+</div>
+
+@if (averageW == null)
+{
+    <p>Average not found</p>
+}else
+{
+    <p>Average: @averageW</p>
+}
+
+
+<button class="btn-dark btn" @onclick="LoadWaterAverage">Search</button>
+
+@if(!string.IsNullOrEmpty(errorW))
+{
+    @errorW
+}
+
+
+<h3 class="mt-5">Electricity average</h3>
+<div class="mb-3">
+    <label for="1" class="form-label">Area</label>
+    <input @bind="areaE" type="text" class="form-control" id="1"/>
+    <div id="emailHelp" class="form-text">Example: 8700</div>
+</div>
+
+@if (averageE == null)
+{
+    <p>Average not found</p>
+}else
+{
+    <p>Average: @averageE</p>
+}
+
+
+
+<button class="btn-dark btn" @onclick="LoadElectricityAverage">Search</button>
+
+@if(!string.IsNullOrEmpty(errorE))
+{
+    @errorE
+}
+
+@code {
+
+    string areaW;
+    string areaE;
+    double averageW;
+    double averageE;
+
+    string errorE;
+    string errorW;
+
+    private async Task LoadWaterAverage()
+    {
+        if (string.IsNullOrEmpty(areaW))
+        {
+            errorW = "Please enter a valid area";
+            return;
+        }
+        
+        
+       averageW =  await usageHttpService.GetWaterAverage(Convert.ToInt32(areaW));
+    }
+    private async Task LoadElectricityAverage()
+    {
+        if (string.IsNullOrEmpty(areaE))
+        {
+            errorE = "Please enter a valid area";
+            return;
+        }
+        averageE =  await usageHttpService.GetElectricityAverage(Convert.ToInt32(areaE));
+    }
+
+}

@@ -1,0 +1,151 @@
+@page "/Users/{userId:int}"
+@using global::Shared.Models
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IUsageHttpService usageHttpService
+
+<h3>User @user.username</h3>
+
+
+<h4 class="h4">Area: @user.area</h4>
+<h4 class="h4">Role: @user.role</h4>
+
+<div class=" mt-5 btn-group">
+  <a href="#" class="btn btn-primary active" aria-current="page">View Usages</a>
+  <a href="@navMgr.Uri/advices" class="btn btn-primary">View Advices Received</a>
+</div>
+
+@if (!waterUsages.Any())
+{
+    <h1>No Water Usages</h1>
+}
+else
+{
+    <h3 class="mt-5">Water Usage</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Year</th>
+            <th scope="col">Month</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var usage in waterUsages)
+        {
+            <tr>
+                <td>@usage.id</td>
+                <td>@usage.amount</td>
+                <td>@usage.year</td>
+                <td>@usage.month</td>
+                <td><a class="text-black" href="@navMgr.Uri/water/@usage.id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@if (!electricityUsages.Any())
+{
+    <h1>No Water Usages</h1>
+}
+else
+{
+    <h3 class="mt-5">Electricity Usage</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Year</th>
+            <th scope="col">Month</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var usage in electricityUsages)
+        {
+            <tr>
+                <td>@usage.id</td>
+                <td>@usage.amount</td>
+                <td>@usage.year</td>
+                <td>@usage.month</td>
+                <td><a class="text-black" href="@navMgr.Uri/electricity/@usage.id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+@if (string.IsNullOrEmpty(errorMessage))
+{
+    <div class="field">
+        <label style="color: red">
+            @errorMessage
+        </label>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int userId { get; set; }
+    public User user = new User();
+    public string errorMessage { get; set; }
+    public ICollection<WaterUsage> waterUsages = new List<WaterUsage>();
+    public ICollection<ElectricityUsage> electricityUsages = new List<ElectricityUsage>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUser();
+        await LoadWaterUsages();
+        await LoadElectricityUsages();
+    }
+    
+    private async Task LoadUser()
+    {
+        try
+        {
+            user = await userHttpService.getUserById(userId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+
+    private async Task LoadWaterUsages()
+    {
+        try
+        {
+            waterUsages = await usageHttpService.GetWaterUsagesByUserId(userId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+    
+    private async Task LoadElectricityUsages()
+    {
+        try
+        {
+            electricityUsages = await usageHttpService.GetElectricityUsagesByUserId(userId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+
+}

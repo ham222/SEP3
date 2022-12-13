@@ -1,0 +1,141 @@
+﻿@page "/elecusage"
+@using BlazorWasm.Services
+@using global::Shared.Models
+@using System.Security.Claims
+@inject IUserHttpService userHttpService
+@inject IUsageHttpService usageHttpService
+
+<PageTitle>Insert Electricity Usage</PageTitle>
+
+<h1>Insert Electricity Usage</h1>
+<form>
+    <div class="form-group">
+        <label for="wateramount">Amount</label>
+        <input type="text" @bind="amount" class="form-control" id="wateramount" placeholder="Enter Water Usage Amount">
+        <small id="waterhelp" class="form-text text-muted">We'll never share your water usage with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="month">Month</label>
+        <input type="text" @bind="month" class="form-control" id="month" placeholder="Enter month of the data inserted">
+        <small id="monthhelp" class="form-text text-muted">Month.</small>
+    </div>
+    <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" @bind="year" class="form-control" id="year" placeholder="Enter year of the data insertedt">
+        <small id="yearhelp" class="form-text text-muted">Year.</small>
+    </div>
+    
+</form>
+
+<button @onclick="LogElectricityUsage" class="btn btn-primary">Submit</button>
+
+
+@if (!string.IsNullOrEmpty(errorLabel))
+    {
+        <div class="field">
+            <label style="color: red">
+                @errorLabel
+            </label>
+        </div>
+    }
+
+@if (!string.IsNullOrEmpty(successLabel))
+{
+    <div class="field">
+        <label style="color: #00ff22">
+            @successLabel
+        </label>
+    </div>
+}
+
+@code{
+    private string amount;
+    private string month;
+    private string year;
+    private string successLabel = "";
+    private string errorLabel = "";
+    private User userToReceive;
+    private int userId;
+    
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
+
+    private IEnumerable<Claim> claims;
+    private ClaimsPrincipal user;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        user = authState.User;
+        if (user.Identity == null) return;
+
+        claims = user.Claims;
+    }
+
+
+    private async Task LogElectricityUsage()
+    {
+       if(!CheckEverything()) return;
+
+        try
+        {
+            string username = claims.First(c => c.Type.Equals("username")).Value;
+            userId = await userHttpService.getUserIdByUserName(username);
+        }catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = $"Error: {e.Message}";
+        }
+
+        try
+        {
+            ElectricityUsage ectricityUsage = new ElectricityUsage
+            {
+                id = 0,
+                amount = Convert.ToInt32(amount),
+                month = Convert.ToInt32(month),
+                year = Convert.ToInt32(year),
+                userId = userId
+            };
+            await usageHttpService.LogElectricityUsageAsync(ectricityUsage, userId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = $"Error: {e.Message}";
+        }
+        finally
+        {
+            errorLabel = "";
+            successLabel = "Usage logged successfully!";
+        }
+    }
+    
+    private bool CheckEverything()
+    {
+        if(string.IsNullOrEmpty(amount) || string.IsNullOrEmpty(month) || string.IsNullOrEmpty(year))
+        {
+            errorLabel = "Please fill all the fields";
+            return false;
+        }
+        
+        if(!int.TryParse(amount, out int amountParsed))
+        {
+            errorLabel = "Amount must be a number";
+            return false;
+        }
+        if(!int.TryParse(year, out int yearParsed))
+        {
+            errorLabel = "Year must be a number";
+            return false;
+        }
+        if(!int.TryParse(month, out int monthParsed))
+        {
+            errorLabel = "Month must be a number";
+            return false;
+        }
+        
+        return true;
+    }
+
+}

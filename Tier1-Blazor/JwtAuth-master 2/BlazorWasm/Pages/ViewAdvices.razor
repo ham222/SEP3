@@ -1,0 +1,105 @@
+@page "/advices"
+@using global::Shared.Models
+@using BlazorWasm.Services
+@inject NavigationManager navMgr
+@inject IUserHttpService userHttpService
+@inject IAdviceHttpService adviceHttpService
+<h3>View Advices</h3>
+
+
+@if (!waterAdvices.Any())
+{
+    <h1>No Water Advices</h1>
+}
+else
+{
+    <h3 class="mt-5">Water Advices</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (WaterUsageAdvice advice in waterAdvices)
+        {
+            <tr>
+
+                <th scope="row">@advice.id</th>
+                <td>@advice.text</td>
+                <td><a class = "text-black" href="@navMgr.Uri/water/@advice.id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@if (!waterAdvices.Any())
+{
+    <h1>No Electricity Advices</h1>
+}
+else
+{
+    <h3 class="mt-5">Electricity Advices</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (ElectricityUsageAdvice advice in electricityAdvice)
+        {
+            <tr>
+
+                <th scope="row">@advice.id</th>
+                <td>@advice.text</td>
+                <td><a class = "text-black" href="@navMgr.Uri/electricity/@advice.id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="field">
+                <label style="color: red">
+                    @errorMessage
+                </label>
+            </div>
+        }
+
+
+@code {
+
+    string errorMessage = "";
+
+    ICollection<WaterUsageAdvice> waterAdvices = new List<WaterUsageAdvice>();
+    ICollection<ElectricityUsageAdvice> electricityAdvice = new List<ElectricityUsageAdvice>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await GetAdvices();
+    }
+
+    private async Task GetAdvices()
+    {
+        try
+        {
+            waterAdvices = await adviceHttpService.GetAllWaterUsageAdvices();
+            electricityAdvice = await adviceHttpService.GetAllElectricityUsageAdvices();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorMessage = e.Message;
+        }
+        
+    }
+
+}

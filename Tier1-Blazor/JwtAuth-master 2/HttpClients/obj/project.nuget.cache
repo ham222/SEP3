@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "OqoVq7Auww38Ju7aB/HSA/QoHzCUIJf0Pau7Z4mpAppz2CWHOlNxH0VxwPUrlFH24xmdxm1dgp7jxKx4UzaQZA==",
+  "success": true,
+  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/HttpClients/HttpClients.csproj",
+  "expectedPackageFiles": [
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.aspnetcore.authorization/6.0.8/microsoft.aspnetcore.authorization.6.0.8.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.aspnetcore.metadata/6.0.8/microsoft.aspnetcore.metadata.6.0.8.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.1/microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/gavriliuciurie/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
