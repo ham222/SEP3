@@ -69,6 +69,14 @@ public class UserEntity
         this.electricityAdvices = electricityAdvices;
     }
 
+    public UserEntity(int id, String username, String password, int role, int area) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.area = area;
+    }
+
     public int getId()
     {
         return id;
