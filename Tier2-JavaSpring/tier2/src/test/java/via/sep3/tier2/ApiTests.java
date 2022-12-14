@@ -122,7 +122,7 @@ public class ApiTests {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$",hasSize(1)))
-                .andExpect(jsonPath("$[0].amount",is(5.0)));
+                .andExpect(jsonPath("$[0].amount",is(5)));
     }
 
     @Test
@@ -135,7 +135,7 @@ public class ApiTests {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$",hasSize(1)))
-                .andExpect(jsonPath("$[0].amount",is(5.0)));
+                .andExpect(jsonPath("$[0].amount",is(5)));
     }
 
     //Electricity usage tests
@@ -150,7 +150,7 @@ public class ApiTests {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$",hasSize(1)))
-                .andExpect(jsonPath("$[0].amount",is(5.0)));
+                .andExpect(jsonPath("$[0].amount",is(5)));
     }
 
     @Test
@@ -163,7 +163,7 @@ public class ApiTests {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$",hasSize(1)))
-                .andExpect(jsonPath("$[0].amount",is(5.0)));
+                .andExpect(jsonPath("$[0].amount",is(5)));
     }
 
     @Test
@@ -223,7 +223,7 @@ public class ApiTests {
                         .delete("/api/advice/electricity/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$",is("")));
+                .andExpect(jsonPath("$",is("Deleted")));
     }
 
 }
