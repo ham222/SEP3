@@ -146,24 +146,6 @@ public class DbTests {
         waterAdviceRepository.deleteById(1);
         assertEquals(0,waterAdviceRepository.count());
     }
-
-    //Electricity usage tests
-
-
-    @Test
-    public void sizeZeroWhenNoElectricityUsage(){
-        //!TODO find out the reason this doesn't work
-        //assertEquals(0,electricityUsageRepository.count());
-    }
-
-
-    //Water usage tests
-
-
-    @Test
-    public void sizeZeroWhenNoWaterUsage(){
-        //!TODO find out the reason this doesn't work
-        //assertEquals(0,waterUsageRepository.count());
-    }
+    
 
 }
