@@ -28,6 +28,7 @@
 
 <button @onclick="UpdateWaterUsage" class="btn btn-primary">Submit</button>
 <button @onclick="NavigateBack" class="btn btn-dark">Cancel</button>
+<button @onclick="DeleteAdvice" class=" btn btn-danger">Delete Advice</button>
 @if (!string.IsNullOrEmpty(errorLabel))
     {
         <div class="field">
@@ -92,7 +93,18 @@
     }
 
 
-
-
+    private async Task DeleteAdvice()
+    {
+        try
+        {
+            usageHttpService.DeteteWaterUsage(usageId);
+            NavigateBack();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            errorLabel = e.Message;
+        }
+    }
 
 }

@@ -13,4 +13,7 @@ public interface IUsageHttpService
     Task UpdateElectricityUsage(ElectricityUsage electricityUsage);
     Task<double> GetWaterAverage(int area);
     Task<double> GetElectricityAverage(int area);
+    
+    Task DeteteWaterUsage(int id);
+    Task DeteteElectricityUsage(int id);
 }

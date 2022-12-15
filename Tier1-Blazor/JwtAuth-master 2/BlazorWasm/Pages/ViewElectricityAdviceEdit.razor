@@ -54,6 +54,11 @@
     
     private async Task UpdateAdvice()
     {
+        if (string.IsNullOrEmpty(text))
+        {
+            errorLabel = "Please enter a description";
+            return;
+        }
         var advice = new ElectricityUsageAdvice
         {
             id = adviceId,

@@ -140,4 +140,26 @@ public class UsageHttpService : IUsageHttpService
             return 0;
         }
     }
+
+    public async Task DeteteWaterUsage(int id)
+    {
+        HttpResponseMessage response = await client.DeleteAsync($"http://localhost:8081/api/waterusage/{id}");
+        string responseContent = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(responseContent);
+        }
+    }
+
+    public async Task DeteteElectricityUsage(int id)
+    {
+        HttpResponseMessage response = await client.DeleteAsync($"http://localhost:8081/api/electricityusage/{id}");
+        string responseContent = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(responseContent);
+        }
+    }
 }
