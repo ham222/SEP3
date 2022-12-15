@@ -23,3 +23,4 @@ public static class AuthorizationPolicies
         });
     }
 }
+

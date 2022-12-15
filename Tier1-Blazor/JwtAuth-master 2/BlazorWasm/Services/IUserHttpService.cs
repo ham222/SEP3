@@ -14,3 +14,7 @@ public interface IUserHttpService
 
     Task<User> getUserByUserName(string name);
 }
+
+
+
+

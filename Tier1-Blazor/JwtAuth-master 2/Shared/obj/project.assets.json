@@ -318,11 +318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gavriliuciurie/Programare/SEP3/SEP3 pre finished version/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj",
+      "projectUniqueName": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3 pre finished version/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj",
+      "projectPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Shared/Shared.csproj",
       "packagesPath": "/Users/gavriliuciurie/.nuget/packages/",
-      "outputPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3 pre finished version/Tier1-Blazor/JwtAuth-master 2/Shared/obj/",
+      "outputPath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/gavriliuciurie/.nuget/NuGet/NuGet.Config"

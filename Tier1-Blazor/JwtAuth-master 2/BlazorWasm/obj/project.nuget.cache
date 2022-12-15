@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2RQya3jxHPW5w0qUa+Iw3K2JO5bpFsZjKaHSQYLd9bkFN5IqpFXvNLGkZzwJgIzw+59e5v72IQvhIRUzglLU9A==",
+  "dgSpecHash": "SfVWzaNhqglmDpcnsp/a8eRgj/zqIm2M9zqw66dSdYHpBsPTG92TK89TINvTCAO+DGBmTY7ahItoH/H5mawt0w==",
   "success": true,
-  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3 pre finished version/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj",
+  "projectFilePath": "/Users/gavriliuciurie/Programare/SEP3/SEP3/Tier1-Blazor/JwtAuth-master 2/BlazorWasm/BlazorWasm.csproj",
   "expectedPackageFiles": [
     "/Users/gavriliuciurie/.nuget/packages/microsoft.aspnetcore.authorization/6.0.8/microsoft.aspnetcore.authorization.6.0.8.nupkg.sha512",
     "/Users/gavriliuciurie/.nuget/packages/microsoft.aspnetcore.components/6.0.7/microsoft.aspnetcore.components.6.0.7.nupkg.sha512",
